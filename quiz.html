@@ -348,6 +348,11 @@
         if (!Array.isArray(QUESTIONS) || !QUESTIONS.length) {
           throw new Error('No questions available');
         }
+        // shuffle questions
+        for (let k = QUESTIONS.length - 1; k > 0; k--) {
+          const r = Math.floor(Math.random() * (k + 1));
+          [QUESTIONS[k], QUESTIONS[r]] = [QUESTIONS[r], QUESTIONS[k]];
+        }
         idx = 0;
         score = 0;
         renderQuestion(QUESTIONS[idx], idx, QUESTIONS.length);
