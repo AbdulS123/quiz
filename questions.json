@@ -1,0 +1,28 @@
+[
+  {
+    "id": "q1",
+    "question": "Which of these are prime numbers?",
+    "choices": [
+      { "text": "2",  "isCorrect": true },
+      { "text": "3",  "isCorrect": true },
+      { "text": "4",  "isCorrect": false },
+      { "text": "5",  "isCorrect": true },
+      { "text": "9",  "isCorrect": false },
+      { "text": "11", "isCorrect": true }
+    ],
+    "explanation": "Primes under 12: 2, 3, 5, 7, 11."
+  },
+  {
+    "id": "q2",
+    "question": "AAAAAAAWhich are core front-end web technologies?",
+    "choices": [
+      { "text": "HTML",       "isCorrect": true },
+      { "text": "CSS",        "isCorrect": true },
+      { "text": "JavaScript", "isCorrect": true },
+      { "text": "Python",     "isCorrect": false },
+      { "text": "C++",        "isCorrect": false },
+      { "text": "SQL",        "isCorrect": false }
+    ],
+    "explanation": "HTML, CSS, and JavaScript run in the browser."
+  }
+]
