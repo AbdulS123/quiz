@@ -13,7 +13,7 @@
       --accent: #7c5cff;
       --danger: #ff5c7a;
       --ok: #40e2a0;
-      --border: rgba(255,255,255,.08);
+      --border: rgba(255,255,255,.3);
       --shadow: 0 10px 30px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.25);
       --radius: 20px;
     }
@@ -76,7 +76,8 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(0,0,0,.25);
     }
-    .choice input[type="checkbox"]:checked + label {
+    .choice input[type="checkbox"]:checked + label,
+    .choice.selected label {
       border-color: var(--accent);
       background: rgba(124,92,255,0.25);
     }
@@ -93,13 +94,13 @@
     }
     .choice.correct label {
       border-color: var(--ok);
-      background: rgba(64,226,160,0.25);
-      color: var(--ok);
+      background: rgba(64,226,160,0.45);
+      color: #fff;
     }
     .choice.incorrect label {
       border-color: var(--danger);
-      background: rgba(255,92,122,0.25);
-      color: var(--danger);
+      background: rgba(255,92,122,0.45);
+      color: #fff;
     }
     .actions {
       display: flex;
@@ -187,16 +188,17 @@
 
     let QUESTIONS = [];
     let idx = 0;
+    let score = 0;
 
     async function loadAllQuestions() {
-      if (location.protocol === "file:") return EMBEDDED_QUESTIONS;
       try {
-        const res = await fetch("questions.json", { cache: "no-store" });
-        if (!res.ok) throw 0;
+        const base = new URL('.', location.href);
+        const res = await fetch(new URL('questions.json', base), { cache: 'no-store' });
+        if (!res.ok) throw new Error('Failed to fetch questions.json');
         const data = await res.json();
-        if (!Array.isArray(data) || !data.length) throw 0;
+        if (!Array.isArray(data) || !data.length) throw new Error('questions.json is empty');
         return data;
-      } catch {
+      } catch (e) {
         return EMBEDDED_QUESTIONS;
       }
     }
@@ -206,6 +208,13 @@
         if (c.isCorrect) a.push(i);
         return a;
       }, []);
+    }
+
+    function arraysEqualAsSets(a, b) {
+      if (a.length !== b.length) return false;
+      const sb = new Set(b);
+      for (const x of a) if (!sb.has(x)) return false;
+      return true;
     }
 
     function getSelectedIndices() {
@@ -218,30 +227,36 @@
     }
 
     function clearStateClasses() {
-      el.form.querySelectorAll(".choice").forEach(d =>
-        d.classList.remove("correct", "incorrect")
-      );
+      el.form.querySelectorAll('.choice').forEach(d => {
+        d.classList.remove('correct', 'incorrect', 'selected');
+      });
     }
 
     function renderQuestion(q, i, n) {
       el.question.textContent = q.question;
-      el.choices.innerHTML = "";
+      el.choices.innerHTML = '';
+      const shuffled = q.choices.slice();
+      for (let k = shuffled.length - 1; k > 0; k--) {
+        const r = Math.floor(Math.random() * (k + 1));
+        [shuffled[k], shuffled[r]] = [shuffled[r], shuffled[k]];
+      }
+      q.choices = shuffled;
       q.choices.forEach((c, j) => {
         const id = `choice-${j}`;
-        const wrap = document.createElement("div");
-        wrap.className = "choice";
-        const input = document.createElement("input");
-        input.type = "checkbox";
-        input.name = "choice";
+        const wrap = document.createElement('div');
+        wrap.className = 'choice';
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.name = 'choice';
         input.id = id;
         input.value = String(j);
-        const label = document.createElement("label");
-        label.setAttribute("for", id);
-        const badge = document.createElement("span");
-        badge.className = "badge";
+        const label = document.createElement('label');
+        label.setAttribute('for', id);
+        const badge = document.createElement('span');
+        badge.className = 'badge';
         badge.textContent = String(j + 1);
-        const content = document.createElement("span");
-        content.className = "text";
+        const content = document.createElement('span');
+        content.className = 'text';
         content.textContent = c.text;
         label.appendChild(badge);
         label.appendChild(content);
@@ -255,6 +270,7 @@
       el.resetBtn.hidden = true;
       el.form.onchange = () => {
         el.checkBtn.disabled = getSelectedIndices().length === 0;
+        syncSelectedClasses();
       };
       const pct = Math.floor(i / n * 100);
       el.status.textContent = `Question ${i + 1} of ${n} — ${pct}% done`;
@@ -268,14 +284,16 @@
       setDisabledAll(true);
       clearStateClasses();
       const correct = getCorrectIndices(q);
-      const choiceEls = [...el.form.querySelectorAll(".choice")];
+      const choiceEls = [...el.form.querySelectorAll('.choice')];
       selected.forEach(i => {
-        if (correct.includes(i)) choiceEls[i].classList.add("correct");
-        else choiceEls[i].classList.add("incorrect");
+        if (correct.includes(i)) choiceEls[i].classList.add('correct');
+        else choiceEls[i].classList.add('incorrect');
       });
       correct.forEach(i => {
-        if (!selected.includes(i)) choiceEls[i].classList.add("correct");
+        if (!selected.includes(i)) choiceEls[i].classList.add('correct');
       });
+      const exact = arraysEqualAsSets(selected, correct);
+      if (exact) score++;
       el.checkBtn.hidden = true;
       el.nextBtn.hidden = false;
       el.nextBtn.focus?.();
@@ -291,27 +309,54 @@
     }
 
     function showResults() {
-      el.question.textContent = "Results";
-      el.choices.innerHTML = "You finished the quiz.";
+      const total = QUESTIONS.length;
+      const percent = total ? Math.round((score / total) * 100) : 0;
+      el.question.textContent = 'Results';
+      el.choices.innerHTML = `
+        <div style="text-align:center;font-size:1.1rem;">
+          <div><strong>${score}</strong> of <strong>${total}</strong> correct</div>
+          <div>(${percent}%)</div>
+        </div>
+      `;
       el.checkBtn.hidden = true;
       el.nextBtn.hidden = true;
       el.resetBtn.hidden = false;
-      el.status.textContent = `Quiz finished — 100% done`;
+      el.status.textContent = 'Quiz finished — 100% done';
     }
 
     function restart() {
       idx = 0;
+      score = 0;
       renderQuestion(QUESTIONS[idx], idx, QUESTIONS.length);
     }
 
-    el.checkBtn.addEventListener("click", checkAnswers);
-    el.nextBtn.addEventListener("click", nextQuestion);
-    el.resetBtn.addEventListener("click", restart);
+    el.checkBtn.addEventListener('click', checkAnswers);
+    el.nextBtn.addEventListener('click', nextQuestion);
+    el.resetBtn.addEventListener('click', restart);
+
+    function syncSelectedClasses() {
+      const wraps = [...el.form.querySelectorAll('.choice')];
+      wraps.forEach((wrap) => {
+        const cb = wrap.querySelector('input[type="checkbox"]');
+        wrap.classList.toggle('selected', cb && cb.checked);
+      });
+    }
 
     (async () => {
-      QUESTIONS = await loadAllQuestions();
-      idx = 0;
-      renderQuestion(QUESTIONS[idx], idx, QUESTIONS.length);
+      try {
+        QUESTIONS = await loadAllQuestions();
+        if (!Array.isArray(QUESTIONS) || !QUESTIONS.length) {
+          throw new Error('No questions available');
+        }
+        idx = 0;
+        score = 0;
+        renderQuestion(QUESTIONS[idx], idx, QUESTIONS.length);
+        syncSelectedClasses();
+      } catch (err) {
+        document.getElementById('question').textContent = 'Could not load questions';
+        document.getElementById('choices').textContent = String(err && err.message ? err.message : err);
+        document.getElementById('checkBtn').disabled = true;
+      }
     })();
   </script>
 </body>
