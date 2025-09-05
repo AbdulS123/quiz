@@ -17,16 +17,6 @@
       --shadow: 0 10px 30px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.25);
       --radius: 20px;
     }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #eef2ff;
-        --card: #ffffff;
-        --text: #0b1020;
-        --muted: #5468ff;
-        --accent: #5a3ef7;
-        --border: rgba(15, 23, 42, .08);
-      }
-    }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
@@ -66,31 +56,29 @@
       flex-direction: column;
       gap: 14px;
     }
-    .sr-only {
-      position: absolute !important;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      white-space: nowrap;
-      border: 0;
+    .choice input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
     }
     .choice label {
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 16px 18px;
-      background: rgba(255,255,255,0.05);
-      border: 2px solid transparent;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid var(--border);
       border-radius: 14px;
       cursor: pointer;
-      transition: transform .06s ease;
+      transition: transform .06s ease, background .15s ease, border-color .15s ease;
     }
     .choice label:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    }
+    .choice input[type="checkbox"]:checked + label {
+      border-color: var(--accent);
+      background: rgba(124,92,255,0.25);
     }
     .choice .badge {
       display: inline-grid;
@@ -105,12 +93,12 @@
     }
     .choice.correct label {
       border-color: var(--ok);
-      background: rgba(64,226,160,0.15);
+      background: rgba(64,226,160,0.25);
       color: var(--ok);
     }
     .choice.incorrect label {
       border-color: var(--danger);
-      background: rgba(255,92,122,0.15);
+      background: rgba(255,92,122,0.25);
       color: var(--danger);
     }
     .actions {
@@ -199,7 +187,6 @@
 
     let QUESTIONS = [];
     let idx = 0;
-    let score = 0;
 
     async function loadAllQuestions() {
       if (location.protocol === "file:") return EMBEDDED_QUESTIONS;
@@ -248,7 +235,6 @@
         input.name = "choice";
         input.id = id;
         input.value = String(j);
-        input.className = "sr-only";
         const label = document.createElement("label");
         label.setAttribute("for", id);
         const badge = document.createElement("span");
@@ -305,8 +291,6 @@
     }
 
     function showResults() {
-      const total = QUESTIONS.length;
-      const percent = Math.round((score / total) * 100);
       el.question.textContent = "Results";
       el.choices.innerHTML = "You finished the quiz.";
       el.checkBtn.hidden = true;
@@ -316,7 +300,6 @@
     }
 
     function restart() {
-      score = 0;
       idx = 0;
       renderQuestion(QUESTIONS[idx], idx, QUESTIONS.length);
     }
@@ -324,24 +307,6 @@
     el.checkBtn.addEventListener("click", checkAnswers);
     el.nextBtn.addEventListener("click", nextQuestion);
     el.resetBtn.addEventListener("click", restart);
-
-    window.addEventListener("keydown", e => {
-      const a = document.activeElement;
-      const typing = a && (a.tagName === "INPUT" || a.tagName === "TEXTAREA");
-      if (typing) return;
-      const q = QUESTIONS[idx];
-      const max = q ? Math.min(q.choices.length, 9) : 9;
-      if (/^[1-9]$/.test(e.key) && Number(e.key) <= max && !el.checkBtn.hidden) {
-        const cb = document.getElementById(`choice-${Number(e.key) - 1}`);
-        if (cb && !cb.disabled) {
-          cb.checked = !cb.checked;
-          cb.dispatchEvent(new Event("change", { bubbles: true }));
-        }
-      } else if (e.key === "Enter") {
-        if (!el.checkBtn.hidden && !el.checkBtn.disabled) checkAnswers();
-        else if (!el.nextBtn.hidden) nextQuestion();
-      }
-    });
 
     (async () => {
       QUESTIONS = await loadAllQuestions();
