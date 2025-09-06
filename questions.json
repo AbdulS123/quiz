@@ -1,14 +1,10 @@
 [
   {
-    "id": "q1",
+    "id": "001",
     "question": "What is true for Information Technology (IT)?",
     "choices": [
       {
-        "text": "Priorities are traditionally : 1. Security, 2. Integrity, 3. Availability",
-        "isCorrect": true
-      },
-      {
-        "text": "Monitors and controls devices and processes on physical operational systems.",
+        "text": "Priorities are traditionally: 1. Security, 2. Integrity, 3. Availability",
         "isCorrect": true
       },
       {
@@ -17,6 +13,10 @@
       },
       {
         "text": "Systems are: email, voice, databases, web, files, printers,...",
+        "isCorrect": true
+      },
+      {
+        "text": "Monitors and controls devices and processes on physical operational systems.",
         "isCorrect": false
       },
       {
@@ -24,13 +24,13 @@
         "isCorrect": false
       },
       {
-        "text": "Priorities are traditionally : 1. Availability, 2. Integrity, 3. Security",
+        "text": "Priorities are traditionally: 1. Availability, 2. Integrity, 3. Security",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q2",
+    "id": "002",
     "question": "What is true for Operational Technology (OT)?",
     "choices": [
       {
@@ -38,16 +38,16 @@
         "isCorrect": true
       },
       {
-        "text": "Priorities are traditionally : 1. Availability, 2. Integrity, 3. Security",
+        "text": "Priorities are traditionally: 1. Availability, 2. Integrity, 3. Security",
         "isCorrect": true
       },
       {
         "text": "Systems are: meters, actuators, automation devices, SCADA,...",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
-        "text": "Priorities are traditionally : 1. Security, 2. Integrity, 3. Availability",
-        "isCorrect": true
+        "text": "Priorities are traditionally: 1. Security, 2. Integrity, 3. Availability",
+        "isCorrect": false
       },
       {
         "text": "Focused on secure flow of data across an organization.",
@@ -60,8 +60,8 @@
     ]
   },
   {
-    "id": "q3",
-    "question": "What kind of things are there in the IoT?",
+    "id": "003",
+    "question": "What kind of things are there in the loT?",
     "choices": [
       {
         "text": "Passive things",
@@ -86,7 +86,7 @@
     ]
   },
   {
-    "id": "q4",
+    "id": "004",
     "question": "Who has introduced the term \"Internet of Things\"?",
     "choices": [
       {
@@ -104,40 +104,26 @@
       {
         "text": "Kevin Bacon",
         "isCorrect": false
-      },
-      {
-        "text": "Set the correct order of the IoT layers:",
-        "isCorrect": false
-      },
-      {
-        "text": "1  Applications",
-        "isCorrect": false
-      },
-      {
-        "text": "2  Networking",
-        "isCorrect": false
-      },
-      {
-        "text": "Sensing",
-        "isCorrect": false
-      },
-      {
-        "text": "3",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q5",
-    "question": "What is the technology used in passive “things”?",
+    "id": "005",
+    "question": "Set the correct order of the loT layers:",
+    "type": "ordering",
+    "correctOrder": [
+      "Sensing",
+      "Networking",
+      "Applications"
+    ]
+  },
+  {
+    "id": "006",
+    "question": "What is the technology used in passive \"things\"?",
     "choices": [
       {
         "text": "RFID",
-        "isCorrect": false
-      },
-      {
-        "text": "x",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "NFID",
@@ -154,38 +140,26 @@
     ]
   },
   {
-    "id": "q6",
+    "id": "007",
     "question": "It is often said that the age of IoT have started between the years 2008 and 2009. Why?",
     "choices": [
       {
-        "text": "During this time period, the number of devices connected to the Internet eclipsed the world's",
+        "text": "During this time period, the number of devices connected to the Internet eclipsed the world's population.",
         "isCorrect": true
-      },
-      {
-        "text": "population.",
-        "isCorrect": false
       },
       {
         "text": "During this time period, the number of publications using the term IoT started to grow exponentially.",
         "isCorrect": false
       },
       {
-        "text": "During this time period, the number of devices connected to the Internet eclipsed the number of",
-        "isCorrect": false
-      },
-      {
-        "text": "network nodes in the Internet.",
-        "isCorrect": false
-      },
-      {
-        "text": "1",
+        "text": "During this time period, the number of devices connected to the Internet eclipsed the number of network nodes in the Internet.",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q7",
-    "question": "How do applications interface with the IoT devices in the oneM2M IoT framework?",
+    "id": "008",
+    "question": "How do applications interface with the loT devices in the oneM2M IoT framework?",
     "choices": [
       {
         "text": "Via RESTful APIs.",
@@ -202,31 +176,27 @@
       {
         "text": "Via Open Service Interface Definitions.",
         "isCorrect": false
-      },
-      {
-        "text": "The number of devices in an IoT network.",
-        "isCorrect": false
-      },
-      {
-        "text": "Security.",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q8",
+    "id": "009",
     "question": "What are the main drivers for an IoT architecture?",
     "choices": [
+      {
+        "text": "The number of devices in an IoT network.",
+        "isCorrect": true
+      },
+      {
+        "text": "Security.",
+        "isCorrect": true
+      },
       {
         "text": "Constrained devices.",
         "isCorrect": true
       },
       {
-        "text": "Amount of data generated by the IoT.",
-        "isCorrect": true
-      },
-      {
-        "text": "Constrained networks.",
+        "text": "Amount of data generated by the loT.",
         "isCorrect": true
       },
       {
@@ -234,12 +204,16 @@
         "isCorrect": true
       },
       {
-        "text": "Social media.",
+        "text": "Constrained networks.",
         "isCorrect": true
       },
       {
+        "text": "Social media.",
+        "isCorrect": false
+      },
+      {
         "text": "E-commerce.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Multi-Gigabit/s connections.",
@@ -248,11 +222,11 @@
     ]
   },
   {
-    "id": "q9",
+    "id": "010",
     "question": "What is true for the IoT World Forum IoT Architecture?",
     "choices": [
       {
-        "text": "It decomposes the IoT problem into smaller parts.",
+        "text": "It decomposes the loT problem into smaller parts.",
         "isCorrect": true
       },
       {
@@ -264,27 +238,29 @@
         "isCorrect": true
       },
       {
-        "text": "Processing of data is centralized in cloud applications.",
-        "isCorrect": false
+        "text": "Specific functions are distributed over the individual layers.",
+        "isCorrect": true
       },
       {
-        "text": "Specific functions are distributed over the individual layers.",
+        "text": "Processing of data is centralized in cloud applications.",
         "isCorrect": false
       },
       {
         "text": "It is created by telecom organizations.",
         "isCorrect": false
-      },
-      {
-        "text": "Which of the following is true for IoT? Select one or more:",
-        "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "011",
+    "question": "Which of the following is true for IoT?",
+    "choices": [
       {
         "text": "There is no standardized IoT architecture approved by an authorized body.",
         "isCorrect": true
       },
       {
-        "text": "The lack of a standardization is one reason that there is no clear definition of the IoT.",
+        "text": "The lack of a standardization is one reason that there is no clear definition of the loT.",
         "isCorrect": true
       },
       {
@@ -292,14 +268,14 @@
         "isCorrect": false
       },
       {
-        "text": "There is a clear definition of the IoT.",
+        "text": "There is a clear definition of the loT.",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q10",
-    "question": "Which layer in the IoTWF Architecture markes the separation between IT and OT?",
+    "id": "012",
+    "question": "Which layer in the loTWF Architecture markes the separation between IT and OT?",
     "choices": [
       {
         "text": "Data Accumulation",
@@ -328,11 +304,13 @@
       {
         "text": "Collaboration & Processes",
         "isCorrect": false
-      },
-      {
-        "text": "Security is a driver for an IoT architecture, because IoT devices are...",
-        "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "013",
+    "question": "Security is a driver for an IoT architecture, because loT devices are...",
+    "choices": [
       {
         "text": "physically easy accessible and widely distributed.",
         "isCorrect": true
@@ -352,15 +330,11 @@
       {
         "text": "smart.",
         "isCorrect": false
-      },
-      {
-        "text": "2",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q11",
+    "id": "014",
     "question": "What is true for the oneM2M IoT Architecture?",
     "choices": [
       {
@@ -390,15 +364,15 @@
     ]
   },
   {
-    "id": "q12",
-    "question": "What is true for the data in the IoT?",
+    "id": "015",
+    "question": "What is true for the data in the loT?",
     "choices": [
       {
-        "text": "Analyzing the data of many devices generates new insights.",
+        "text": "IoT data enables businesses to deliver new services.",
         "isCorrect": true
       },
       {
-        "text": "IoT data enables businesses to deliver new services.",
+        "text": "Analyzing the data of many devices generates new insights.",
         "isCorrect": true
       },
       {
@@ -408,59 +382,37 @@
       {
         "text": "Unstructured data of a single device gives you new insights.",
         "isCorrect": false
-      },
-      {
-        "text": "Set the correct order of the layers in the IoTWF Architecture::",
-        "isCorrect": false
-      },
-      {
-        "text": "1  Collaboration & Processes",
-        "isCorrect": false
-      },
-      {
-        "text": "2  Application",
-        "isCorrect": false
-      },
-      {
-        "text": "3  Data Abstraction",
-        "isCorrect": false
-      },
-      {
-        "text": "4  Data Accumulation",
-        "isCorrect": false
-      },
-      {
-        "text": "5",
-        "isCorrect": false
-      },
-      {
-        "text": "Edge Computing",
-        "isCorrect": false
-      },
-      {
-        "text": "6  Connectivity",
-        "isCorrect": false
-      },
-      {
-        "text": "7  Physical Devices & Controllers",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q13",
+    "id": "016",
+    "question": "Set the correct order of the layers in the loTWF Architecture:",
+    "type": "ordering",
+    "correctOrder": [
+      "Physical Devices & Controllers",
+      "Connectivity",
+      "Edge Computing",
+      "Data Accumulation",
+      "Data Abstraction",
+      "Application",
+      "Collaboration & Processes"
+    ]
+  },
+  {
+    "id": "017",
     "question": "Which of the following is true?",
     "choices": [
       {
-        "text": "When implementing IoT you may have to deal with legacy protocols and interfaces.",
-        "isCorrect": true
-      },
-      {
-        "text": "When implementing IoT you never have to deal with legacy protocols and interfaces.",
-        "isCorrect": true
-      },
-      {
         "text": "In factories, machines are replaced at long intervals.",
+        "isCorrect": true
+      },
+      {
+        "text": "When implementing lot you may have to deal with legacy protocols and interfaces.",
+        "isCorrect": true
+      },
+      {
+        "text": "When implementing lot you never have to deal with legacy protocols and interfaces.",
         "isCorrect": false
       },
       {
@@ -470,16 +422,12 @@
     ]
   },
   {
-    "id": "q14",
+    "id": "018",
     "question": "Which of the following is true?",
     "choices": [
       {
-        "text": "The most time-sensitive data is analyzed on the edge or fog node closest to the things generating the",
+        "text": "The most time-sensitive data is analyzed on the edge or fog node closest to the things generating the data.",
         "isCorrect": true
-      },
-      {
-        "text": "data.",
-        "isCorrect": false
       },
       {
         "text": "Long-term storage of data and big-data analytics is done in the Fog close to the devices.",
@@ -496,7 +444,7 @@
     ]
   },
   {
-    "id": "q15",
+    "id": "019",
     "question": "Which kinds of analytics are used in IoT systems?",
     "choices": [
       {
@@ -514,20 +462,12 @@
       {
         "text": "Device analytics.",
         "isCorrect": false
-      },
-      {
-        "text": "3",
-        "isCorrect": false
-      },
-      {
-        "text": "You want to increase the throughput and/or the achievable distance of a wireless access technology. What",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q16",
-    "question": "will be increased as well?",
+    "id": "020",
+    "question": "You want to increase the throughput and/or the achievable distance of a wireless access technology. What will be increased as well?",
     "choices": [
       {
         "text": "Power consumption.",
@@ -544,11 +484,13 @@
       {
         "text": "Sensor density.",
         "isCorrect": false
-      },
-      {
-        "text": "Services located in the Fog (Fog services) are:",
-        "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "021",
+    "question": "Services located in the Fog (Fog services) are:",
+    "choices": [
       {
         "text": "reducing network traffic.",
         "isCorrect": true
@@ -572,43 +514,22 @@
       {
         "text": "located close to the Cloud.",
         "isCorrect": false
-      },
-      {
-        "text": "Sort the following access technologies according to their range, starting with the shortest:",
-        "isCorrect": false
-      },
-      {
-        "text": "1  Bluetooth",
-        "isCorrect": false
-      },
-      {
-        "text": "Zigbee",
-        "isCorrect": false
-      },
-      {
-        "text": "2",
-        "isCorrect": false
-      },
-      {
-        "text": "802.11ah",
-        "isCorrect": false
-      },
-      {
-        "text": "3",
-        "isCorrect": false
-      },
-      {
-        "text": "LoRaWan",
-        "isCorrect": false
-      },
-      {
-        "text": "4",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q17",
+    "id": "022",
+    "question": "Sort the following access technologies according to their range, starting with the shortest:",
+    "type": "ordering",
+    "correctOrder": [
+      "Bluetooth",
+      "Zigbee",
+      "802.11ah",
+      "LoRaWan"
+    ]
+  },
+  {
+    "id": "023",
     "question": "What do you need to consider when designing an IoT network?",
     "choices": [
       {
@@ -616,11 +537,11 @@
         "isCorrect": true
       },
       {
-        "text": "Mobility of the smart objects.",
+        "text": "Form factor of the smart objects.",
         "isCorrect": true
       },
       {
-        "text": "Form factor of the smart objects.",
+        "text": "Mobility of the smart objects.",
         "isCorrect": true
       },
       {
@@ -634,15 +555,13 @@
       {
         "text": "Optical transmittance.",
         "isCorrect": false
-      },
-      {
-        "text": "In your IoT-system, the devices are connected via Bluetooth LE. To which sublayer in our simplified IoT-",
-        "isCorrect": false
-      },
-      {
-        "text": "architecture does Bluetooth LE belong? Select one:",
-        "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "024",
+    "question": "In your loT-system, the devices are connected via Bluetooth LE. To which sublayer in our simplified IoT-architecture does Bluetooth LE belong?",
+    "choices": [
       {
         "text": "Access network",
         "isCorrect": true
@@ -670,31 +589,45 @@
       {
         "text": "Industry specific applications",
         "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "025",
+    "question": "In your loT-system, the applications connect to the devices via HTTP. To which sublayer in our simplified loT-architecture does HTTP belong?",
+    "choices": [
       {
-        "text": "In your loT-system, the applications connect to the devices via HTTP. To which sublayer in our simplified",
-        "isCorrect": false
-      },
-      {
-        "text": "loT-architecture does HTTP belong? Select one:",
-        "isCorrect": false
-      },
-      {
-        "text": "loT network management",
+        "text": "IoT network management",
         "isCorrect": true
+      },
+      {
+        "text": "Network transport",
+        "isCorrect": false
+      },
+      {
+        "text": "Things",
+        "isCorrect": false
       },
       {
         "text": "Applications",
         "isCorrect": false
       },
       {
-        "text": "4",
+        "text": "Access network",
+        "isCorrect": false
+      },
+      {
+        "text": "Gateways and backhaul network",
+        "isCorrect": false
+      },
+      {
+        "text": "Analytics",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q18",
+    "id": "026",
     "question": "How can latency and network traffic be minimized?",
     "choices": [
       {
@@ -716,7 +649,7 @@
     ]
   },
   {
-    "id": "q19",
+    "id": "027",
     "question": "What type of application is SCADA?",
     "choices": [
       {
@@ -738,12 +671,12 @@
     ]
   },
   {
-    "id": "q20",
+    "id": "028",
     "question": "Which protocols belong to the network transport layer of our simplified IoT architecture?",
     "choices": [
       {
         "text": "IP",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "TCP",
@@ -755,10 +688,10 @@
       },
       {
         "text": "MQTT",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
-        "text": "CoAP",
+        "text": "COAP",
         "isCorrect": false
       },
       {
@@ -768,7 +701,7 @@
     ]
   },
   {
-    "id": "q21",
+    "id": "029",
     "question": "Which protocols belong to the network management layer of our simplified IoT architecture?",
     "choices": [
       {
@@ -780,7 +713,7 @@
         "isCorrect": true
       },
       {
-        "text": "CoAP",
+        "text": "COAP",
         "isCorrect": true
       },
       {
@@ -798,7 +731,7 @@
     ]
   },
   {
-    "id": "q22",
+    "id": "030",
     "question": "What can be limitations of pure Cloud architectures for IoT systems?",
     "choices": [
       {
@@ -820,7 +753,7 @@
     ]
   },
   {
-    "id": "q23",
+    "id": "031",
     "question": "What determines the achievable range of a wireless access network?",
     "choices": [
       {
@@ -838,16 +771,12 @@
       {
         "text": "Network topology.",
         "isCorrect": false
-      },
-      {
-        "text": "5",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q24",
-    "question": "What are typically factors in the choice of loT access technologies?",
+    "id": "032",
+    "question": "What are typically factors in the choice of lot access technologies?",
     "choices": [
       {
         "text": "Power consumption.",
@@ -876,7 +805,7 @@
     ]
   },
   {
-    "id": "q25",
+    "id": "033",
     "question": "What does the abbreviation MEMS stand for?",
     "choices": [
       {
@@ -898,19 +827,19 @@
     ]
   },
   {
-    "id": "q26",
-    "question": "Which of the following are advantages of wireless sensor-actuator networks (SANET)) over wired SANETs?",
+    "id": "034",
+    "question": "Which of the following are advantages of wireless sensor-actuator networks (SANET)) over wired SANETS?",
     "choices": [
       {
         "text": "Better handling of dynamic topology changes.",
         "isCorrect": true
       },
       {
-        "text": "Greater deployment flexibility.",
+        "text": "Easy introduction of new sensor-actuator nodes.",
         "isCorrect": true
       },
       {
-        "text": "Easy introduction of new sensor-actuator nodes.",
+        "text": "Greater deployment flexibility.",
         "isCorrect": true
       },
       {
@@ -936,7 +865,7 @@
     ]
   },
   {
-    "id": "q27",
+    "id": "035",
     "question": "What does the abbreviation EPC stand for?",
     "choices": [
       {
@@ -954,11 +883,13 @@
       {
         "text": "Enhanced Product Code",
         "isCorrect": false
-      },
-      {
-        "text": "A further development of smart things are:",
-        "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "036",
+    "question": "A further development of smart things are:",
+    "choices": [
       {
         "text": "Smart materials",
         "isCorrect": true
@@ -974,23 +905,19 @@
       {
         "text": "Smart controllers",
         "isCorrect": false
-      },
-      {
-        "text": "Smart technologies",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q28",
+    "id": "037",
     "question": "What are the enabling technologies for the IoT described by the ITU?",
     "choices": [
       {
-        "text": "RFID",
+        "text": "Smart technologies",
         "isCorrect": true
       },
       {
-        "text": "Nanotechnology",
+        "text": "RFID",
         "isCorrect": true
       },
       {
@@ -998,8 +925,12 @@
         "isCorrect": true
       },
       {
-        "text": "RFIT",
+        "text": "Nanotechnology",
         "isCorrect": true
+      },
+      {
+        "text": "RFIT",
+        "isCorrect": false
       },
       {
         "text": "Cloud technology",
@@ -1012,15 +943,11 @@
       {
         "text": "Network technologies",
         "isCorrect": false
-      },
-      {
-        "text": "6",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q29",
+    "id": "038",
     "question": "Which of the following is true for RFID?",
     "choices": [
       {
@@ -1050,16 +977,12 @@
     ]
   },
   {
-    "id": "q30",
+    "id": "039",
     "question": "Which of the following is true?",
     "choices": [
       {
-        "text": "A sensor measures a physical quantity and converts the measurement reading into a digital",
+        "text": "A sensor measures a physical quantity and converts the measurement reading into a digital representation.",
         "isCorrect": true
-      },
-      {
-        "text": "representation.",
-        "isCorrect": false
       },
       {
         "text": "Actuators receive a control signal that triggers a physical effect.",
@@ -1084,7 +1007,7 @@
     ]
   },
   {
-    "id": "q31",
+    "id": "040",
     "question": "What are the four characteristics for defining a Smart Object?",
     "choices": [
       {
@@ -1118,7 +1041,7 @@
     ]
   },
   {
-    "id": "q32",
+    "id": "041",
     "question": "Which of the following communication patterns do wirelessly connected smart objects typically have?",
     "choices": [
       {
@@ -1136,17 +1059,17 @@
       {
         "text": "Client-server.",
         "isCorrect": false
-      },
-      {
-        "text": "The radio spectrum is regulated by countries and organizations, such as the RTR.",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q33",
+    "id": "042",
     "question": "Which of the following are true regarding the radio frequency spectrum?",
     "choices": [
+      {
+        "text": "The radio spectrum is regulated by countries and organizations, such as the RTR.",
+        "isCorrect": true
+      },
       {
         "text": "Unlicensed frequency bands are regulated, e.g. regarding transmission power or duty cycle.",
         "isCorrect": true
@@ -1161,7 +1084,7 @@
       },
       {
         "text": "Unlicensed frequency bands are free to use for everybody and unregulated.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "When using unlicensed frequency bands you have to pay for it.",
@@ -1174,11 +1097,13 @@
       {
         "text": "Cellular networks use unlicensed frequency bands.",
         "isCorrect": false
-      },
-      {
-        "text": "Which of the following network topologies are used in cellular networks? Select one:",
-        "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "043",
+    "question": "Which of the following network topologies are used in cellular networks?",
+    "choices": [
       {
         "text": "Star topology",
         "isCorrect": true
@@ -1194,15 +1119,11 @@
       {
         "text": "Peer-to-peer topology",
         "isCorrect": false
-      },
-      {
-        "text": "7",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q34",
+    "id": "044",
     "question": "What does the abbreviation LPWA stand for?",
     "choices": [
       {
@@ -1224,12 +1145,12 @@
     ]
   },
   {
-    "id": "q35",
+    "id": "045",
     "question": "Which of the following are medium-range access technologies?",
     "choices": [
       {
         "text": "Ethernet",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Zigbee",
@@ -1241,7 +1162,7 @@
       },
       {
         "text": "5G",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Bluetooth",
@@ -1254,16 +1175,16 @@
     ]
   },
   {
-    "id": "q36",
+    "id": "046",
     "question": "What is the wavelength of a 2.4GHz signal?",
     "choices": [
       {
         "text": "125mm",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "125cm",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "125nm",
@@ -1276,12 +1197,12 @@
     ]
   },
   {
-    "id": "q37",
+    "id": "047",
     "question": "Which of the following are determining factors for the achievable range of a wireless technologie?",
     "choices": [
       {
         "text": "Frequency",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Transmission power",
@@ -1293,7 +1214,7 @@
       },
       {
         "text": "Computing power",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Memory constraints",
@@ -1302,7 +1223,7 @@
     ]
   },
   {
-    "id": "q38",
+    "id": "048",
     "question": "Which of the following is a sub-GHz ISM frequency band?",
     "choices": [
       {
@@ -1314,7 +1235,7 @@
         "isCorrect": true
       },
       {
-        "text": "86,6MHz",
+        "text": "86.6MHz",
         "isCorrect": false
       },
       {
@@ -1324,15 +1245,15 @@
     ]
   },
   {
-    "id": "q39",
+    "id": "049",
     "question": "Which of the following are true regarding radio transmission?",
     "choices": [
       {
-        "text": "With shorter wavelengths a higher data rate can be achieved.",
+        "text": "Longer wavelengths have a better ability to penetrate buildings.",
         "isCorrect": true
       },
       {
-        "text": "Longer wavelengths have a better ability to penetrate buildings.",
+        "text": "With shorter wavelengths a higher data rate can be achieved.",
         "isCorrect": true
       },
       {
@@ -1342,15 +1263,11 @@
       {
         "text": "With longer wavelengths a higher data rate can be achieved.",
         "isCorrect": false
-      },
-      {
-        "text": "8",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q40",
+    "id": "050",
     "question": "Which of the following are short-range access technologies?",
     "choices": [
       {
@@ -1376,24 +1293,20 @@
       {
         "text": "LoRaWAN",
         "isCorrect": false
-      },
-      {
-        "text": "Bluetooth uses a master/slave architecture. How many slaves can communicate with one master in such a",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q41",
-    "question": "network?",
+    "id": "051",
+    "question": "Bluetooth uses a master/slave architecture. How many slaves can communicate with one master in such a network?",
     "choices": [
       {
         "text": "7",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "254",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "16",
@@ -1410,7 +1323,7 @@
     ]
   },
   {
-    "id": "q42",
+    "id": "052",
     "question": "In which layer of IEEE 802.15.4 is security implemented?",
     "choices": [
       {
@@ -1432,7 +1345,7 @@
     ]
   },
   {
-    "id": "q43",
+    "id": "053",
     "question": "Which of the following is true for ZigBee?",
     "choices": [
       {
@@ -1444,16 +1357,12 @@
         "isCorrect": true
       },
       {
-        "text": "ZigBee implements standardized libraries or functional domains for predefined application profiles like",
-        "isCorrect": true
-      },
-      {
-        "text": "Home Automation or Smart Energy.",
+        "text": "ZigBee implements standardized libraries or functional domains for predefined application profiles like Home Automation or Smart Energy.",
         "isCorrect": true
       },
       {
         "text": "ZigBee solutions are aimed at smart objects that have low bandwith and low power needs.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "ZigBee is released as a RFC standard.",
@@ -1474,7 +1383,7 @@
     ]
   },
   {
-    "id": "q44",
+    "id": "054",
     "question": "Which of the following is true for IEEE 802.15.4g, Wi-SUN?",
     "choices": [
       {
@@ -1482,16 +1391,12 @@
         "isCorrect": true
       },
       {
-        "text": "The maximum physical service data unit size is increased to 2047 bytes, compared to 127 bytes in IEEE",
+        "text": "The maximum physical service data unit size is increased to 2047 bytes, compared to 127 bytes in IEEE 802.15.4",
         "isCorrect": true
       },
       {
-        "text": "802.15.4",
-        "isCorrect": false
-      },
-      {
         "text": "It focuses on smart grid, or smart utility network communication.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Fragmentation of large IPv6 packets is necessary at the MAC layer.",
@@ -1504,7 +1409,7 @@
     ]
   },
   {
-    "id": "q45",
+    "id": "055",
     "question": "At what altitude, above ground, do Low Earth Orbit (LEO) satellites operate?",
     "choices": [
       {
@@ -1518,15 +1423,11 @@
       {
         "text": "< 20 km",
         "isCorrect": false
-      },
-      {
-        "text": "9",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q46",
+    "id": "056",
     "question": "What types of MAC frames are specified in IEEE 802.15.4?",
     "choices": [
       {
@@ -1564,7 +1465,7 @@
     ]
   },
   {
-    "id": "q47",
+    "id": "057",
     "question": "At what altitude, measured above the equator, are geostationary satellites orbiting the earth?",
     "choices": [
       {
@@ -1586,7 +1487,7 @@
     ]
   },
   {
-    "id": "q48",
+    "id": "058",
     "question": "What makes ZigBee IP different from ZigBee?",
     "choices": [
       {
@@ -1616,12 +1517,12 @@
     ]
   },
   {
-    "id": "q49",
+    "id": "059",
     "question": "Which of the following is part of the IEEE 802.15.4 MAC Frame Header?",
     "choices": [
       {
         "text": "Source PAN Identifiere",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Sequence number",
@@ -1645,22 +1546,22 @@
       },
       {
         "text": "Frame Check Sequence",
-        "isCorrect": true
-      },
-      {
-        "text": "Frame Payload",
         "isCorrect": false
       },
       {
-        "text": "Support of low power devices.",
+        "text": "Frame Payload",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q50",
+    "id": "060",
     "question": "What is the aim of the IEEE 802.11ah industrial Wi-Fi specification, also known as Wi-Fi HaLow?",
     "choices": [
+      {
+        "text": "Support of low power devices.",
+        "isCorrect": true
+      },
       {
         "text": "Utilization of sub-GHz frequency bands for better signal penetration and longer range.",
         "isCorrect": true
@@ -1671,7 +1572,7 @@
       },
       {
         "text": "Additional security compared to other 802.11 specifications.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Utilization of frequency bands above 5GHz for better signal penetration and longer range.",
@@ -1680,15 +1581,11 @@
       {
         "text": "Support of the HaLow IoT application protocol.",
         "isCorrect": false
-      },
-      {
-        "text": "10",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q51",
+    "id": "061",
     "question": "What is a network made up of Bluetooth devices called?",
     "choices": [
       {
@@ -1714,7 +1611,7 @@
     ]
   },
   {
-    "id": "q52",
+    "id": "062",
     "question": "Which standardisation body is responsible for the Bluetooth specification?",
     "choices": [
       {
@@ -1740,7 +1637,7 @@
     ]
   },
   {
-    "id": "q53",
+    "id": "063",
     "question": "Which layers of the OSI model are defined by IEEE 802.15.4?",
     "choices": [
       {
@@ -1762,7 +1659,7 @@
     ]
   },
   {
-    "id": "q54",
+    "id": "064",
     "question": "Which protocol stacks make use of IEEE 802.15.4?",
     "choices": [
       {
@@ -1788,49 +1685,33 @@
       {
         "text": "SIGFOX",
         "isCorrect": false
-      },
-      {
-        "text": "To enable mobile vendors to connect IoT-devices 3GPP introduced the user equipment category \"LTE",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q55",
-    "question": "Category 0\" for the use with NB-IoT. How are these Cat 0 devices optimized for the use in IoT?",
+    "id": "065",
+    "question": "To enable mobile vendors to connect IoT-devices 3GPP introduced the user equipment category \"LTE Category 0\" for the use with NB-IoT. How are these Cat 0 devices optimized for the use in IoT?",
     "choices": [
       {
         "text": "Cat 0 devices communicate in half-duplex mode to reduce cost and complexity of devices.",
         "isCorrect": true
       },
       {
-        "text": "Cat 0 devices implement a power saving mode, i.e. they stay registered with the network when in sleep",
+        "text": "Cat 0 devices implement a power saving mode, i.e. they stay registered with the network when in sleep mode. So no negotiation and connection reestablishment with the network after wake-up is necessary.",
         "isCorrect": true
       },
       {
-        "text": "mode. So no negotiation and connection reestablishment with the network after wake-up is necessary.",
+        "text": "Cat 0 devices communicate in full-duplex to reduce transmission times and therefore power consumption.",
         "isCorrect": false
       },
       {
-        "text": "Cat 0 devices communicate in full-duplex to reduce transmission times and therefore power",
-        "isCorrect": false
-      },
-      {
-        "text": "consumption.",
-        "isCorrect": false
-      },
-      {
-        "text": "Cat 0 devices implement a power saving mode, i.e. they connect to the closest available cell only after",
-        "isCorrect": false
-      },
-      {
-        "text": "wake-up, to reduce transmission power significantly.",
+        "text": "Cat 0 devices implement a power saving mode, i.e. they connect to the closest available cell only after wake-up, to reduce transmission power significantly.",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q56",
+    "id": "066",
     "question": "What is the Friend feature of nodes in a Bluetooth mesh network?",
     "choices": [
       {
@@ -1842,49 +1723,29 @@
         "isCorrect": false
       },
       {
-        "text": "The ability to operate within a mesh network at significantly reduced receiver duty cycles to help a",
-        "isCorrect": false
-      },
-      {
-        "text": "node.",
+        "text": "The ability to operate within a mesh network at significantly reduced receiver duty cycles to help a node.",
         "isCorrect": false
       },
       {
         "text": "The ability to transfer power to neighbouring devices in case of low battery.",
         "isCorrect": false
-      },
-      {
-        "text": "11",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q57",
+    "id": "067",
     "question": "Which of the following is true for the IEEE 802.15.4 physical layer?",
     "choices": [
       {
-        "text": "The maximum size of the physical service data unit (PSDU) is 127 Bytes. Therefore, fragmentation of",
+        "text": "The maximum size of the physical service data unit (PSDU) is 127 Bytes. Therefore, fragmentation of larger higher layer packets (e.g., IPv6) must occur at the data link layer.",
         "isCorrect": true
       },
       {
-        "text": "larger higher layer packets (e.g., IPv6) must occur at the data link layer.",
+        "text": "The maximum size of the physical service data unit (PSDU) is 2047 Bytes. Therefore, no fragmentation of higher layer packets (e.g., IPv6) is necessary at the MAC layer.",
         "isCorrect": false
       },
       {
-        "text": "The maximum size of the physical service data unit (PSDU) is 2047 Bytes. Therefore, no fragmentation",
-        "isCorrect": false
-      },
-      {
-        "text": "of higher layer packets (e.g., IPv6) is necessary at the MAC layer.",
-        "isCorrect": false
-      },
-      {
-        "text": "The size of the physical service data unit (PSDU) is 127 Bytes. Therefore, fragmentation of larger higher",
-        "isCorrect": false
-      },
-      {
-        "text": "layer packets (e.g., IPv6) must occur at the data link layer.",
+        "text": "The size of the physical service data unit (PSDU) is 127 Bytes. Therefore, fragmentation of larger higher layer packets (e.g., IPv6) must occur at the data link layer.",
         "isCorrect": false
       },
       {
@@ -1894,7 +1755,7 @@
     ]
   },
   {
-    "id": "q58",
+    "id": "068",
     "question": "Which of the following is true for IEEE 1901.2a?",
     "choices": [
       {
@@ -1924,7 +1785,7 @@
     ]
   },
   {
-    "id": "q59",
+    "id": "069",
     "question": "Which of the following is true for a IEEE 802.15.4 PAN Coordinator?",
     "choices": [
       {
@@ -1962,7 +1823,7 @@
     ]
   },
   {
-    "id": "q60",
+    "id": "070",
     "question": "Which of the following is true for WirelessHART?",
     "choices": [
       {
@@ -1970,8 +1831,12 @@
         "isCorrect": true
       },
       {
-        "text": "WirelessHART devices communicate with each other via a gateway.",
+        "text": "It operates in the 2.4 GHz ISM frequency band.",
         "isCorrect": true
+      },
+      {
+        "text": "WirelessHART devices communicate with each other via a gateway.",
+        "isCorrect": false
       },
       {
         "text": "It operates in the Sub-GHz and 2.4 GHz ISM frequency bands.",
@@ -1982,17 +1847,13 @@
         "isCorrect": false
       },
       {
-        "text": "It operates in the 2.4 GHz ISM frequency band.",
-        "isCorrect": false
-      },
-      {
         "text": "WirelessHART devices can directly communicate with host systems via Ethernet.",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q61",
+    "id": "071",
     "question": "Can the same ISM frequencies be used for IoT devices anywhere in the world?",
     "choices": [
       {
@@ -2010,15 +1871,11 @@
       {
         "text": "No, only the ISM frequency bands below 868MHz are the same worldwide.",
         "isCorrect": false
-      },
-      {
-        "text": "12",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q62",
+    "id": "072",
     "question": "Which of the following is true for IEEE 1901.2a NB-PLC?",
     "choices": [
       {
@@ -2034,33 +1891,21 @@
         "isCorrect": true
       },
       {
-        "text": "IEEE 1901.2a NB-PLC offers no security in PHY and MAC layers. Security has to be implemented in the",
+        "text": "IEEE 1901.2a NB-PLC offers no security in PHY and MAC layers. Security has to be implemented in the transport or application layer.",
         "isCorrect": false
       },
       {
-        "text": "transport or application layer.",
+        "text": "There is no need for frequency regulations for wired communications like NB-PLC in the sub-GHz frequency bands.",
         "isCorrect": false
       },
       {
-        "text": "There is no need for frequency regulations for wired communications like NB-PLC in the sub-GHz",
-        "isCorrect": false
-      },
-      {
-        "text": "frequency bands.",
-        "isCorrect": false
-      },
-      {
-        "text": "Unlike wireless transmission technologies, NB-PLC transmission range is not limited by factors such as",
-        "isCorrect": false
-      },
-      {
-        "text": "noise, interference, or attenuation.",
+        "text": "Unlike wireless transmission technologies, NB-PLC transmission range is not limited by factors such as noise, interference, or attenuation.",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q63",
+    "id": "073",
     "question": "What types of devices exist in an IEEE 802.15.4 network?",
     "choices": [
       {
@@ -2082,7 +1927,7 @@
     ]
   },
   {
-    "id": "q64",
+    "id": "074",
     "question": "Why can IEEE 1901.2a NB-PLC be mixed with wireless IEEE 802.15.4 WPAN for endpoints?",
     "choices": [
       {
@@ -2104,7 +1949,7 @@
     ]
   },
   {
-    "id": "q65",
+    "id": "075",
     "question": "What layers are specified by ZigBee?",
     "choices": [
       {
@@ -2130,7 +1975,7 @@
     ]
   },
   {
-    "id": "q66",
+    "id": "076",
     "question": "Which Modulation method is used by LoRaWAN?",
     "choices": [
       {
@@ -2156,7 +2001,7 @@
     ]
   },
   {
-    "id": "q67",
+    "id": "077",
     "question": "Which of the following is correct for LoRa Class A devices?",
     "choices": [
       {
@@ -2174,15 +2019,11 @@
       {
         "text": "The receiver of the end-device is open at all times that the device is not transmitting.",
         "isCorrect": false
-      },
-      {
-        "text": "13",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q68",
+    "id": "078",
     "question": "Which of the following is correct for LoRa Class B devices?",
     "choices": [
       {
@@ -2204,7 +2045,7 @@
     ]
   },
   {
-    "id": "q69",
+    "id": "079",
     "question": "Which of the following is correct for LoRa Class C devices?",
     "choices": [
       {
@@ -2213,11 +2054,11 @@
       },
       {
         "text": "The network server can initiate a downlink transmission at any time.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Class C is the lowest power operating mode.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Communication is always initiated by the end-device and is fully asynchronous.",
@@ -2226,27 +2067,19 @@
     ]
   },
   {
-    "id": "q70",
+    "id": "080",
     "question": "What is true for LoRaWAN Class A devices?",
     "choices": [
       {
-        "text": "It allows bidirectional communications, where a LoRaWAN device is able to receive downstream data",
+        "text": "It allows bidirectional communications, where a LoRaWAN device is able to receive downstream data only after transmitting. Two receive windows are available after each transmission.",
         "isCorrect": true
-      },
-      {
-        "text": "only after transmitting. Two receive windows are available after each transmission.",
-        "isCorrect": false
       },
       {
         "text": "A Class A node is listening continuously by keeping its receiving window open when not transmitting.",
         "isCorrect": false
       },
       {
-        "text": "It allows bidirectional communications, where a LoRaWAN device is able to receive data after",
-        "isCorrect": false
-      },
-      {
-        "text": "transmitting and in periodic receiving windows.",
+        "text": "It allows bidirectional communications, where a LoRaWAN device is able to receive data after transmitting and in periodic receiving windows.",
         "isCorrect": false
       },
       {
@@ -2256,7 +2089,7 @@
     ]
   },
   {
-    "id": "q71",
+    "id": "081",
     "question": "What is true for LoRaWAN Class C devices?",
     "choices": [
       {
@@ -2268,11 +2101,7 @@
         "isCorrect": false
       },
       {
-        "text": "It allows bidirectional communications, where a LoRaWAN device is able to receive downstream data",
-        "isCorrect": false
-      },
-      {
-        "text": "only after transmitting. Two receive windows are available after each transmission.",
+        "text": "It allows bidirectional communications, where a LoRaWAN device is able to receive downstream data only after transmitting. Two receive windows are available after each transmission.",
         "isCorrect": false
       },
       {
@@ -2282,7 +2111,7 @@
     ]
   },
   {
-    "id": "q72",
+    "id": "082",
     "question": "Which of the following is true for LoRaWAN?",
     "choices": [
       {
@@ -2302,11 +2131,7 @@
         "isCorrect": false
       },
       {
-        "text": "The LoRa Alliance specifies frequency bands, the PHY modulation layer and the MAC layer. Network,",
-        "isCorrect": false
-      },
-      {
-        "text": "transport and application layers are not specified by the LoRa Alliance.",
+        "text": "The LoRa Alliance specifies frequency bands, the PHY modulation layer and the MAC layer. Network, transport and application layers are not specified by the LoRa Alliance.",
         "isCorrect": false
       },
       {
@@ -2316,12 +2141,12 @@
     ]
   },
   {
-    "id": "q73",
+    "id": "083",
     "question": "What are advantages of the LoRa wireless technology?",
     "choices": [
       {
         "text": "Long range.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Cost-effective.",
@@ -2333,7 +2158,7 @@
       },
       {
         "text": "High data rate.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Exclusive use of the selected frequency band.",
@@ -2342,20 +2167,16 @@
       {
         "text": "Licensed frequency spectrum.",
         "isCorrect": false
-      },
-      {
-        "text": "14",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q74",
+    "id": "084",
     "question": "Which of the following frequency bands are used for LoRa in the EU?",
     "choices": [
       {
         "text": "433 to 434 MHz",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "863 to 870 MHz",
@@ -2363,7 +2184,7 @@
       },
       {
         "text": "433 to 434 kHz",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "915 to 928 MHz",
@@ -2384,12 +2205,12 @@
     ]
   },
   {
-    "id": "q75",
+    "id": "085",
     "question": "Which frequency bands are used for LoRa in the EU?",
     "choices": [
       {
         "text": "433 to 434 MHz",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "863 to 870 MHz",
@@ -2397,7 +2218,7 @@
       },
       {
         "text": "433 to 434 kHz",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "625 to 635 MHz",
@@ -2406,39 +2227,27 @@
     ]
   },
   {
-    "id": "q76",
+    "id": "086",
     "question": "Which of the following is true for the LoRaWAN architecture?",
     "choices": [
       {
-        "text": "LoRaWAN endpoints communicate directly with one or more gateways. Packet de-duplication is",
-        "isCorrect": true
-      },
-      {
-        "text": "handled by the LoRaWAN network server.",
+        "text": "LoRaWAN endpoints communicate directly with one or more gateways. Packet de-duplication is handled by the LoRaWAN network server.",
         "isCorrect": true
       },
       {
         "text": "The LoRaWAN network server forwards application data from endpoints to the application servers.",
+        "isCorrect": true
+      },
+      {
+        "text": "LoRaWAN endpoints communicate directly with one or more gateways. Packet de-duplication is handled by the LoRaWAN gateways.",
         "isCorrect": false
       },
       {
-        "text": "handled by the LoRaWAN gateways.",
+        "text": "LoRaWAN endpoints connect to a single gateway. Gateway handover is handled by the LoRaWAN network server.",
         "isCorrect": false
       },
       {
-        "text": "LoRaWAN endpoints connect to a single gateway. Gateway handover is handled by the LoRaWAN",
-        "isCorrect": false
-      },
-      {
-        "text": "network server.",
-        "isCorrect": false
-      },
-      {
-        "text": "LoRaWAN endpoints connect to a single gateway. Gateway handover is negotiated and handled",
-        "isCorrect": false
-      },
-      {
-        "text": "between LoRaWAN gateways.",
+        "text": "LoRaWAN endpoints connect to a single gateway. Gateway handover is negotiated and handled between LoRaWAN gateways.",
         "isCorrect": false
       },
       {
@@ -2448,7 +2257,7 @@
     ]
   },
   {
-    "id": "q77",
+    "id": "087",
     "question": "What is the maximum data transmission rate achievable with LoRaWAN?",
     "choices": [
       {
@@ -2470,7 +2279,7 @@
     ]
   },
   {
-    "id": "q78",
+    "id": "088",
     "question": "Which of the following are CoAP message types?",
     "choices": [
       {
@@ -2504,20 +2313,12 @@
       {
         "text": "Put",
         "isCorrect": false
-      },
-      {
-        "text": "15",
-        "isCorrect": false
-      },
-      {
-        "text": "Constrained IoT devices (Class 0) do not implement a network protocol stack. What kind of functionality do",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q79",
-    "question": "you need when connecting this kind of device to an IP based network?",
+    "id": "089",
+    "question": "Constrained IoT devices (Class 0) do not implement a network protocol stack. What kind of functionality do you need when connecting this kind of device to an IP based network?",
     "choices": [
       {
         "text": "IoT data broker.",
@@ -2538,7 +2339,7 @@
     ]
   },
   {
-    "id": "q80",
+    "id": "090",
     "question": "How can non-IP devices be integrated into an IP network?",
     "choices": [
       {
@@ -2560,7 +2361,7 @@
     ]
   },
   {
-    "id": "q81",
+    "id": "091",
     "question": "What are prerequisites for using web-based protocols like HTTP or Websockets in IoT?",
     "choices": [
       {
@@ -2578,15 +2379,13 @@
       {
         "text": "Ethernet or WiFi connections.",
         "isCorrect": false
-      },
-      {
-        "text": "When constrained devices implement an optimized IP stack and communicate directly with application",
-        "isCorrect": false
-      },
-      {
-        "text": "servers, this is referred to as:",
-        "isCorrect": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "092",
+    "question": "When constrained devices implement an optimized IP stack and communicate directly with application servers, this is referred to as:",
+    "choices": [
       {
         "text": "Adoption model",
         "isCorrect": true
@@ -2602,16 +2401,12 @@
       {
         "text": "Adaptation model.",
         "isCorrect": false
-      },
-      {
-        "text": "There are two routing options when implementing the 6LoWPAN adaptation layer. Mesh under and mesh",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q82",
-    "question": "over (route over). In which layer is the routing of packets handled if mesh over is used?",
+    "id": "093",
+    "question": "There are two routing options when implementing the 6LoWPAN adaptation layer. Mesh under and mesh over (route over). In which layer is the routing of packets handled if mesh over is used?",
     "choices": [
       {
         "text": "Network layer",
@@ -2628,16 +2423,12 @@
       {
         "text": "Data link layer",
         "isCorrect": false
-      },
-      {
-        "text": "There are two routing options when implementing the 6LoWPAN adaptation layer. Mesh under and mesh",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q83",
-    "question": "over (route over). In which layer is the routing of packets handled if mesh under is used?",
+    "id": "094",
+    "question": "There are two routing options when implementing the 6LoWPAN adaptation layer. Mesh under and mesh over (route over). In which layer is the routing of packets handled if mesh under is used?",
     "choices": [
       {
         "text": "6LoWPAN adaptation layer",
@@ -2654,28 +2445,20 @@
       {
         "text": "Network layer",
         "isCorrect": false
-      },
-      {
-        "text": "16",
-        "isCorrect": false
-      },
-      {
-        "text": "The 6LoWPAN headers start with identifier-bits. Which of the following is the identifier for the first",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q84",
-    "question": "fragment when using IPv6 packet fragmentation?",
+    "id": "095",
+    "question": "The 6LoWPAN headers start with identifier-bits. Which of the following is the identifier for the first fragment when using IPv6 packet fragmentation?",
     "choices": [
       {
         "text": "11000",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "11100",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "10001",
@@ -2692,25 +2475,17 @@
       {
         "text": "10101",
         "isCorrect": false
-      },
-      {
-        "text": "The following figure shows the direction oriented acyclic graph for a RPL network.",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q85",
-    "question": "What is the rank of node \"A\"?",
-    "choices": [
-      {
-        "text": "Answer:  2",
-        "isCorrect": false
-      }
-    ]
+    "id": "096",
+    "question": "The following figure shows the direction oriented acyclic graph for a RPL network. What is the rank of node \"A\"?",
+    "type": "short_answer",
+    "answer": "2"
   },
   {
-    "id": "q86",
+    "id": "097",
     "question": "Which of the following is a 6LoWPAN header?",
     "choices": [
       {
@@ -2736,24 +2511,20 @@
       {
         "text": "UDP header",
         "isCorrect": false
-      },
-      {
-        "text": "The Modbus Serial header address field size is 1byte.",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q87",
-    "question": "What is the maximum number of remote units that can be connected to a Modbus control unit?",
+    "id": "098",
+    "question": "The Modbus Serial header address field size is 1byte. What is the maximum number of remote units that can be connected to a Modbus control unit?",
     "choices": [
       {
         "text": "247",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "128",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "255",
@@ -2774,15 +2545,11 @@
     ]
   },
   {
-    "id": "q88",
+    "id": "099",
     "question": "Which of the following is true for the MQTT publish/subscribe framework?",
     "choices": [
       {
-        "text": "Message data can be buffered, so that subscribers can access data even when the corresponding",
-        "isCorrect": true
-      },
-      {
-        "text": "endpoints are offline.",
+        "text": "Message data can be buffered, so that subscribers can access data even when the corresponding endpoints are offline.",
         "isCorrect": true
       },
       {
@@ -2795,7 +2562,7 @@
       },
       {
         "text": "The MQTT message broker pushes the application data to MQTT clients acting as subscribers.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "A MQTT message broker is only required for large numbers of endpoints.",
@@ -2806,25 +2573,17 @@
         "isCorrect": false
       },
       {
-        "text": "The MQTT message broker orchestrates the connections, but not the data exchange between MQTT",
-        "isCorrect": false
-      },
-      {
-        "text": "publishers and subscribers.",
+        "text": "The MQTT message broker orchestrates the connections, but not the data exchange between MQTT publishers and subscribers.",
         "isCorrect": false
       },
       {
         "text": "Message exchange between nodes can be done via request/response or HTTP-proxy.",
         "isCorrect": false
-      },
-      {
-        "text": "17",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q89",
+    "id": "100",
     "question": "Which of the following is true for the Constrained Application Protocol (CoAP)?",
     "choices": [
       {
@@ -2858,41 +2617,41 @@
       {
         "text": "CoAP is standardized by OASIS.",
         "isCorrect": false
-      },
-      {
-        "text": "IPv6 packet fragmentation and reassembly",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q90",
+    "id": "101",
     "question": "What main functions are provided by 6LoWPAN?",
     "choices": [
+      {
+        "text": "IPv6 packet fragmentation and reassembly",
+        "isCorrect": true
+      },
       {
         "text": "Mesh under forwarding",
         "isCorrect": true
       },
       {
+        "text": "IPv6 header compression",
+        "isCorrect": true
+      },
+      {
         "text": "Mesh over routing",
-        "isCorrect": true
-      },
-      {
-        "text": "IPv4 tunneling",
-        "isCorrect": true
-      },
-      {
-        "text": "Packet classification (traffic class)",
         "isCorrect": false
       },
       {
-        "text": "IPv6 header compression",
+        "text": "IPv4 tunneling",
+        "isCorrect": false
+      },
+      {
+        "text": "Packet classification (traffic class)",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q91",
+    "id": "102",
     "question": "What is the purpose of the CoAP Token header field?",
     "choices": [
       {
@@ -2914,7 +2673,7 @@
     ]
   },
   {
-    "id": "q92",
+    "id": "103",
     "question": "Which of the following is true if you have to choose between IPv4 or IPv6 for a given IoT use-case?",
     "choices": [
       {
@@ -2926,12 +2685,8 @@
         "isCorrect": true
       },
       {
-        "text": "The first generations of cellular data services (GPRS, Edge, 3G) are based on IPv4. IPv6 must be",
+        "text": "The first generations of cellular data services (GPRS, Edge, 3G) are based on IPv4. IPv6 must be tunneled over IPv4 when used with these technologies.",
         "isCorrect": true
-      },
-      {
-        "text": "tunneled over IPv4 when used with these technologies.",
-        "isCorrect": false
       },
       {
         "text": "All cellular data services (GPRS, Edge, 3G, LTE, 5G) support both IPv4 and IPv6.",
@@ -2942,17 +2697,13 @@
         "isCorrect": false
       },
       {
-        "text": "The choice of IPv4 or IPv6 is independet of the application layer protocols. Only the transport layer",
-        "isCorrect": false
-      },
-      {
-        "text": "protocols are determined by application layer protocols.",
+        "text": "The choice of IPv4 or IPv6 is independet of the application layer protocols. Only the transport layer protocols are determined by application layer protocols.",
         "isCorrect": false
       }
     ]
   },
   {
-    "id": "q93",
+    "id": "104",
     "question": "Which of the following is true for the Message Queuing Telemetry Transport protocol (MQTT)?",
     "choices": [
       {
@@ -2961,7 +2712,7 @@
       },
       {
         "text": "It uses TCP as transport layer.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Three classes of MQTT quality of service (QoS) are defined.",
@@ -2973,7 +2724,7 @@
       },
       {
         "text": "Messages are exchanged by request/response.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Three classes of MQTT devices (MDs) are defined.",
@@ -2986,15 +2737,11 @@
       {
         "text": "MQTT is standardized by IBM and Arcom.",
         "isCorrect": false
-      },
-      {
-        "text": "18",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q94",
+    "id": "105",
     "question": "Which of the following application layer protocols is a publish/subscribe protocol?",
     "choices": [
       {
@@ -3016,7 +2763,7 @@
     ]
   },
   {
-    "id": "q95",
+    "id": "106",
     "question": "What is the address of the Modbus Serial control unit (master)?",
     "choices": [
       {
@@ -3046,7 +2793,7 @@
     ]
   },
   {
-    "id": "q96",
+    "id": "107",
     "question": "What security objective does the Hash function address?",
     "choices": [
       {
@@ -3072,7 +2819,7 @@
     ]
   },
   {
-    "id": "q97",
+    "id": "108",
     "question": "What is true for the Message Authentication Code (MAC)?",
     "choices": [
       {
@@ -3094,7 +2841,7 @@
     ]
   },
   {
-    "id": "q98",
+    "id": "109",
     "question": "How can the authenticity of a public key be assured?",
     "choices": [
       {
@@ -3116,7 +2863,7 @@
     ]
   },
   {
-    "id": "q99",
+    "id": "110",
     "question": "What is true for symmetric cryptography?",
     "choices": [
       {
@@ -3150,15 +2897,11 @@
       {
         "text": "Sender and receiver must obtain the secret key over an insecure communication channel.",
         "isCorrect": false
-      },
-      {
-        "text": "19",
-        "isCorrect": false
       }
     ]
   },
   {
-    "id": "q100",
+    "id": "111",
     "question": "What is true for asymmetric cryptography?",
     "choices": [
       {
@@ -3192,7 +2935,7 @@
     ]
   },
   {
-    "id": "q101",
+    "id": "112",
     "question": "What are main types of threats in the IoT?",
     "choices": [
       {
@@ -3201,7 +2944,7 @@
       },
       {
         "text": "Taking control.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Disrupting service.",
@@ -3209,7 +2952,7 @@
       },
       {
         "text": "Authentication violation.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Insecure data transfer.",
@@ -3230,7 +2973,7 @@
     ]
   },
   {
-    "id": "q102",
+    "id": "113",
     "question": "What are the objectives of cryptography?",
     "choices": [
       {
@@ -3255,10 +2998,6 @@
       },
       {
         "text": "Camouflage",
-        "isCorrect": false
-      },
-      {
-        "text": "20",
         "isCorrect": false
       }
     ]
