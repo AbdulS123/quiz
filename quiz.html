@@ -273,7 +273,7 @@
         syncSelectedClasses();
       };
       const pct = Math.floor(i / n * 100);
-      el.status.textContent = `Question ${i + 1} of ${n} — ${pct}% done`;
+      el.status.textContent = `(${QUESTIONS[idx].id}) Question ${i + 1} of ${n} — ${pct}% done`;
     }
 
     function checkAnswers() {
