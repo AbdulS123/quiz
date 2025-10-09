@@ -239,7 +239,7 @@
       },
       {
         "text": "Specific functions are distributed over the individual layers.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Processing of data is centralized in cloud applications.",
