@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,6 +190,7 @@
     let QUESTIONS = [];
     let idx = 0;
     let score = 0;
+    let falseAnsweredQuestions = [];
 
     async function loadAllQuestions() {
       try {
@@ -293,7 +295,14 @@
         if (!selected.includes(i)) choiceEls[i].classList.add('correct');
       });
       const exact = arraysEqualAsSets(selected, correct);
-      if (exact) score++;
+      if (exact) {
+        score++;
+        el.nextBtn.style.backgroundColor =  "rgba(64,226,160,0.45)";
+      } 
+      else{
+        el.nextBtn.style.backgroundColor = "##b8c0ff";
+        falseAnsweredQuestions.push(idx);
+      } 
       el.checkBtn.hidden = true;
       el.nextBtn.hidden = false;
       el.nextBtn.focus?.();
@@ -316,6 +325,8 @@
         <div style="text-align:center;font-size:1.1rem;">
           <div><strong>${score}</strong> of <strong>${total}</strong> correct</div>
           <div>(${percent}%)</div>
+          <div>False answered questions</div>
+          <div>${falseAnsweredQuestions.join('<br>')}</div>
         </div>
       `;
       el.checkBtn.hidden = true;
@@ -327,6 +338,7 @@
     function restart() {
       idx = 0;
       score = 0;
+      falseAnsweredQuestions = [];
       renderQuestion(QUESTIONS[idx], idx, QUESTIONS.length);
     }
 
@@ -355,6 +367,7 @@
         }
         idx = 0;
         score = 0;
+        falseAnsweredQuestions = [];
         renderQuestion(QUESTIONS[idx], idx, QUESTIONS.length);
         syncSelectedClasses();
       } catch (err) {
