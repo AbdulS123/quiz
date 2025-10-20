@@ -2284,35 +2284,35 @@
     "choices": [
       {
         "text": "Acknowledgement",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Non-confirmable",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Reset",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Confirmable",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Delete",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Post",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Get",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Put",
-        "isCorrect": false
+        "isCorrect": true
       }
     ]
   },
