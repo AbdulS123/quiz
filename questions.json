@@ -108,16 +108,6 @@
     ]
   },
   {
-    "id": "005",
-    "question": "Set the correct order of the loT layers:",
-    "type": "ordering",
-    "correctOrder": [
-      "Sensing",
-      "Networking",
-      "Applications"
-    ]
-  },
-  {
     "id": "006",
     "question": "What is the technology used in passive \"things\"?",
     "choices": [
@@ -384,21 +374,7 @@
         "isCorrect": false
       }
     ]
-  },
-  {
-    "id": "016",
-    "question": "Set the correct order of the layers in the loTWF Architecture:",
-    "type": "ordering",
-    "correctOrder": [
-      "Physical Devices & Controllers",
-      "Connectivity",
-      "Edge Computing",
-      "Data Accumulation",
-      "Data Abstraction",
-      "Application",
-      "Collaboration & Processes"
-    ]
-  },
+  },  
   {
     "id": "017",
     "question": "Which of the following is true?",
@@ -515,17 +491,6 @@
         "text": "located close to the Cloud.",
         "isCorrect": false
       }
-    ]
-  },
-  {
-    "id": "022",
-    "question": "Sort the following access technologies according to their range, starting with the shortest:",
-    "type": "ordering",
-    "correctOrder": [
-      "Bluetooth",
-      "Zigbee",
-      "802.11ah",
-      "LoRaWan"
     ]
   },
   {
@@ -2477,12 +2442,6 @@
         "isCorrect": false
       }
     ]
-  },
-  {
-    "id": "096",
-    "question": "The following figure shows the direction oriented acyclic graph for a RPL network. What is the rank of node \"A\"?",
-    "type": "short_answer",
-    "answer": "2"
   },
   {
     "id": "097",
