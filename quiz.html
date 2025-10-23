@@ -364,41 +364,39 @@
       document.getElementById("hideQSet").hidden = false;
       
       document.getElementById("hideQSet").addEventListener('click', function() {
-        document.getElementById("slideQuestions").hidden = true;
-        document.getElementById("passedExam").hidden = true;
-        document.getElementById("onlineMCQ").hidden = true;
-        document.getElementById("hideQSet").hidden = true;
+        hideDataSetOptions();
       }); 
 
-      if (document.getElementById("slideQuestions").addEventListener('click', function() {
-      document.getElementById("slideQuestions").hidden = true;
-      document.getElementById("passedExam").hidden = true;
-      document.getElementById("onlineMCQ").hidden = true;
-      document.getElementById("hideQSet").hidden = true;
-      questionSet = 'slideQuestions.json';
-      loadAllQuestions(questionSet);
-      restart();
-      }));
-      if (document.getElementById("passedExam").addEventListener('click', function() {
-      document.getElementById("slideQuestions").hidden = true;
-      document.getElementById("passedExam").hidden = true;
-      document.getElementById("onlineMCQ").hidden = true;
-      document.getElementById("hideQSet").hidden = true;
-      questionSet = 'passedExamQuestions.json';
-      loadAllQuestions(questionSet);
-      restart();
-      }));  
-      if (document.getElementById("onlineMCQ").addEventListener('click', function() {
-      document.getElementById("slideQuestions").hidden = true;
-      document.getElementById("passedExam").hidden = true;
-      document.getElementById("onlineMCQ").hidden = true;
-      document.getElementById("hideQSet").hidden = true;
-      questionSet = 'questions.json';
-      loadAllQuestions(questionSet);
-      restart();
-      }));
 
+      document.getElementById("slideQuestions").addEventListener('click', async () => {
+        hideDataSetOptions();
+        questionSet = 'slideQuestions.json';
+        QUESTIONS = await loadAllQuestions(questionSet); // <-- assign!
+        restart();
+      });
+
+      document.getElementById("passedExam").addEventListener('click', async () => {
+        hideDataSetOptions();
+        questionSet = 'passedExam.json';
+        QUESTIONS = await loadAllQuestions(questionSet);
+        restart();
+      });
+
+      document.getElementById("onlineMCQ").addEventListener('click', async () => {
+        hideDataSetOptions();
+        questionSet = 'onlineMCQ.json';
+        QUESTIONS = await loadAllQuestions(questionSet);
+        restart();
+      });
     }
+
+    function hideDataSetOptions() {
+      document.getElementById("slideQuestions").hidden = true;
+      document.getElementById("passedExam").hidden = true;
+      document.getElementById("onlineMCQ").hidden = true;
+      document.getElementById("hideQSet").hidden = true;
+    }
+
 
 
     function syncSelectedClasses() {
