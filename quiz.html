@@ -44,6 +44,7 @@
       color: var(--muted);
       font-size: .9rem;
       text-align: right;
+      cursor: pointer;
     }
     #question {
       font-size: 22px;
@@ -129,6 +130,12 @@
     <div class="card" role="region" aria-labelledby="question">
       <header>
         <div id="status" class="status"></div>
+        
+        <div id="onlineMCQ" class="status" hidden >All online multiplechoice questions</div>
+        <div id="passedExam" class="status" hidden>All passed exam questions</div>
+        <div id="slideQuestions" class="status" hidden>All slide questions</div>
+        <div id="hideQSet" class="status" hidden>Hide question set</div>
+        
       </header>
       <form id="quizForm">
         <fieldset>
@@ -191,11 +198,12 @@
     let idx = 0;
     let score = 0;
     let falseAnsweredQuestions = [];
+    let questionSet = 'questions.json';
 
-    async function loadAllQuestions() {
+    async function loadAllQuestions(questionSet) {
       try {
         const base = new URL('.', location.href);
-        const res = await fetch(new URL('questions.json', base), { cache: 'no-store' });
+        const res = await fetch(new URL(questionSet, base), { cache: 'no-store' });
         if (!res.ok) throw new Error('Failed to fetch questions.json');
         const data = await res.json();
         if (!Array.isArray(data) || !data.length) throw new Error('questions.json is empty');
@@ -345,6 +353,53 @@
     el.checkBtn.addEventListener('click', checkAnswers);
     el.nextBtn.addEventListener('click', nextQuestion);
     el.resetBtn.addEventListener('click', restart);
+    el.status.addEventListener('click', showDataSetOptions);
+
+
+    function showDataSetOptions() {
+
+      document.getElementById("slideQuestions").hidden = false;
+      document.getElementById("passedExam").hidden = false;
+      document.getElementById("onlineMCQ").hidden = false;
+      document.getElementById("hideQSet").hidden = false;
+      
+      document.getElementById("hideQSet").addEventListener('click', function() {
+        document.getElementById("slideQuestions").hidden = true;
+        document.getElementById("passedExam").hidden = true;
+        document.getElementById("onlineMCQ").hidden = true;
+        document.getElementById("hideQSet").hidden = true;
+      }); 
+
+      if (document.getElementById("slideQuestions").addEventListener('click', function() {
+      document.getElementById("slideQuestions").hidden = true;
+      document.getElementById("passedExam").hidden = true;
+      document.getElementById("onlineMCQ").hidden = true;
+      document.getElementById("hideQSet").hidden = true;
+      questionSet = 'slideQuestions.json';
+      loadAllQuestions(questionSet);
+      restart();
+      }));
+      if (document.getElementById("passedExam").addEventListener('click', function() {
+      document.getElementById("slideQuestions").hidden = true;
+      document.getElementById("passedExam").hidden = true;
+      document.getElementById("onlineMCQ").hidden = true;
+      document.getElementById("hideQSet").hidden = true;
+      questionSet = 'passedExamQuestions.json';
+      loadAllQuestions(questionSet);
+      restart();
+      }));  
+      if (document.getElementById("onlineMCQ").addEventListener('click', function() {
+      document.getElementById("slideQuestions").hidden = true;
+      document.getElementById("passedExam").hidden = true;
+      document.getElementById("onlineMCQ").hidden = true;
+      document.getElementById("hideQSet").hidden = true;
+      questionSet = 'questions.json';
+      loadAllQuestions(questionSet);
+      restart();
+      }));
+
+    }
+
 
     function syncSelectedClasses() {
       const wraps = [...el.form.querySelectorAll('.choice')];
@@ -356,7 +411,7 @@
 
     (async () => {
       try {
-        QUESTIONS = await loadAllQuestions();
+        QUESTIONS = await loadAllQuestions(questionSet);
         if (!Array.isArray(QUESTIONS) || !QUESTIONS.length) {
           throw new Error('No questions available');
         }
