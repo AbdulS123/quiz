@@ -1,0 +1,684 @@
+[
+  {
+    "id": "001",
+    "question": "Which statement best describes the target and typical uses of IEEE 802.15.4?",
+    "choices": [
+      { "text": "High-throughput multimedia streaming and AR/VR headsets over long range.", "isCorrect": false },
+      { "text": "Low-data-rate, low-power IoT devices.", "isCorrect": true },
+      { "text": "Typical uses: home/building automation, industrial WSNs, toys/remote controls.", "isCorrect": true },
+      { "text": "Mission-critical ultra-reliable control for high-speed trains.", "isCorrect": false },
+      { "text": "Nationwide cellular broadband for smartphones.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "002",
+    "question": "Which OSI layers are specified by the IEEE 802.15.4 standard itself?",
+    "choices": [
+      { "text": "Physical (PHY) and Medium Access Control (MAC).", "isCorrect": true },
+      { "text": "Network and Transport.", "isCorrect": false },
+      { "text": "Application and Presentation.", "isCorrect": false },
+      { "text": "MAC and Network.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "003",
+    "question": "Which set lists the original/common 802.15.4 bands (with global/regional use)?",
+    "choices": [
+      { "text": "2.4 GHz ISM (worldwide).", "isCorrect": true },
+      { "text": "Sub-GHz: ~915 MHz (primarily Americas) and ~868 MHz (primarily Europe).", "isCorrect": true },
+      { "text": "5 GHz and 60 GHz only.", "isCorrect": false },
+      { "text": "150 MHz and 3.5 GHz only.", "isCorrect": false },
+      { "text": "700 MHz and 3.7 GHz only.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "004",
+    "question": "Which pairing correctly characterizes FFD and RFD in 802.15.4?",
+    "choices": [
+      { "text": "FFD can serve as coordinator/PAN coordinator and relay traffic.", "isCorrect": true },
+      { "text": "RFD is a simple leaf with minimal resources and cannot be a coordinator.", "isCorrect": true },
+      { "text": "FFD: simple leaf; cannot relay — RFD: can be PAN coordinator.", "isCorrect": false },
+      { "text": "FFD: application-only device — RFD: routing-only device.", "isCorrect": false },
+      { "text": "FFD: mains-powered only — RFD: battery-powered only.", "isCorrect": false },
+      { "text": "FFD: cannot associate — RFD: accepts associations from others.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "005",
+    "question": "What are the main layers of the Core IoT Functional Stack in the Simplified IoT Architecture?",
+    "choices": [
+      { "text": "Things (sensors/actuators).", "isCorrect": true },
+      { "text": "Communications Network.", "isCorrect": true },
+      { "text": "Applications.", "isCorrect": true },
+      { "text": "IoT Data Management & Compute Stack (Edge/Fog/Cloud).", "isCorrect": false },
+      { "text": "Security as a separate layer.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "006",
+    "question": "Which sublayers appear in the expanded view of the Core IoT Functional Stack?",
+    "choices": [
+      { "text": "Access Network (e.g., ZigBee, Wi-Fi, LoRa).", "isCorrect": true },
+      { "text": "Gateways and Backhaul Network.", "isCorrect": true },
+      { "text": "Network Transport Layer.", "isCorrect": true },
+      { "text": "IoT Network Management (e.g., CoAP, MQTT).", "isCorrect": true },
+      { "text": "Analytics (applications layer subview).", "isCorrect": true },
+      { "text": "Vertical-specific applications (e.g., SCADA, MDM).", "isCorrect": true },
+      { "text": "Data Accumulation (IoTWF layer).", "isCorrect": false },
+      { "text": "Presentation Layer (classic IT stack).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "007",
+    "question": "Match the expanded layers with correct examples (select all that apply).",
+    "choices": [
+      { "text": "Access Network → ZigBee, Wi-Fi, LoRa.", "isCorrect": true },
+      { "text": "Gateways & Backhaul → Cellular/LTE backhaul, microwave/fiber links, IoT gateways.", "isCorrect": true },
+      { "text": "Network Transport Layer → IPv6, 6LoWPAN/RPL, TCP/UDP.", "isCorrect": true },
+      { "text": "IoT Network Management → CoAP and MQTT used for device/app messaging and management.", "isCorrect": true },
+      { "text": "Applications: Analytics → Dashboards, anomaly detection, KPI trending.", "isCorrect": true },
+      { "text": "Applications: Vertical Apps → SCADA systems, Meter Data Management (MDM).", "isCorrect": true },
+      { "text": "Data Accumulation → ETL pipelines in a data warehouse.", "isCorrect": false },
+      { "text": "Presentation Layer → GUI theming engines.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "008",
+    "question": "What are typical use cases for IEEE 802.15.4? What is the typical range of it?",
+    "choices": [
+      { "text": "Typical uses: home/building automation, automotive networks, industrial wireless sensor networks, interactive toys/remote controls.", "isCorrect": true },
+      { "text": "Typical range: medium-range—tens to hundreds of meters (generally < 1 km, depending on environment and hardware).", "isCorrect": true },
+      { "text": "Designed for high-throughput multimedia streaming over long distances.", "isCorrect": false },
+      { "text": "Typical range: many kilometers indoors without relays.", "isCorrect": false },
+      { "text": "Primarily for nationwide cellular broadband to smartphones.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "009",
+    "question": "What OSI layers are defined by IEEE 802.15.4?",
+    "choices": [
+      { "text": "Physical (PHY) and Medium Access Control (MAC).", "isCorrect": true },
+      { "text": "Network and Transport.", "isCorrect": false },
+      { "text": "Application and Presentation.", "isCorrect": false },
+      { "text": "Session and Transport.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "010",
+    "question": "Which access technologies are based on IEEE 802.15.4 (name at least 3)?",
+    "choices": [
+      { "text": "ZigBee.", "isCorrect": true },
+      { "text": "6LoWPAN.", "isCorrect": true },
+      { "text": "WirelessHART (IEC 62591).", "isCorrect": true },
+      { "text": "ISA100.11a.", "isCorrect": true },
+      { "text": "Wi-SUN (IEEE 802.15.4g).", "isCorrect": true },
+      { "text": "LoRaWAN.", "isCorrect": false },
+      { "text": "NB-IoT.", "isCorrect": false },
+      { "text": "Bluetooth (IEEE 802.15.1).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "011",
+    "question": "What is a PAN coordinator? What type of devices can act as a PAN coordinator?",
+    "choices": [
+      { "text": "Definition: the primary controller of the PAN that coordinates communication (e.g., beacons/association) for devices on the network.", "isCorrect": true },
+      { "text": "Only Full-Function Devices (FFDs) can act as a PAN coordinator; Reduced-Function Devices (RFDs) cannot.", "isCorrect": true },
+      { "text": "Any device, including RFDs, can be a PAN coordinator in star or mesh topologies.", "isCorrect": false },
+      { "text": "A PAN coordinator is only a backhaul router and does not control the PAN.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "012",
+    "question": "What are the main layers of this architecture?",
+    "choices": [
+      { "text": "Edge.", "isCorrect": true },
+      { "text": "Fog.", "isCorrect": true },
+      { "text": "Cloud.", "isCorrect": true },
+      { "text": "Things / Communications / Applications (Core IoT Functional Stack).", "isCorrect": false },
+      { "text": "Presentation layer (classic IT stack).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "013",
+    "question": "What is different to the traditional IT Computing Model?",
+    "choices": [
+      { "text": "IoT uses a distributed, tiered model (Edge–Fog–Cloud) instead of centralizing everything in the cloud.", "isCorrect": true },
+      { "text": "Processing and analytics are placed close to data sources to reduce latency and bandwidth usage.", "isCorrect": true },
+      { "text": "Traditional IT assumes centralized storage/processing with high-bandwidth links; IoT often has constrained last-mile bandwidth and higher latency.", "isCorrect": true },
+      { "text": "IoT backhaul can be unreliable/expensive (e.g., cellular/satellite), so pre-processing before sending to cloud is beneficial.", "isCorrect": true },
+      { "text": "IoT relies only on cloud computing; edge and fog are unnecessary layers.", "isCorrect": false },
+      { "text": "Last-mile IoT networks typically have unlimited bandwidth and sub-millisecond latency.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "014",
+    "question": "What are the functions of each layer?",
+    "choices": [
+      { "text": "Edge → immediate data collection, filtering/pre-processing, local/real-time control of devices.", "isCorrect": true },
+      { "text": "Fog → aggregation from multiple edge nodes, contextual/near-real-time analytics, local storage, selective forwarding.", "isCorrect": true },
+      { "text": "Cloud → historical/big-data analytics, long-term storage, fleet-wide insights/ML training and orchestration.", "isCorrect": true },
+      { "text": "Edge → long-term archival data warehousing for the whole enterprise.", "isCorrect": false },
+      { "text": "Fog → provides backhaul only; no analytics or processing.", "isCorrect": false },
+      { "text": "Cloud → sub-millisecond device control loops at the machine interface.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "015",
+    "question": "What are the main layers of the Data Management and Compute Stack in the Simplified IoT Architecture?",
+    "choices": [
+      { "text": "Edge.", "isCorrect": true },
+      { "text": "Fog.", "isCorrect": true },
+      { "text": "Cloud.", "isCorrect": true },
+      { "text": "Things / Devices.", "isCorrect": false },
+      { "text": "Presentation layer.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "016",
+    "question": "What is different about the Data Management and Compute Stack in the Simplified IoT Architecture compared to the traditional IT computing model?",
+    "choices": [
+      { "text": "It uses a distributed, tiered model (Edge–Fog–Cloud) instead of centralizing all compute in the cloud or data center.", "isCorrect": true },
+      { "text": "Processing is placed close to data sources to reduce latency and bandwidth usage.", "isCorrect": true },
+      { "text": "Backhaul/last-mile links can be constrained or costly, so pre-processing and selective forwarding are emphasized.", "isCorrect": true },
+      { "text": "Traditional IT centralizes storage/compute assuming reliable, high-bandwidth networks.", "isCorrect": true },
+      { "text": "IoT always performs all analytics in the cloud; edge and fog are optional and rarely used.", "isCorrect": false },
+      { "text": "IoT last-mile networks typically provide unlimited bandwidth and near-zero latency.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "017",
+    "question": "What are the functions of each layer in the Data Management and Compute Stack of the Simplified IoT Architecture?",
+    "choices": [
+      { "text": "Edge → data acquisition, filtering/pre-processing, protocol translation, real-time/local control loops.", "isCorrect": true },
+      { "text": "Fog → aggregation from multiple edges, near-real-time analytics, temporary/local storage, policy enforcement, selective forwarding.", "isCorrect": true },
+      { "text": "Cloud → long-term storage, batch/advanced analytics and ML training, fleet-wide orchestration and dashboards.", "isCorrect": true },
+      { "text": "Edge → enterprise-wide archival and historical data warehousing.", "isCorrect": false },
+      { "text": "Fog → backhaul transport only; no analytics or storage.", "isCorrect": false },
+      { "text": "Cloud → sub-millisecond motor control at the machine interface.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "018",
+    "question": "Explain and outline (draw) the LoRaWAN network architecture. What devices and functionalities are needed to send data from a LoRa-node to an application server?",
+    "choices": [
+      { "text": "LoRaWAN end device (LoRa node) creates an uplink frame.", "isCorrect": true },
+      { "text": "LoRaWAN gateway (packet forwarder) receives the RF frame and forwards it over IP backhaul.", "isCorrect": true },
+      { "text": "LoRaWAN Network Server handles deduplication (from multiple gateways), MAC commands/ADR, routing to the right application.", "isCorrect": true },
+      { "text": "Application Server receives the decrypted application payload for the target application (e.g., via MQTT/HTTP).", "isCorrect": true },
+      { "text": "Join Server is involved for OTAA to derive session keys and device address (before data is sent).", "isCorrect": true },
+      { "text": "Only the gateway is needed; there is no LoRaWAN Network Server in the architecture.", "isCorrect": false },
+      { "text": "End devices send IP packets directly to the Application Server without gateways.", "isCorrect": false },
+      { "text": "Backhaul is unnecessary because gateways process and store all application data locally.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "019",
+    "question": "How is security implemented in LoRaWAN? What are the 2 security keys used for in LoRaWAN, and why is there a need for 2 keys?",
+    "choices": [
+      { "text": "Security uses AES-128; devices are personalized and derive session keys during activation (OTAA) or store them (ABP).", "isCorrect": true },
+      { "text": "NwkSKey (Network Session Key) ensures integrity/security of MAC/network traffic (e.g., MIC, MAC commands).", "isCorrect": true },
+      { "text": "AppSKey (Application Session Key) encrypts end-to-end application payloads so the network cannot read them.", "isCorrect": true },
+      { "text": "Reason for two keys: separation of duties—network operations can manage MAC without accessing application data.", "isCorrect": true },
+      { "text": "AppKey is a root key used in OTAA to derive NwkSKey and AppSKey together with a nonce.", "isCorrect": true },
+      { "text": "Only one key is used in LoRaWAN; the second key is optional and rarely implemented.", "isCorrect": false },
+      { "text": "The gateway terminates encryption and reads application payloads by design.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "020",
+    "question": "What is 6LoWPAN and why is there a need for 6LoWPAN?",
+    "choices": [
+      { "text": "6LoWPAN is IPv6 over Low-power Wireless Personal Area Networks—an adaptation layer to carry IPv6 over IEEE 802.15.4.", "isCorrect": true },
+      { "text": "Need: 802.15.4 frames are tiny (127 bytes) vs. IPv6 MTU (≥1280 bytes); 6LoWPAN adds header compression and fragmentation so constrained nodes can use IPv6 efficiently.", "isCorrect": true },
+      { "text": "6LoWPAN is a replacement for IPv6 on the Internet backbone.", "isCorrect": false },
+      { "text": "Need: to enable IPv4 over Wi-Fi in high-throughput LANs.", "isCorrect": false },
+      { "text": "6LoWPAN eliminates the need for IPv6 entirely on IoT devices.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "021",
+    "question": "What access technology is 6LoWPAN based on?",
+    "choices": [
+      { "text": "IEEE 802.15.4 (low-power WPAN).", "isCorrect": true },
+      { "text": "IEEE 802.15.4g (sub-GHz extension used by some 6LoWPAN profiles).", "isCorrect": true },
+      { "text": "IEEE 802.11 (Wi-Fi).", "isCorrect": false },
+      { "text": "Bluetooth Classic / BLE (IEEE 802.15.1).", "isCorrect": false },
+      { "text": "LoRaWAN.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "022",
+    "question": "What are the 3 main functions of 6LoWPAN?",
+    "choices": [
+      { "text": "IPv6 header compression (per RFC 6282).", "isCorrect": true },
+      { "text": "IPv6 packet fragmentation and reassembly across 802.15.4 frames.", "isCorrect": true },
+      { "text": "Layer-2 mesh forwarding (mesh-under addressing).", "isCorrect": true },
+      { "text": "End-to-end TLS offload in the adaptation layer.", "isCorrect": false },
+      { "text": "Application-layer payload encoding (CBOR/JSON).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "023",
+    "question": "Outline the IP protocol stack with 6LoWPAN.",
+    "choices": [
+      { "text": "Application → Transport (typically UDP/ICMP, TCP possible) → IPv6 → 6LoWPAN adaptation layer.", "isCorrect": true },
+      { "text": "Below 6LoWPAN: IEEE 802.15.4 MAC → IEEE 802.15.4 PHY.", "isCorrect": true },
+      { "text": "Application → Transport → IP → Ethernet MAC → Ethernet PHY (no 6LoWPAN).", "isCorrect": false },
+      { "text": "Application → IPv4 → 6LoWPAN → 802.15.4 MAC/PHY.", "isCorrect": false },
+      { "text": "Application → CoAP/MQTT → LoRaWAN PHY (no IP).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "024",
+    "question": "What is 6LoWPAN and why is there a need for 6LoWPAN?",
+    "choices": [
+      { "text": "6LoWPAN is an IPv6 adaptation layer for IEEE 802.15.4.", "isCorrect": true },
+      { "text": "Need: tiny 802.15.4 frames vs. IPv6 MTU; solve via compression/fragmentation.", "isCorrect": true },
+      { "text": "6LoWPAN replaces IPv6 on the Internet backbone.", "isCorrect": false },
+      { "text": "Need: provide IPv4 tunneling over Wi-Fi only.", "isCorrect": false },
+      { "text": "6LoWPAN removes the IP layer from constrained devices.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "025",
+    "question": "What are the 3 main functions of 6LoWPAN?",
+    "choices": [
+      { "text": "IPv6 header compression.", "isCorrect": true },
+      { "text": "IPv6 fragmentation/reassembly over 802.15.4.", "isCorrect": true },
+      { "text": "Layer-2 mesh forwarding (mesh-under).", "isCorrect": true },
+      { "text": "End-to-end TLS offload in the adaptation layer.", "isCorrect": false },
+      { "text": "IPv4 header compression.", "isCorrect": false },
+      { "text": "NAT64 translation.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "026",
+    "question": "Outline (draw) the TCP/IP or OSI protocol stack with 6LoWPAN.",
+    "choices": [
+      { "text": "TCP/IP view: App → UDP/ICMP → IPv6 → 6LoWPAN → 802.15.4 MAC → 802.15.4 PHY.", "isCorrect": true },
+      { "text": "OSI view: Application → Transport → Network(IPv6) → Adaptation(6LoWPAN) → Data Link(802.15.4 MAC) → Physical(802.15.4 PHY).", "isCorrect": true },
+      { "text": "App → Transport → IPv4 → 6LoWPAN → 802.15.4 MAC/PHY.", "isCorrect": false },
+      { "text": "App → UDP → IPv6 → Ethernet MAC/PHY (no adaptation).", "isCorrect": false },
+      { "text": "App → MQTT/CoAP → LoRa PHY (no IP).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "027",
+    "question": "What is 6LoWPAN and why is there a need for 6LoWPAN?",
+    "choices": [
+      { "text": "IPv6 adaptation over IEEE 802.15.4.", "isCorrect": true },
+      { "text": "Needed: 127-B 802.15.4 vs 1280-B IPv6 → compression/fragmentation.", "isCorrect": true },
+      { "text": "Replacement for IPv6 on the backbone.", "isCorrect": false },
+      { "text": "Provides IPv4 tunneling for Wi-Fi only.", "isCorrect": false },
+      { "text": "Removes the IP layer from IoT nodes.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "028",
+    "question": "What access technology is 6LoWPAN based on?",
+    "choices": [
+      { "text": "IEEE 802.15.4.", "isCorrect": true },
+      { "text": "IEEE 802.15.4g.", "isCorrect": true },
+      { "text": "IEEE 802.11 (Wi-Fi).", "isCorrect": false },
+      { "text": "Bluetooth / BLE.", "isCorrect": false },
+      { "text": "LoRaWAN.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "029",
+    "question": "What are the 3 main functions of 6LoWPAN?",
+    "choices": [
+      { "text": "IPv6 header compression.", "isCorrect": true },
+      { "text": "Fragmentation and reassembly.", "isCorrect": true },
+      { "text": "Mesh-under forwarding.", "isCorrect": true },
+      { "text": "TLS offload.", "isCorrect": false },
+      { "text": "NAT/NAPT.", "isCorrect": false },
+      { "text": "IPv4 header compression.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "030",
+    "question": "Outline the IP protocol stack with 6LoWPAN.",
+    "choices": [
+      { "text": "App → UDP/ICMP → IPv6 → 6LoWPAN → 802.15.4 MAC → 802.15.4 PHY.", "isCorrect": true },
+      { "text": "OSI: App → Transport → Network(IPv6) → Adaptation(6LoWPAN) → Data Link(802.15.4 MAC) → Physical.", "isCorrect": true },
+      { "text": "App → Transport → IPv4 → 6LoWPAN → 802.15.4.", "isCorrect": false },
+      { "text": "App → UDP → IPv6 → Ethernet (no adaptation).", "isCorrect": false },
+      { "text": "App → MQTT/CoAP → LoRa PHY.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "031",
+    "question": "What reliability mechanisms are implemented in the Constrained Application Protocol (CoAP)? Name at least 3.",
+    "choices": [
+      { "text": "Confirmable messages with ACK.", "isCorrect": true },
+      { "text": "Retransmission on timeout.", "isCorrect": true },
+      { "text": "Exponential backoff for retries.", "isCorrect": true },
+      { "text": "Duplicate detection via Message ID.", "isCorrect": true },
+      { "text": "Piggybacked ACK carrying the response.", "isCorrect": true },
+      { "text": "TCP-style SYN/FIN handshakes.", "isCorrect": false },
+      { "text": "Sliding windows with sequence numbers.", "isCorrect": false },
+      { "text": "Fixed 1 s timeout without backoff.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "032",
+    "question": "Explain and outline the CoAP congestion control.",
+    "choices": [
+      { "text": "Random initial ACK timeout 2–3 s.", "isCorrect": true },
+      { "text": "Each retry doubles the timeout.", "isCorrect": true },
+      { "text": "Maximum of four retransmissions.", "isCorrect": true },
+      { "text": "NON messages are not retransmitted.", "isCorrect": true },
+      { "text": "AIMD congestion window (like TCP).", "isCorrect": false },
+      { "text": "Fixed timeout at 500 ms.", "isCorrect": false },
+      { "text": "Unlimited retries until ACK arrives.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "033",
+    "question": "Which network application architecture is used by CoAP?",
+    "choices": [
+      { "text": "RESTful client–server (request/response).", "isCorrect": true },
+      { "text": "Brokered publish/subscribe.", "isCorrect": false },
+      { "text": "Peer-to-peer file sharing.", "isCorrect": false },
+      { "text": "Circuit-switched sessions.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "034",
+    "question": "CoAP is derived from which application layer protocol?",
+    "choices": [
+      { "text": "HTTP.", "isCorrect": true },
+      { "text": "MQTT.", "isCorrect": false },
+      { "text": "XMPP.", "isCorrect": false },
+      { "text": "AMQP.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "035",
+    "question": "Which transport layer protocol does CoAP use?",
+    "choices": [
+      { "text": "UDP (optionally secured with DTLS).", "isCorrect": true },
+      { "text": "TCP only.", "isCorrect": false },
+      { "text": "SCTP.", "isCorrect": false },
+      { "text": "QUIC only.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "036",
+    "question": "What methods are defined in CoAP?",
+    "choices": [
+      { "text": "GET, POST.", "isCorrect": true },
+      { "text": "PUT, DELETE.", "isCorrect": true },
+      { "text": "CONNECT, TRACE.", "isCorrect": false },
+      { "text": "SUBSCRIBE, PUBLISH.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "037",
+    "question": "What is the Token in the CoAP header used for?",
+    "choices": [
+      { "text": "Matching a response to its request.", "isCorrect": true },
+      { "text": "Authenticating the client to the server.", "isCorrect": false },
+      { "text": "Advertising the supported cipher suite.", "isCorrect": false },
+      { "text": "Flow control for retransmissions.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "038",
+    "question": "In MQTT, which exact message sequence occurs (broker ↔ pressure gauge ↔ NEW client) until the NEW client receives the first value of topic \"dev1/pressure\"? (Assume no authentication, no retained messages; pressure gauge publishes with QoS 1; NEW client subscribes with QoS 0.)",
+    "choices": [
+      { "text": "NEW→Broker: CONNECT → Broker→NEW: CONNACK → NEW→Broker: SUBSCRIBE(dev1/pressure,QoS0) → Broker→NEW: SUBACK → Gauge→Broker: PUBLISH(dev1/pressure,QoS1) → Broker→Gauge: PUBACK → Broker→NEW: PUBLISH(dev1/pressure,QoS0).", "isCorrect": true },
+      { "text": "NEW→Broker: CONNECT → Broker→NEW: CONNACK → Gauge→Broker: PUBLISH(QoS1) → Broker→Gauge: PUBACK → NEW→Broker: SUBSCRIBE(QoS0) → Broker→NEW: SUBACK → Broker→NEW: PUBLISH(QoS0).", "isCorrect": false },
+      { "text": "NEW→Broker: CONNECT → Broker→NEW: CONNACK → NEW→Broker: SUBSCRIBE(QoS0) → Broker→NEW: SUBACK → Broker→NEW: PUBLISH(retained,QoS0).", "isCorrect": false },
+      { "text": "NEW→Broker: CONNECT → Broker→NEW: CONNACK → NEW→Broker: SUBSCRIBE(QoS0) → Broker→NEW: SUBACK → Gauge→Broker: PUBLISH(QoS1) → Broker→NEW: PUBLISH(QoS1) → NEW→Broker: PUBACK.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "039",
+    "question": "MQTT sequence (Gauge QoS=1, NEW client QoS=0). No auth, no retained messages. Which exact order leads to the NEW client’s first value on topic \"dev1/pressure\"?",
+    "choices": [
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS0) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS1) → B→Gauge: PUBACK → B→NEW: PUBLISH(QoS0).", "isCorrect": true },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → Gauge→B: PUBLISH(QoS1) → B→Gauge: PUBACK → NEW→B: SUBSCRIBE(QoS0) → B→NEW: SUBACK → B→NEW: PUBLISH(QoS0).", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS1) → B→Gauge: PUBREC → Gauge→B: PUBREL → B→Gauge: PUBCOMP → B→NEW: PUBLISH(QoS0).", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS0) → B→NEW: SUBACK → B→NEW: PUBLISH(retained,QoS0).", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS0) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS1) → B→NEW: PUBLISH(QoS1) → NEW→B: PUBACK.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "040",
+    "question": "MQTT sequence (Gauge QoS=0, NEW client QoS=1). No auth, no retained messages. Which exact order leads to the NEW client’s first value on topic \"dev1/pressure\"?",
+    "choices": [
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS0) → B→NEW: PUBLISH(QoS0).", "isCorrect": true },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS0) → B→Gauge: PUBACK → B→NEW: PUBLISH(QoS1) → NEW→B: PUBACK.", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → Gauge→B: PUBLISH(QoS0) → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → B→NEW: PUBLISH(QoS1).", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS0) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS0) → B→NEW: PUBLISH(QoS0).", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS1) → B→NEW: PUBLISH(QoS1) → NEW→B: PUBACK.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "041",
+    "question": "MQTT sequence (Gauge QoS=2, NEW client QoS=2). No auth, no retained messages. Which exact order leads to the NEW client’s first value on topic \"dev1/pressure\"?",
+    "choices": [
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS2) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS2) → B→Gauge: PUBREC → Gauge→B: PUBREL → B→Gauge: PUBCOMP → B→NEW: PUBLISH(QoS2) → NEW→B: PUBREC → B→NEW: PUBREL → NEW→B: PUBCOMP.", "isCorrect": true },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS2) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS2) → B→Gauge: PUBACK → B→NEW: PUBLISH(QoS2) → NEW→B: PUBACK.", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → Gauge→B: PUBLISH(QoS2) → B→Gauge: PUBREC → Gauge→B: PUBREL → B→Gauge: PUBCOMP → NEW→B: SUBSCRIBE(QoS2) → B→NEW: SUBACK → B→NEW: PUBLISH(QoS2) → NEW→B: PUBREC → B→NEW: PUBREL → NEW→B: PUBCOMP.", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS2) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS2) → B→NEW: PUBLISH(QoS2) → NEW→B: PUBREC → B→NEW: PUBREL → NEW→B: PUBCOMP → B→Gauge: PUBREC → Gauge→B: PUBREL → B→Gauge: PUBCOMP.", "isCorrect": false },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS2) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS2) → B→NEW: PUBLISH(QoS2) → NEW→B: PUBACK → B→Gauge: PUBACK.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "042",
+    "question": "Bluetooth LE connection setup: which order is correct until the first data exchange on a data channel?",
+    "choices": [
+      { "text": "Advertiser sends advertisements → Scanner initiates → CONNECT_REQ → Connection established → Data events.", "isCorrect": true },
+      { "text": "Scanner broadcasts → Advertiser scans → CONNECT_REQ → Data events.", "isCorrect": false },
+      { "text": "Observer subscribes → Broadcaster publishes → CONNECT_REQ → Data events.", "isCorrect": false },
+      { "text": "Advertiser sends advertisements → Scanner acknowledges (ACK) → Data events (no CONNECT_REQ).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "043",
+    "question": "During discovery and connection in Bluetooth LE, which role pairings are correct?",
+    "choices": [
+      { "text": "Discovery: advertiser ↔ scanner.", "isCorrect": true },
+      { "text": "After CONNECT_REQ: advertiser becomes slave, initiator becomes master.", "isCorrect": true },
+      { "text": "Broadcast (no connection): broadcaster ↔ observer.", "isCorrect": true },
+      { "text": "After CONNECT_REQ: scanner becomes slave, advertiser becomes master.", "isCorrect": false },
+      { "text": "Discovery uses master ↔ slave directly (no advertiser/scanner).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "044",
+    "question": "Which channels are used before and after a Bluetooth LE connection is established?",
+    "choices": [
+      { "text": "Before: advertising channels 37–39.", "isCorrect": true },
+      { "text": "After: data channels (37 total) with hopping.", "isCorrect": true },
+      { "text": "Before: all 40 data channels.", "isCorrect": false },
+      { "text": "After: only channel 37 (fixed).", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "045",
+    "question": "In a typical GATT-based BLE app, which statements about roles are correct?",
+    "choices": [
+      { "text": "Peripheral usually acts as GATT server.", "isCorrect": true },
+      { "text": "Central usually acts as GATT client.", "isCorrect": true },
+      { "text": "GAP handles discovery, security, and connection setup.", "isCorrect": true },
+      { "text": "ATT/GATT are replaced by GAP once connected.", "isCorrect": false },
+      { "text": "GATT client runs only on the peripheral.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "046",
+    "question": "Smart toy robot (BLE to phone, Wi-Fi/Internet to company server, kids are users). Which elements in the sketch are CRITICAL from a threat-model view? (Select all that apply.)",
+    "choices": [
+      { "text": "Bluetooth link between phone and toy.", "isCorrect": true },
+      { "text": "Mobile app on the parent/child phone.", "isCorrect": true },
+      { "text": "Toy’s microphone/camera and stored voice data.", "isCorrect": true },
+      { "text": "Wi-Fi link from toy/phone to the Internet.", "isCorrect": true },
+      { "text": "Company backend/API and data store.", "isCorrect": true },
+      { "text": "Wall power outlet used to charge the toy.", "isCorrect": false },
+      { "text": "Printed user manual.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "047",
+    "question": "Using OWASP IoT Top 10, which categories best fit this scenario’s main risks? (Select at least three.)",
+    "choices": [
+      { "text": "Insecure ecosystem interfaces (mobile/cloud APIs).", "isCorrect": true },
+      { "text": "Insecure data transfer and storage (BLE/Wi-Fi/cloud).", "isCorrect": true },
+      { "text": "Weak, guessable, or hardcoded passwords.", "isCorrect": true },
+      { "text": "Lack of secure update mechanism.", "isCorrect": true },
+      { "text": "Insufficient privacy protection for personal/voice data.", "isCorrect": true },
+      { "text": "Use of quantum-resistant cryptography only.", "isCorrect": false },
+      { "text": "Excessive physical packaging waste.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "048",
+    "question": "Pick concrete THREATS that could hit the smart toy scenario first. (Select all that apply.)",
+    "choices": [
+      { "text": "BLE eavesdropping or MITM during pairing.", "isCorrect": true },
+      { "text": "Rogue mobile app abusing toy permissions.", "isCorrect": true },
+      { "text": "Credential stuffing against the backend API.", "isCorrect": true },
+      { "text": "Unencrypted voice uploads over Wi-Fi/HTTP.", "isCorrect": true },
+      { "text": "Unsigned firmware update pushed to the toy.", "isCorrect": true },
+      { "text": "Electrostatic discharge damaging plastics.", "isCorrect": false },
+      { "text": "Printer misprints the logo.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "049",
+    "question": "Which MITIGATIONS most directly reduce those risks for the toy, app, and cloud? (Select all that apply.)",
+    "choices": [
+      { "text": "BLE LE Secure Connections; authenticated pairing.", "isCorrect": true },
+      { "text": "TLS 1.2+ end-to-end; cert pinning in the app.", "isCorrect": true },
+      { "text": "Per-device creds; no hardcoded passwords.", "isCorrect": true },
+      { "text": "Signed firmware; secure boot; update rollback.", "isCorrect": true },
+      { "text": "Least-privilege app permissions; parental consent; data minimization.", "isCorrect": true },
+      { "text": "Turn off LEDs to save power.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "050",
+    "question": "In the medical IoT sketch, which parts are CRITICAL to the threat model? (Select all that apply.)",
+    "choices": [
+      { "text": "Device ↔ Cloud uplink.", "isCorrect": true },
+      { "text": "Cloud ↔ Database link.", "isCorrect": true },
+      { "text": "Cloud ↔ Analytics workstation.", "isCorrect": true },
+      { "text": "Downlink commands Cloud → Devices.", "isCorrect": true },
+      { "text": "Data at rest in the Database.", "isCorrect": true },
+      { "text": "Device identity/keys on the node.", "isCorrect": true },
+      { "text": "Logo colors on the diagram.", "isCorrect": false },
+      { "text": "Rack paint on the server.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "051",
+    "question": "Pick threats for this scenario using STRIDE. (Select at least three.)",
+    "choices": [
+      { "text": "Spoofing: fake device sends vitals.", "isCorrect": true },
+      { "text": "Tampering: alter readings in transit.", "isCorrect": true },
+      { "text": "Repudiation: deny a sent command.", "isCorrect": true },
+      { "text": "Information disclosure: leak PHI from DB.", "isCorrect": true },
+      { "text": "DoS: flood the cloud/device path.", "isCorrect": true },
+      { "text": "EoP: low-priv user writes device settings.", "isCorrect": true },
+      { "text": "Cosmetic: outdated app icon.", "isCorrect": false },
+      { "text": "Hardware: sticker falls off the case.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "052",
+    "question": "Which STRIDE category fits an attacker sending falsified sensor data from a non-authorized source?",
+    "choices": [
+      { "text": "Spoofing identity.", "isCorrect": true },
+      { "text": "Tampering with data.", "isCorrect": false },
+      { "text": "Repudiation.", "isCorrect": false },
+      { "text": "Information disclosure.", "isCorrect": false },
+      { "text": "Denial of Service.", "isCorrect": false },
+      { "text": "Elevation of Privilege.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "053",
+    "question": "A hacker modifies health data packets before they reach the cloud. Which STRIDE category does this describe?",
+    "choices": [
+      { "text": "Tampering.", "isCorrect": true },
+      { "text": "Spoofing.", "isCorrect": false },
+      { "text": "Information disclosure.", "isCorrect": false },
+      { "text": "Elevation of Privilege.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "054",
+    "question": "An attacker eavesdrops on patient data traveling from the medical device to the cloud. Which STRIDE category applies?",
+    "choices": [
+      { "text": "Information disclosure.", "isCorrect": true },
+      { "text": "Spoofing.", "isCorrect": false },
+      { "text": "Tampering.", "isCorrect": false },
+      { "text": "Denial of Service.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "055",
+    "question": "An IoT gateway floods the cloud API with requests and prevents real data from being processed. Which STRIDE category is that?",
+    "choices": [
+      { "text": "Denial of Service.", "isCorrect": true },
+      { "text": "Spoofing.", "isCorrect": false },
+      { "text": "Information disclosure.", "isCorrect": false },
+      { "text": "Elevation of Privilege.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "056",
+    "question": "An administrator console has no role separation, and a normal user gains access to change device configurations. Which STRIDE threat is this?",
+    "choices": [
+      { "text": "Elevation of Privilege.", "isCorrect": true },
+      { "text": "Spoofing.", "isCorrect": false },
+      { "text": "Repudiation.", "isCorrect": false },
+      { "text": "Tampering.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "057",
+    "question": "A device sends wrong dosage data, and the system cannot prove which device sent it. Which STRIDE category applies?",
+    "choices": [
+      { "text": "Repudiation.", "isCorrect": true },
+      { "text": "Spoofing.", "isCorrect": false },
+      { "text": "Information disclosure.", "isCorrect": false },
+      { "text": "Denial of Service.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "058",
+    "question": "What mitigations reduce Spoofing and Tampering threats in the medical IoT system? (Select all that apply.)",
+    "choices": [
+      { "text": "Mutual authentication between device and cloud.", "isCorrect": true },
+      { "text": "End-to-end encryption (TLS or DTLS).", "isCorrect": true },
+      { "text": "Digital signatures and integrity checks on messages.", "isCorrect": true },
+      { "text": "Public dashboard without login.", "isCorrect": false },
+      { "text": "Unencrypted HTTP connections.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "059",
+    "question": "Which mitigations are most effective against Information Disclosure and Elevation of Privilege?",
+    "choices": [
+      { "text": "Access control, least privilege, encryption at rest.", "isCorrect": true },
+      { "text": "Open public data sharing policy.", "isCorrect": false },
+      { "text": "Plaintext logging of credentials.", "isCorrect": false },
+      { "text": "Allow root SSH from Internet.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "060",
+    "question": "Which STRIDE category involves making the service unavailable by overwhelming it with traffic?",
+    "choices": [
+      { "text": "Denial of Service.", "isCorrect": true },
+      { "text": "Information disclosure.", "isCorrect": false },
+      { "text": "Repudiation.", "isCorrect": false },
+      { "text": "Spoofing.", "isCorrect": false }
+    ]
+  }
+]
