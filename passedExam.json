@@ -110,7 +110,6 @@
       { "text": "ZigBee.", "isCorrect": true },
       { "text": "6LoWPAN.", "isCorrect": true },
       { "text": "WirelessHART (IEC 62591).", "isCorrect": true },
-      { "text": "ISA100.11a.", "isCorrect": true },
       { "text": "Wi-SUN (IEEE 802.15.4g).", "isCorrect": true },
       { "text": "LoRaWAN.", "isCorrect": false },
       { "text": "NB-IoT.", "isCorrect": false },
@@ -449,11 +448,11 @@
     "id": "040",
     "question": "MQTT sequence (Gauge QoS=0, NEW client QoS=1). No auth, no retained messages. Which exact order leads to the NEW client’s first value on topic \"dev1/pressure\"?",
     "choices": [
-      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS0) → B→NEW: PUBLISH(QoS0).", "isCorrect": true },
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS0) → B→NEW: PUBLISH(QoS0).", "isCorrect": false },
       { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS0) → B→Gauge: PUBACK → B→NEW: PUBLISH(QoS1) → NEW→B: PUBACK.", "isCorrect": false },
       { "text": "NEW→B: CONNECT → B→NEW: CONNACK → Gauge→B: PUBLISH(QoS0) → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → B→NEW: PUBLISH(QoS1).", "isCorrect": false },
       { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS0) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS0) → B→NEW: PUBLISH(QoS0).", "isCorrect": false },
-      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS1) → B→NEW: PUBLISH(QoS1) → NEW→B: PUBACK.", "isCorrect": false }
+      { "text": "NEW→B: CONNECT → B→NEW: CONNACK → NEW→B: SUBSCRIBE(QoS1) → B→NEW: SUBACK → Gauge→B: PUBLISH(QoS1) → B→NEW: PUBLISH(QoS1) → NEW→B: PUBACK.", "isCorrect": true }
     ]
   },
   {
@@ -682,3 +681,4 @@
     ]
   }
 ]
+
