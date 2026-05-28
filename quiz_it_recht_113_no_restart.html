@@ -1,0 +1,3113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT-Recht Quiz — 113 Question PDF Set</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg2: #12183a;
+      --card: rgba(16, 23, 52, 0.92);
+      --card-strong: #101734;
+      --text: #f5f7ff;
+      --muted: #b8c0ff;
+      --muted2: #d8dcff;
+      --accent: #6d4aff;
+      --accent2: #360094;
+      --danger: #ff5c7a;
+      --ok: #40e2a0;
+      --warning: #ffd166;
+      --border: rgba(255,255,255,.20);
+      --border-strong: rgba(255,255,255,.34);
+      --shadow: 0 24px 70px rgba(0,0,0,.42), 0 4px 18px rgba(0,0,0,.25);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 10%, rgba(109,74,255,.34), transparent 30rem),
+        radial-gradient(circle at 85% 15%, rgba(64,226,160,.14), transparent 26rem),
+        linear-gradient(145deg, var(--bg), #070a16 70%);
+    }
+
+    button, input { font: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
+
+    .app {
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: clamp(16px, 3vw, 36px);
+    }
+
+    .shell {
+      width: min(100%, 1180px);
+      display: grid;
+      gap: 16px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(16, 23, 52, .60);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.18);
+    }
+
+    .brand { display: grid; gap: 2px; }
+    .brand h1 { margin: 0; font-size: clamp(1.1rem, 2vw, 1.55rem); letter-spacing: -.02em; }
+    .brand p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+    .pills { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid var(--border);
+      color: var(--muted2);
+      font-size: .88rem;
+      white-space: nowrap;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 16px var(--accent); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(18px, 3vw, 28px);
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .progress-wrap { display: grid; gap: 9px; margin-bottom: 18px; }
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: .92rem;
+      flex-wrap: wrap;
+    }
+    .progress {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .progress > span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent2), var(--accent), var(--ok));
+      transition: width .28s ease;
+    }
+
+    fieldset { border: 0; padding: 0; margin: 0; }
+    #question {
+      display: block;
+      width: 100%;
+      font-size: clamp(1.18rem, 2.4vw, 1.65rem);
+      line-height: 1.35;
+      margin: 6px 0 18px 0;
+      font-weight: 750;
+      text-align: center;
+      letter-spacing: -.015em;
+    }
+
+    .hint {
+      margin: -6px auto 18px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .92rem;
+    }
+
+    .choices {
+      display: grid;
+      gap: 12px;
+    }
+
+    .choice input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .choice label {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      align-items: start;
+      gap: 13px;
+      padding: 15px 16px;
+      background: rgba(255,255,255,0.075);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      cursor: pointer;
+      transition: transform .10s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+      min-height: 62px;
+    }
+    .choice label:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-strong);
+      box-shadow: 0 10px 18px rgba(0,0,0,.20);
+      background: rgba(255,255,255,0.10);
+    }
+    .choice input[type="checkbox"]:focus-visible + label { outline: 3px solid rgba(109,74,255,.45); outline-offset: 3px; }
+    .choice.selected label {
+      border-color: var(--accent);
+      background: rgba(109,74,255,0.22);
+    }
+    .choice .badge {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: .9rem;
+      font-weight: 800;
+      background: rgba(184,192,255,.22);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.18);
+      line-height: 1;
+    }
+    .choice .text { line-height: 1.42; padding-top: 5px; }
+    .choice.correct label {
+      border-color: rgba(64,226,160,.9);
+      background: rgba(64,226,160,0.22);
+      color: #fff;
+    }
+    .choice.correct .badge { background: rgba(64,226,160,.96); color: #07120f; }
+    .choice.incorrect label {
+      border-color: rgba(255,92,122,.95);
+      background: rgba(255,92,122,0.22);
+      color: #fff;
+    }
+    .choice.incorrect .badge { background: rgba(255,92,122,.96); color: #fff; }
+    .choice.missed label {
+      border-color: rgba(255,209,102,.95);
+      box-shadow: inset 0 0 0 1px rgba(255,209,102,.35);
+    }
+
+    .feedback {
+      margin-top: 16px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      color: var(--muted2);
+      background: rgba(255,255,255,.06);
+      display: none;
+    }
+    .feedback.show { display: block; }
+    .feedback.ok { border-color: rgba(64,226,160,.55); background: rgba(64,226,160,.12); }
+    .feedback.bad { border-color: rgba(255,92,122,.60); background: rgba(255,92,122,.10); }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid transparent;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      color: #fff;
+      font-weight: 750;
+      padding: 12px 18px;
+      border-radius: 14px;
+      cursor: pointer;
+      min-width: 140px;
+      transition: transform .10s ease, opacity .16s ease, box-shadow .16s ease, border-color .16s ease;
+      box-shadow: 0 10px 20px rgba(54,0,148,.25);
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(54,0,148,.32); }
+    .btn:disabled { opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+    .btn.secondary { background: rgba(184,192,255,.16); color: var(--text); border-color: var(--border); box-shadow: none; }
+    .btn.success { background: rgba(64,226,160,.23); border-color: rgba(64,226,160,.55); box-shadow: none; }
+    .btn.danger { background: rgba(255,92,122,.18); border-color: rgba(255,92,122,.48); box-shadow: none; }
+
+    .results { text-align: center; display: grid; gap: 16px; }
+    .score-big { font-size: clamp(2.2rem, 6vw, 4.2rem); font-weight: 850; letter-spacing: -.06em; }
+    .result-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+    .metric {
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.06);
+    }
+    .metric strong { display: block; font-size: 1.35rem; }
+    .metric span { color: var(--muted); font-size: .9rem; }
+    .missed-list {
+      text-align: left;
+      max-height: 280px;
+      overflow: auto;
+      display: grid;
+      gap: 8px;
+      padding: 4px;
+    }
+    .missed-item {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      border-radius: 14px;
+      padding: 10px 12px;
+      color: var(--muted2);
+    }
+    .missed-item b { color: var(--text); }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .mini {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 10px;
+      cursor: pointer;
+    }
+    .mini:hover { color: var(--text); border-color: var(--border-strong); }
+
+    .kbd {
+      display: inline-grid;
+      place-items: center;
+      min-width: 1.65em;
+      padding: 1px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,.22);
+      color: var(--muted2);
+      background: rgba(255,255,255,.08);
+      font-size: .82em;
+    }
+
+    @media (max-width: 720px) {
+      .topbar { align-items: stretch; }
+      .pills { justify-content: flex-start; }
+      .result-grid { grid-template-columns: 1fr; }
+      .btn { width: 100%; }
+      .choice label { grid-template-columns: 30px 1fr; padding: 14px; }
+      .choice .badge { width: 30px; height: 30px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="shell" aria-label="IT-Recht quiz app">
+      <div class="topbar">
+        <div class="brand">
+          <h1>IT-Recht Quiz</h1>
+          <p>Only using the <strong>113-question IT-Recht PDF</strong> question set</p>
+        </div>
+        <div class="pills" aria-label="Quiz stats">
+          <span class="pill"><span class="dot"></span><span id="sourcePill">113-question PDF set</span></span>
+          <span class="pill">Score: <strong id="scorePill">0</strong></span>
+          <span class="pill">Missed: <strong id="missedPill">0</strong></span>
+        </div>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="question">
+        <div class="progress-wrap">
+          <div class="status-row">
+            <span id="status">Loading…</span>
+            <span id="shortcutHint"><span class="kbd">1-9</span> select · <span class="kbd">Enter</span> check/next</span>
+          </div>
+          <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+        </div>
+
+        <form id="quizForm">
+          <fieldset>
+            <legend id="question">Loading…</legend>
+            <div class="hint" id="hint">Select all correct answers.</div>
+            <div id="choices" class="choices" role="group" aria-labelledby="question"></div>
+          </fieldset>
+          <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+          <div class="actions">
+            <button type="button" id="checkBtn" class="btn" disabled>Check answers</button>
+            <button type="button" id="nextBtn" class="btn secondary" hidden>Next</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script id="question-data" type="application/json">
+
+[
+  {
+    "id": "001",
+    "question": "Welche Registrierungshindernisse gibt es für die Eintragung einer Marke ins Markenregister?",
+    "choices": [
+      {
+        "text": "Mangelnde graphische Darstellbarkeit",
+        "isCorrect": false
+      },
+      {
+        "text": "Gattungsbezeichnung",
+        "isCorrect": true
+      },
+      {
+        "text": "Ähnlichkeit mit einer älteren Marke",
+        "isCorrect": false
+      },
+      {
+        "text": "Ordnungs- oder sittenwidrige Zeichen",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "question": "Was ist Bestandteil der Kontrolle von allgemeinen Geschäftsbedingungen (AGB)?",
+    "choices": [
+      {
+        "text": "Inhaltskontrolle",
+        "isCorrect": true
+      },
+      {
+        "text": "Verbotskontrolle",
+        "isCorrect": false
+      },
+      {
+        "text": "Gültigkeitskontrolle",
+        "isCorrect": false
+      },
+      {
+        "text": "Geltungskontrolle",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "question": "Welche Aussage/n über das Herkunftslandprinzip im E-Commerce-Recht ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Die Begriffsdefinition \"koordinierter Bereich\" findet sich in S 2 Z 8 ECG.",
+        "isCorrect": false
+      },
+      {
+        "text": "Im koordinierten Bereich richten sich die vom Dienstanbieter zu erfüllenden rechtlichen Verpflichtungen nach dem Recht jenes Mitgliedsstaats, in dem der Diensteanbieter niedergelassen ist.",
+        "isCorrect": true
+      },
+      {
+        "text": "Das Herkunftslandprinzip ist in den SS30ff ECG geregelt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Im koordinierten Bereich hat der Dienstanbieter niemals auch rechtliche Verpflichtungen jener Staaten einzuhalten, in denen er zwar nicht niedergelassen ist, aber seine Produkte digital anbietet.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "question": "Welche Elemente umfasst die Informationssicherheit?",
+    "choices": [
+      {
+        "text": "Verfügbarkeit",
+        "isCorrect": true
+      },
+      {
+        "text": "Vertraulichkeit",
+        "isCorrect": true
+      },
+      {
+        "text": "Vertretbarkeit",
+        "isCorrect": false
+      },
+      {
+        "text": "Verarbeitbarkeit",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "question": "Welche Aussage(n) zum Ermittlungsverfahren ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Das Ermittlungsverfahren wird von der Staatsanwaltschaft gemeinsam mit der Kriminalpolizei geführt.",
+        "isCorrect": true
+      },
+      {
+        "text": "Das Ermittlungsverfahren endet entweder mit Einstellung oder Erhebung der Anklage.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ziel des Ermittlungsverfahrens ist es einen Täter zu finden. Es werden daher nur Beweise zu Lasten des Beschuldigten ermittelt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Für die Ausübung aller Ermittlungsbefugnisse ist eine gerichtliche Bewilligung erforderlich.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "question": "A möchte von der X GmbH ein Auto erwerben. Die X GmbH bietet A zwei verschiedene Möglichkeiten an: I) A bezahlt den vollen Preis sofort und wird sofort Eigentümer. 2) A bezahlt monatlich eine Rate und kann nach 5 Jahren entscheiden, ob er das Auto ganz erwerben möchte und den Restpreis bezahlen. Welche Aussage(n) stimmt/stimmen?",
+    "choices": [
+      {
+        "text": "Der Leasingvertrag ist im ABGB gesetzlich geregelt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Variante 2) ist ein Leasingvertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Variante l) ist ein Kaufvertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Variante I) ist ein Leasingvertrag.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "007",
+    "question": "Eine Richtlinie der EU",
+    "choices": [
+      {
+        "text": "ist unverbindlich.",
+        "isCorrect": false
+      },
+      {
+        "text": "ist in den Mitgliedstaaten immer unmittelbar anwendbar.",
+        "isCorrect": false
+      },
+      {
+        "text": "hat Empfehlungscharakter.",
+        "isCorrect": false
+      },
+      {
+        "text": "muss in nationales Recht umgesetzt werden.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "008",
+    "question": "Welche der folgenden Regelungen, sind bei elektronischem Abschluss von Verträgen mit Verbrauchern einzuhalten?",
+    "choices": [
+      {
+        "text": "Es muss der Zugang einer elektronischen Vertragserklärung unverzüglich elektronisch bestätigt werden (elektronische Empfangsbestätigung).",
+        "isCorrect": true
+      },
+      {
+        "text": "Ein Diensteanbieter hat die Vertragsbestimmungen und AGB dem Nutzer so zur Verfügung zu stellen, dass er sie speichern und wiedergeben kann.",
+        "isCorrect": true
+      },
+      {
+        "text": "Der Unternehmer hat dafür zu sorgen, dass der Verbraucher bei der Bestellung ausdrücklich bestätigt, dass die Bestellung mit einer Zahlungsverpflichtung verbunden ist.",
+        "isCorrect": true
+      },
+      {
+        "text": "Falls der Diensteanbieter sich freiwilligen Verhaltenskodizes unterworfen hat, hat er dies anzugeben und elektronischen Zugang zu diesen Kodizes anzugeben.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "009",
+    "question": "A verschafft sich durch eine Brute-Force-Attacke Zugang zu einem Computersystem, um personenbezogene Daten zu erlangen. Er denkt, es sei sein eigener Server, in Wahrheit handelt es sich aber um fremde Hardware.",
+    "choices": [
+      {
+        "text": "Es liegt ein Rechtfertigungsgrund vor.",
+        "isCorrect": false
+      },
+      {
+        "text": "A erfüllt den subjektiven Tatbestand des § 118a StGB.",
+        "isCorrect": false
+      },
+      {
+        "text": "A erfüllt den objektiven Tatbestand des § 118a StGB.",
+        "isCorrect": true
+      },
+      {
+        "text": "A ist strafbar.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "010",
+    "question": "Welche der folgenden Aussagen über die Zulassungsfreiheit von Diensten der Informationsgesellschaft ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Rechtsvorschriften, die die Zulässigkeit der Aufnahme oder Ausübung keiner geschäftlichen, gewerblichen oder beruflichen Tätigkeit regeln und nicht besonders und ausschließlich für Dienste der Informationsgesellschaft oder deren Anbieter gelten, bleiben unberührt. Gleiches gilt für Rechtsvorschriften über die Anzeige oder Konzessionspflicht von Telekommunikationsdiensten.",
+        "isCorrect": false
+      },
+      {
+        "text": "Einschlägige Regelungen finden sich dazu in §4 FAGG",
+        "isCorrect": false
+      },
+      {
+        "text": "Die Aufnahme und die Ausübung der Tätigkeit eines Diensteanbieters bedürfen keiner gesonderten behördlichen Zulassung, Bewilligung, Genehmigung oder Konzession oder sonstigen Anforderung gleicher Wirkung.",
+        "isCorrect": true
+      },
+      {
+        "text": "Rechtsvorschriften, die die Zulässigkeit der Aufnahme oder Ausübung einer geschäftlichen, gewerblichen oder beruflichen Tätigkeit regeln und nicht besonders und ausschließlich für Dienste der Informationsgesellschaft oder deren Anbieter gelten, bleiben unberührt. Gleiches gilt für Rechtsvorschriften über die Anzeig eoder Konzessionspflicht von Telekommunikationsdiensten",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "011",
+    "question": "Gerichtliche Straftat oder Verwaltungsübertretung? Kreuzen Sie alle gerichtlich strafbaren Delikte an?",
+    "choices": [
+      {
+        "text": "Diebstahl",
+        "isCorrect": true
+      },
+      {
+        "text": "Handy am Steuer",
+        "isCorrect": false
+      },
+      {
+        "text": "Belästigung",
+        "isCorrect": false
+      },
+      {
+        "text": "Mord",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "012",
+    "question": "Welche der folgenden Aussagen ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Ris.bka.gv.at und eur-lex.europa.eu sind Rechtsinformationssysteme.",
+        "isCorrect": true
+      },
+      {
+        "text": "Auf der Internetseite ris.bka.gv.at findet man nur Urteile des EuGHs.",
+        "isCorrect": false
+      },
+      {
+        "text": "Auf der Internetseite ris.bka.gv.at findet man unter anderem österreichisches Bundes- und Landesrecht.",
+        "isCorrect": true
+      },
+      {
+        "text": "Auf der Internetseite eur-lex.europa.eu findet man unter anderem EU-Rechtsprechung, Richtlinien und Verordnungen.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "013",
+    "question": "Welche Haftungsprivilegien sind im österreichischen ECG geregelt, obwohl dies in der europäischen E-Commerce-Richtlinie nicht explizit vorgesehen war?",
+    "choices": [
+      {
+        "text": "Ausschluss der Verantwortlichkeit bei Links (S 17 ECG)",
+        "isCorrect": true
+      },
+      {
+        "text": "Ausschluss der Verantwortlichkeit bei Suchmaschinen (S 14 ECG)",
+        "isCorrect": true
+      },
+      {
+        "text": "Ausschluss der Verantwortlichkeit bei Durchleitung (Access-Provider, S 13 ECG)",
+        "isCorrect": false
+      },
+      {
+        "text": "Ausschluss der Verantwortlichkeit bei Speicherung fremder Inhalte (Host-Provider; S 16 ECG)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "014",
+    "question": "Welche(r) Vertrag/Verträge ist/sind im ABGB geregelt?",
+    "choices": [
+      {
+        "text": "Mietvertrag",
+        "isCorrect": true
+      },
+      {
+        "text": "Kaufvertrag",
+        "isCorrect": true
+      },
+      {
+        "text": "Schenkung",
+        "isCorrect": true
+      },
+      {
+        "text": "Leasingvertrag",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "015",
+    "question": "Eine Richtlinie der EU muss durch die Mitgliedstaaten in nationales Recht umgesetzt werden.",
+    "choices": [
+      {
+        "text": "Wahr",
+        "isCorrect": true
+      },
+      {
+        "text": "Falsch",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "016",
+    "question": "Auf welchen § kann in Österreich der Haftungsausschluss im Zusammenhang mit der Setzung eines Hyperlinks zur Weiterleitung auf eine fremde Website gestützt werden?",
+    "choices": [
+      {
+        "text": "§ 18 ECG",
+        "isCorrect": false
+      },
+      {
+        "text": "§ 17 ECG",
+        "isCorrect": true
+      },
+      {
+        "text": "Eine derartige Regelung besteht in Österreich nicht",
+        "isCorrect": false
+      },
+      {
+        "text": "§ 14 ECG",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "017",
+    "question": "Welche der folgenden Aussagen über die sog. \"Button-Lösung\" ist/sind NICHT richtig?",
+    "choices": [
+      {
+        "text": "Durch einen Klick auf eine \"ButtonSchaltfläche\" gibt die Konsumentin ihre/ seine Zustimmung zu dem gewünschten online Einkauf, den AGB wie auch als auch der Datenschutzerklärung.",
+        "isCorrect": true
+      },
+      {
+        "text": "Mit diesem weiteren Schritt im Bestellprozess hat der/die Verbraucher/in ausdrücklich zu bestätigen, dass die vorliegende Bestellung mit einer Zahlungsverpflichtung einhergeht.",
+        "isCorrect": false
+      },
+      {
+        "text": "Die Details zur Button-Lösung findet sich in § 8 Abs 2 FAGG",
+        "isCorrect": false
+      },
+      {
+        "text": "Diese Regelung betrifft elektronische Geschäfte mit Verbrauchern, die für diese eine Zahlungsverpflichtung nach sich ziehen.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "018",
+    "question": "Was muss bei einem Vertragsabschluss in einem Webshop beachtet werden?",
+    "choices": [
+      {
+        "text": "Es müssen keine Musterformulare übermittelt werden.",
+        "isCorrect": false
+      },
+      {
+        "text": "Bei Beginn des Bestellvorgangs muss darüber informiert werden, ob Lieferbeschränkungen bestehen und welche Zahlungsmittel akzeptiert werden.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es bestehen keinerlei Regelungen wie der kauf abgeschlossen wird.",
+        "isCorrect": false
+      },
+      {
+        "text": "Nach Vertragsabschluss muss eine Bestätigung des geschlossen Vertrags auf einem dauerhaften Datenträger übermittelt werden",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "019",
+    "question": "Für den Versuch ein Delikt, nach § 126b StGB zu begehen....",
+    "choices": [
+      {
+        "text": "● besteht keine Strafbarkeit, weil ein Versuch als Vorbereitungshandlung nicht strafbar sein kann.",
+        "isCorrect": false
+      },
+      {
+        "text": "● gilt ein Milderungsgrund im Vergleich zu einem vollendeten Delikt.",
+        "isCorrect": true
+      },
+      {
+        "text": "● besteht nur deshalb Strafbarkeit, weil die Störung der Funktionsfähigkeit eines Computersystems in § 126b StGB angeführt ist.",
+        "isCorrect": false
+      },
+      {
+        "text": "● gilt derselbe Strafrahmen wie für ein vollendetes Delikt.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "020",
+    "question": "Welche Aussage(n) zur Gewährleistung ist/sind richtig?",
+    "choices": [
+      {
+        "text": "● Die Gewährleistung besteht gegenüber dem Hersteller.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Die Gewährleistung berechtigt immer zur Vertragsauflösung.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Die Vermutungsfrist beträgt 6 Monate.",
+        "isCorrect": true
+      },
+      {
+        "text": "● Die Gewährleistungsfrist beträgt 2 Jahre.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "021",
+    "question": "Welchen erweiterten Schutz genießen bekannte Marken?",
+    "choices": [
+      {
+        "text": "● Bekannte Marken müssen nicht in das Markenregister eintragen werden.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Nur bekannte Marken werden auch dann geschützt, wenn das beanstandete Zeichen für Waren oder Dienstleistungen verwendet wird, die nicht ähnlich sind mit derjenigen, für die die bekannte Marke eingetragen ist.",
+        "isCorrect": true
+      },
+      {
+        "text": "● Nur bekannte Marken werden auch dann geschützt, wenn zwischen den beanstandeten Zeichen und der bekannten Marke eine Verwechslungsgefahr besteht.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Bekannte Marken sind automatisch weltweit geschützt",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "022",
+    "question": "Im Zusammenhang mit dem Recht auf Berichtigung (Art 16 DSGVO) ist welche Aussage zutreffend?",
+    "choices": [
+      {
+        "text": "● Die Verpflichtung trifft den Verantwortlichen (\"Controller\").",
+        "isCorrect": true
+      },
+      {
+        "text": "● Die Berichtigung soll ohne unnötige Verzögerung erfolgen.",
+        "isCorrect": true
+      },
+      {
+        "text": "● Die Berichtigung hat binnen 24 stunden zu erfolgen.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Die Verpflichtung trifft den Auftragsverarbeiter (\"Processor\").",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "023",
+    "question": "Welche freien Werknutzungen gibt es im ?",
+    "choices": [
+      {
+        "text": "● Werknutzungen im Interesse der Rechtspflege und der Verwaltung",
+        "isCorrect": true
+      },
+      {
+        "text": "● Vervielfältigung für Zwecke des Unterrichts und Lehre",
+        "isCorrect": true
+      },
+      {
+        "text": "● Weiterteilen von fremden Inhalten",
+        "isCorrect": false
+      },
+      {
+        "text": "● Wissenschaftliches Großzitat",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "024",
+    "question": "Für wen gelten die Haftungsprivilegien im e-commerce-Gesetz?",
+    "choices": [
+      {
+        "text": "● Host-Provider, der nicht allgemein die von ihnen gespeicherten, übermittelten oder zugänglich gemachten Informationen überwacht oder nach Umständen forscht, die auf rechtswidrige Tätigkeiten hinweisen",
+        "isCorrect": true
+      },
+      {
+        "text": "● Access-Provider, der die übermittelten Informationen verändert",
+        "isCorrect": false
+      },
+      {
+        "text": "● Content-Provider",
+        "isCorrect": false
+      },
+      {
+        "text": "● Access-Provider, sofern er die Übermittlung nicht veranlasst, den Empfänger der übermittelten Informationen nicht auswählt und die übermittelten Informationen weder auswählt noch verändern",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "025",
+    "question": "Welche der folgenden Kriterien sind Voraussetzung für die Strafbarkeit?",
+    "choices": [
+      {
+        "text": "● Objektiver Tatbestand",
+        "isCorrect": true
+      },
+      {
+        "text": "● Rechtswidrigkeit Subjektiver",
+        "isCorrect": true
+      },
+      {
+        "text": "● Tatbestand",
+        "isCorrect": true
+      },
+      {
+        "text": "● Neutrale Sorgfaltswidrigkeit",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "026",
+    "question": "Der Europarat:",
+    "choices": [
+      {
+        "text": "● hat seinen Sitz in Luxemburg.",
+        "isCorrect": false
+      },
+      {
+        "text": "● ist eine Institution der Europäischen Union.",
+        "isCorrect": false
+      },
+      {
+        "text": "● hat 46 Mitgliedstaaten.",
+        "isCorrect": true
+      },
+      {
+        "text": "● erlässt Gesetze.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "027",
+    "question": "Welche der folgenden Aussagen ist richtig?",
+    "choices": [
+      {
+        "text": "● Erwägungsgründe sind verbindlich.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Artikel gibt es nur in Richtlinien.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Richtlinien müssen immer sofort in nationales Recht umgesetzt werden.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Artikel einer Verordnung sind verbindlich.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "028",
+    "question": "Die Verordnung des Magistrats der Stadt Wien betreffend Auskunftserteilung für Contact Tracing im Zusammenhang mit Verdachtsfällen von COWID-19 findet man im Rechtsinformationssystem des Bundes (vwrww.ris.bka.gv.at)",
+    "choices": [
+      {
+        "text": "● Richtig",
+        "isCorrect": true
+      },
+      {
+        "text": "● Falsch",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "029",
+    "question": "A Kauf beim Händler B ein neues Handy. Dieses Handy wird nach 4 Monaten defekt wegen einem Lötfehler bei der Produktion. A verliert dabei all seine Daten auf dem Handy. Welche der folgenden Aussagen ist richtig? Überlegen Sie sich warum.",
+    "choices": [
+      {
+        "text": "● A kann von B Reparatur des Geräts oder ein neues Gerät desselben Models verlangen.",
+        "isCorrect": true
+      },
+      {
+        "text": "● A kann von B sofort den Kaufpreis zurückverlangen.",
+        "isCorrect": false
+      },
+      {
+        "text": "● B muss A gar nichts leisten, da die Gewährleistungsfrist von 3 Monaten bereits vorbei ist.",
+        "isCorrect": false
+      },
+      {
+        "text": "● A kann von B Schadenersatz für die verlorengegangen Daten auf dem Handy verlangen",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "030",
+    "question": "Welche der folgenden Gesetze werden zum gezählt?",
+    "choices": [
+      {
+        "text": "● Wasserrechtsgesetz",
+        "isCorrect": false
+      },
+      {
+        "text": "● Verbraucherkreditgesetz",
+        "isCorrect": true
+      },
+      {
+        "text": "● Pauschalreisegesetz",
+        "isCorrect": true
+      },
+      {
+        "text": "● Konsumentenschutzgesetz",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "031",
+    "question": "Was ist nicht im E-Commerce-Gesetz geregelt?",
+    "choices": [
+      {
+        "text": "● Impressumspflicht",
+        "isCorrect": false
+      },
+      {
+        "text": "● Steuerabgaben für Anbieter von Diensten der Informationsgesellschaft",
+        "isCorrect": true
+      },
+      {
+        "text": "● Besonderheiten des Vertragsabschlusses im Internet",
+        "isCorrect": false
+      },
+      {
+        "text": "● Providerhaftung",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "032",
+    "question": "Welche der folgenden Rechtsgrundlagen für die Datenverarbeitung bestehen gemäß Art 6 DSGVO",
+    "choices": [
+      {
+        "text": "● Genehmigung durch die Datenschutzbehörde",
+        "isCorrect": false
+      },
+      {
+        "text": "● Einwilligung Vermutetes",
+        "isCorrect": true
+      },
+      {
+        "text": "● Interesse der betroffenen Person",
+        "isCorrect": false
+      },
+      {
+        "text": "● Erfüllung eines Vertrags",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "033",
+    "question": "Die DSGVO",
+    "choices": [
+      {
+        "text": "● regelt den Schutz natürlicher Personen bei der Verarbeitung ihrer personenbezogenen Daten",
+        "isCorrect": true
+      },
+      {
+        "text": "● muss von den Mitgliedstaaten erst in nationales Recht umgesetzt werden",
+        "isCorrect": false
+      },
+      {
+        "text": "● regelt den Schutz juristischer Personen bei der Verarbeitung ihrer personenbezogenen Daten",
+        "isCorrect": false
+      },
+      {
+        "text": "● ist unmittelbar in allen Mitgliedstaaten der EU anwendbar",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "034",
+    "question": "Welche Aussage(n) zu den Betroffenenrechten ist/sind richtig?",
+    "choices": [
+      {
+        "text": "● Die Betroffenenrechte können gemäß Art 23 DSGVO von den Mitgliedsstaaten eingeschränkt werden.",
+        "isCorrect": true
+      },
+      {
+        "text": "● Das Recht auf Vergessenwerden ist nicht ausdrücklich in der DSGVO normiert.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Stellt eine betroffene Person einen Antrag auf Löschung, so hat der Verantwortliche die Daten jedenfalls zu löschen.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Das Recht auf Widerspruch (Art 21 DSGVO) normiert, wie eine ursprünglich erteilte Einwilligung widerrufen werden kann. -> beim letzten mal oft falsch beantwortet.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "035",
+    "question": "§ 75 StGB (Mord) lautet: Wer einen anderen tötet, ist mit Freiheitsstrafe von zehn bis zwanzig Jahren oder mit lebenslanger Freiheitsstrafe zu bestrafen. Welche/r der Folgenden Fälle fällt/fallen unter § 75 StGB?",
+    "choices": [
+      {
+        "text": "● Bei einer Wirtshausschlägerei schlägt F auf den G ein und verletzt diesen so schwer, dass dieser später seinen Verletzungen erliegt. Niemals hätte F gedacht, dass G sterben könnte.",
+        "isCorrect": false
+      },
+      {
+        "text": "● A vergiftet die B, damit er ihre Erbschaft bekommt.",
+        "isCorrect": true
+      },
+      {
+        "text": "● C Überfällt den D, um ihn auszurauben, D schlägt als Verteidigung auf C ein, dieser stirbt.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Die E will ihren reichen Onkel O ermorden, um von ihm zu erben. Bei der Ausführung der Tat ersticht E allerdings nicht O, sondern dessen lang verschollenen Zwillingsbruder Z den sie mit O verwechselt hat.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "036",
+    "question": "A will seinem Konkurrenzunternehmen, der XYZ GmBH schaden. Deshalb plant er eine Ransomware-Attacke. Er lädt sich zu diesem Zweck ein entsprechendes Programm aus dem Darknet herunter. Anschließend verschafft er sich Zugang zum Firmennetzwerk. Das Passwort war dabei einfach zu erraten: das Geburtsdatum des Geschäftsführers. A lässt dann das Programm laufen, sodass alle Server verschlüsselt werden. Für die Herausgabe des Passworts verlangt A 50 Bitcoin",
+    "choices": [
+      {
+        "text": "● § 126c StGB - Missbrauch von Computerprogrammen oder Zugangsdaten",
+        "isCorrect": true
+      },
+      {
+        "text": "● § 126a StGB - Datenbeschädigung",
+        "isCorrect": true
+      },
+      {
+        "text": "● § 126b StGB - Störung der Funktionsfähigkeit eines Computersystems",
+        "isCorrect": false
+      },
+      {
+        "text": "● § 118a StGB - Widerrechtlicher Zugriff auf ein Computersystem",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "037",
+    "question": "Um einen Vertrag zu schließen, muss die Person..",
+    "choices": [
+      {
+        "text": "● Immer ihre Unterschrift unter den Vertrag setzen.",
+        "isCorrect": false
+      },
+      {
+        "text": "● Rechtsfähig sein.",
+        "isCorrect": true
+      },
+      {
+        "text": "● Eine Willenserklärung abgeben.",
+        "isCorrect": true
+      },
+      {
+        "text": "● Achtzehn Jahre sein.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "038",
+    "question": "A will seinem Konkurrenzunternehmen, der XYZ GmBH schaden. Deshalb plant er eine Ransomware-Attacke. Er lädt sich zu diesem Zweck ein entsprechendes Programm aus dem Darknet herunter. Anschließend verschafft er sich Zugang zum Firmennetzwerk. Das Passwort war dabei einfach zu erraten: das Geburtsdatum des Geschäftsführers. A lässt dann das Programm laufen, sodass alle Server verschlüsselt werden. Für die Herausgabe des Passworts verlangt A 10.000 € in Bitcoin. Welche/n Tatbestand/Tatbestände erfüllt dieser Fall?",
+    "choices": [
+      {
+        "text": "§ 126a StGB – Datenbeschädigung",
+        "isCorrect": true
+      },
+      {
+        "text": "§ 126c StGB – Missbrauch von Computerprogrammen oder Zugangsdaten",
+        "isCorrect": true
+      },
+      {
+        "text": "§ 126b StGB – Störung der Funktionsfähigkeit eines Computersystems",
+        "isCorrect": false
+      },
+      {
+        "text": "§ 118a StGB – Widerrechtlicher Zugriff auf ein Computersystem",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "039",
+    "question": "Offizialdelikte…",
+    "choices": [
+      {
+        "text": "verfolgt die Staatsanwaltschaft von sich aus.",
+        "isCorrect": true
+      },
+      {
+        "text": "dürfen nur von der Wirtschafts- und Korruptionsstaatsanwaltschaft verfolgt werden.",
+        "isCorrect": false
+      },
+      {
+        "text": "werden auch verfolgt, wenn das Opfer sich dagegen ausspricht.",
+        "isCorrect": true
+      },
+      {
+        "text": "werden nur verfolgt, wenn das Opfer zustimmt.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "040",
+    "question": "Bei § 118a (Widerrechtlicher Zugriff auf ein Computersystem) muss/müssen folgende Voraussetzung(en) beim objektiven Tatbestand vorliegen:",
+    "choices": [
+      {
+        "text": "Selbstbezeichnung als \"Hacker\"",
+        "isCorrect": false
+      },
+      {
+        "text": "Überwindung einer spezifischen Sicherheitsvorkehrung",
+        "isCorrect": true
+      },
+      {
+        "text": "Nachweisliche Programmierkenntnisse",
+        "isCorrect": false
+      },
+      {
+        "text": "Fehlende Verfügungsbefugnis (zumindest Fehlen der alleinigen Verfügungsbefugnis) über ein Computersystem",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "041",
+    "question": "Which of the following are obligations for deployers of high-risk AI Systems",
+    "choices": [
+      {
+        "text": "AI literacy training for their staff",
+        "isCorrect": true
+      },
+      {
+        "text": "Ensuring transparency by informing users that they are interacting with an AI system.",
+        "isCorrect": true
+      },
+      {
+        "text": "Implementing human oversight",
+        "isCorrect": true
+      },
+      {
+        "text": "Submitting AI systems for public voting before deployment",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "042",
+    "question": "Der Cyber Resilience Act…",
+    "choices": [
+      {
+        "text": "teilt Produkte in verschiedene Risikoklassen ein.",
+        "isCorrect": true
+      },
+      {
+        "text": "verlangt ein Konformitätsbewertungsverfahren sowie eine CE-Kennzeichnung.",
+        "isCorrect": true
+      },
+      {
+        "text": "gilt für Produkte mit digitalen Elementen.",
+        "isCorrect": true
+      },
+      {
+        "text": "muss seit 2022 von Unternehmen eingehalten werden.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "043",
+    "question": "Wie lange wird ein Werk urheberrechtlich geschützt (Schutzdauer des Urheberrechts)?",
+    "choices": [
+      {
+        "text": "25 Jahre nach dem Tod des Urhebers",
+        "isCorrect": true
+      },
+      {
+        "text": "70 Jahre nach dem Tod des Urhebers",
+        "isCorrect": true
+      },
+      {
+        "text": "10 Jahre und immer wieder um 10 Jahre verlängerbar",
+        "isCorrect": false
+      },
+      {
+        "text": "Unbefristet",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "044",
+    "question": "In what ways do the GDPR and the EU AI Act overlap?",
+    "choices": [
+      {
+        "text": "Both impose requirements of transparency and explainability in automated decision-making processes.",
+        "isCorrect": true
+      },
+      {
+        "text": "Both laws impose requirements related to data governance and data quality.",
+        "isCorrect": true
+      },
+      {
+        "text": "The AI Act replaces the GDPR for all AI-related data processing activities.",
+        "isCorrect": false
+      },
+      {
+        "text": "The two laws overlap directly when AI systems are used to process personal data.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "045",
+    "question": "Which of the following is an example of personal data?",
+    "choices": [
+      {
+        "text": "Your IP address",
+        "isCorrect": true
+      },
+      {
+        "text": "Name and surname",
+        "isCorrect": true
+      },
+      {
+        "text": "Weather data",
+        "isCorrect": false
+      },
+      {
+        "text": "Company registration number",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "046",
+    "question": "Welche der folgenden Aussagen zum ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Das Konsumentenschutzgesetz beinhaltet lediglich eine negative Definition des Verbraucherbegriffs.",
+        "isCorrect": true
+      },
+      {
+        "text": "Das Verbraucherrecht verpflichtet an verschiedenen Stellen Unternehmen, den Verbrauchern Informationen über ihre Waren und Dienstleistungen zur Verfügung zu stellen.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es gibt ein universelles Rücktrittsrecht für Verbraucher.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ein Verbrauchergeschäft ist ein Geschäft, an dem zwei Verbraucher beteiligt sind.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "047",
+    "question": "Eine Verordnung der EU",
+    "choices": [
+      {
+        "text": "gilt sobald sie von der Europäischen Kommission beschlossen wurde.",
+        "isCorrect": false
+      },
+      {
+        "text": "ist in der Regel in Erwägungsgründe und Paragraphen gegliedert.",
+        "isCorrect": true
+      },
+      {
+        "text": "ist in der Regel in Erwägungsgründe und Artikel gegliedert.",
+        "isCorrect": true
+      },
+      {
+        "text": "muss immer in nationales Recht umgesetzt werden.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "048",
+    "question": "In Österreich gibt es folgende Systeme des Schadensersatzes:",
+    "choices": [
+      {
+        "text": "Verschuldenshaftung",
+        "isCorrect": true
+      },
+      {
+        "text": "Gefährdungshaftung",
+        "isCorrect": true
+      },
+      {
+        "text": "Techniküberlassungshaftung",
+        "isCorrect": false
+      },
+      {
+        "text": "Gerüchtehaftung",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "049",
+    "question": "Welche der folgende Elemente gehören zur Privatautonomie?",
+    "choices": [
+      {
+        "text": "Abschlussfreiheit",
+        "isCorrect": true
+      },
+      {
+        "text": "Formfreiheit",
+        "isCorrect": true
+      },
+      {
+        "text": "Diskriminierungsfreiheit",
+        "isCorrect": false
+      },
+      {
+        "text": "Schuldenfreiheit",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "050",
+    "question": "Wie lange wird ein Patent geschützt (Schutzdauer des Patentrechts)?",
+    "choices": [
+      {
+        "text": "Maximal 30 Jahre",
+        "isCorrect": true
+      },
+      {
+        "text": "Maximal 20 Jahre",
+        "isCorrect": true
+      },
+      {
+        "text": "Maximal 10 Jahre",
+        "isCorrect": true
+      },
+      {
+        "text": "Unbefristet",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "051",
+    "question": "Welche der folgenden Aussagen zur Geschäftsfähigkeit ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Wenn die Geschäftsfähigkeit einmal durch das Gesetz beschränkt wurde, nach dem man volljährig geworden ist, kann sie sich nicht mehr erweitern.",
+        "isCorrect": false
+      },
+      {
+        "text": "Die Geschäftsfähigkeit bezeichnet die Fähigkeit, Eigentum zu erwerben.",
+        "isCorrect": false
+      },
+      {
+        "text": "Auch erwachsene Menschen können eingeschränkt geschäftsfähig sein.",
+        "isCorrect": true
+      },
+      {
+        "text": "Die Geschäftsfähigkeit kann durch das Alter beschränkt sein.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "052",
+    "question": "Which of the following are rights conferred to the data subject under Articles 12-22 of the GDPR?",
+    "choices": [
+      {
+        "text": "Rights in relation to automated decision-making and profiling.",
+        "isCorrect": true
+      },
+      {
+        "text": "The right to be informed.",
+        "isCorrect": true
+      },
+      {
+        "text": "The right to payment for the processing of personal data.",
+        "isCorrect": false
+      },
+      {
+        "text": "The right to be forgotten (erasure).",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "053",
+    "question": "Welche Aussage(n) zum Digital Services Act ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Enthält Regelungen zur Haftung für Online-Intermediäre in Europa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Verpflichtet große Plattformen zur Einführung von Upload-Filtern, um Hate Speech vorzubeugen",
+        "isCorrect": false
+      },
+      {
+        "text": "Übernimmt im Wesentlichen die Haftungsregeln für Hosting Provider von der E-Commerce-Richtlinie.",
+        "isCorrect": true
+      },
+      {
+        "text": "Beim DSA handelt es sich um eine Verordnung.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "054",
+    "question": "Welche Produkte werden durch den Cyber Resilience Act geregelt?",
+    "choices": [
+      {
+        "text": "Medizinprodukte",
+        "isCorrect": false
+      },
+      {
+        "text": "Software",
+        "isCorrect": true
+      },
+      {
+        "text": "Hardware",
+        "isCorrect": true
+      },
+      {
+        "text": "Open-Source-Software mit kommerzieller Nutzung",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "055",
+    "question": "The GDPR",
+    "choices": [
+      {
+        "text": "Is directly applicable in all EU member states.",
+        "isCorrect": true
+      },
+      {
+        "text": "Regulates the protection of legal entities when processing their personal data.",
+        "isCorrect": false
+      },
+      {
+        "text": "Regulates the protection of natural persons when processing their personal data.",
+        "isCorrect": true
+      },
+      {
+        "text": "Must first be transposed into national law by the member states.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "056",
+    "question": "Der Europäische Gerichtshof für Menschenrechte",
+    "choices": [
+      {
+        "text": "stellt die Einhaltung der Europäischen Menschenrechtskonvention (EMRK) sicher.",
+        "isCorrect": true
+      },
+      {
+        "text": "ist ein Organ der Europäischen Union.",
+        "isCorrect": false
+      },
+      {
+        "text": "ist ein Organ des Europarats.",
+        "isCorrect": true
+      },
+      {
+        "text": "prüft, ob Mitgliedstaaten den unionsrechtlichen Verpflichtungen nachgekommen sind.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "057",
+    "question": "Welche Aussage/n über das Herkunftslandprinzip im E-Commerce-Recht ist/sind richtig? Die Begriffsdefinition \"koordinierter Bereich\" findet sich in § 2 Z 8 ECG. Im koordinierten Bereich richten sich die vom Dienstanbieter zu erfüllenden rechtlichen Verpflichtungen nach dem Recht jenes",
+    "choices": [
+      {
+        "text": "Mitgliedsstaats, in dem der Diensteanbieter niedergelassen ist.",
+        "isCorrect": true
+      },
+      {
+        "text": "Das Herkunftslandprinzip ist in den §§30ff ECG geregelt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Im koordinierten Bereich hat der Dienstanbieter niemals auch rechtliche Verpflichtungen jener Staaten einzuhalten, in denen er",
+        "isCorrect": false
+      },
+      {
+        "text": "zwar nicht niedergelassen ist, aber seine Produkte digital anbietet.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "058",
+    "question": "Zwei Täter trifft dieselbe Schuld an einer Straftat, sie haben aber unterschiedliche Einkommenssituationen. Wie ist beim Verhängen einer Geldstrafe vorzugehen?",
+    "choices": [
+      {
+        "text": "Die Anzahl der Tagessätze ist bei beiden Tätern gleich; die Höhe ist verschieden.",
+        "isCorrect": true
+      },
+      {
+        "text": "Das geringere Einkommen des einen Täters wird als Milderungsgrund berücksichtigt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Das Einkommen wird bei der Strafzumessung nicht berücksichtigt. Bei gleicher Schuld ist auch die gleiche Strafe zu verhängen.",
+        "isCorrect": false
+      },
+      {
+        "text": "Die Höhe der Tagessätze ist bei beiden Tätern gleich; die Anzahl ist verschieden.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "059",
+    "question": "Beschreiben Sie kurz die wesentlichen Unterschiede zwischen dem Europäischen Rat, Rat der Europäischen Union und Europarat.",
+    "choices": [
+      {
+        "text": "Der Europarat hat nichts mit der EU zu tun. Er hat seinen Sitz in Straßburg und umfasst 47 Mitgliedsstaaten (darunter beispielsweise Bosnien und Herzegowina, Serbien und Albanien; die drei genannten sind keine Mitglieder der EU). Der Europäische Rat ist ein Organ der EU, hat seinen Sitz in Brüssel und ist eine Zusammenkunft der Staats- und Regierungsoberhäupter. Er wird nicht gesetzgeberisch tätig, es werden lediglich allgemeine Ziele und Prioritäten definiert. Der Rat der EU ist ebenfalls ein Organ der EU, hat seinen Sitz in Brüssel und ist eine Zusammenkunft von Ministern der Mitgliedsländer (Ministerrat). Im Gegensatz zum Europäischen Rat ist dieser aber mit dem Parlament als Gesetzgeber tätig und schließt internationale Verträge.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "060",
+    "question": "Wenn es darum geht, geeignete technische und organisatorische Maßnahmen für die Sicherheit der Datenverarbeitung zu finden, können Sie welche exemplarischen Maßnahmen aus Art 32 DSGVO ableiten? Mit welcher Methode könnten Sie sonst noch geeignete Maßnahmen herausfinden und wie würde Sie dabei vorgehen? (Skizzieren Sie in Kürze)",
+    "choices": [
+      {
+        "text": "Ableiten kann man unter Anderem - die Pseudonymisierung und Verschlüsselung personenbezogener Daten - die Fähigkeit, um Vertraulichkeit, Integrität, Verfügbarkeit und Belastbarkeit der Dienste und Systeme im Zusammenhang mit der Verarbeitung personenbezogener Daten auf Dauer sicherzustellen - die Fähigkeit, die Verfügbarkeit der personenbezogenen Daten und den Zugang zu ihnen bei einem physischen und technischen Zwischenfall rasch wiederherzustellen - ein Verfahren zur regelmäßigen Überprüfung, Bewertung und Evaluierung der Wirksamkeit der technischen und organisatorischen Maßnahmen zur Gewährleistung der Sicherheit Mit der KORA-Methode können außerdem weitere geeignete Maßnahmen entdeckt werden. Dabei werden verfassungsrechtliche Vorgaben abgeleitet und anschließend mit Hilfe rechtlicher Anforderungen und Kriterien zu technischen Gestaltungszielen definiert. Diese werden abschließend durch technische Gestaltungsvorschläge konkretisiert, um sie anschließend in der Praxis umzusetzen. (Skizze) Verfassungsrechtliche Vorgaben > Rechtliche Anforderungen > Rechtliche Kriterien > Technische Gestaltungsziele > Technische Gestaltungsvorschläge",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "061",
+    "question": "Was ist eine Diversion?",
+    "choices": [
+      {
+        "text": "Unter einer Diversion versteht man den Rücktritt der weiteren Verfolgung unter bestimmten Auflagen. Dies kann bei leichter und mittelschwerer Kriminalität angewandt und dem Angeklagten angeboten werden. Dabei erfolgt kein Schuldeingeständnis und der Betroffene erhält keine Strafe.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "062",
+    "question": "Erklären sie die Rechtsnatur einer Domain.",
+    "choices": [
+      {
+        "text": "Eine Domain ist nur ein obligatorischer Anspruch, um eine bestimmte Bezeichnung im Rahmen des DNS zu halten. Dies führt aufgrund der Einmaligkeit einer Domain zu einem ausschließlichen Besitz der Bezeichnung. Die Registrierung entfaltet keine Rechte, die mit dieser Bezeichnung nicht schon vorher verbunden gewesen wären. Im Zusammenhang mit der Verwendung der registrierten Domain, insbesondere mit dem Inhalt der Webseite, kann sie aber die Kennzeichenfunktion entfalten und in den Genuss des Kennzeichenschutzes gelangen (Missbrauch von Kennzeichen eines Unternehmens oder Schutz des Namens unter anderem).",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "063",
+    "question": "Was sind Fernabsatzverträge? Wie werden diese definiert?",
+    "choices": [
+      {
+        "text": "Unter einem Fernabsatzvertrag versteht man jeden Vertrag, der zwischen einem Unternehmer und einem Verbraucher ohne gleichzeitige körperliche Anwesenheit beider Parteien im Rahmen eines für den Fernabsatz organisierten Vertriebs- oder Dienstleistungssystems geschlossen wird, wobei bis zum Zustandekommen des Vertrags werden ausschließlich Fernkommunikationsmittel verwendet. Ein Beispiel für ein Fernabsatzgeschäft wäre Online-Shopping.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "064",
+    "question": "A möchte von der X GmbH ein Auto erwerben. Die X GmbH bietet A zwei verschiedene Möglichkeiten an: 1) A bezahlt den vollen Preis sofort und wird sofort Eigentümer. 2) A bezahlt monatlich eine Rate und kann nach 5 Jahren entscheiden, ob er das Auto ganz erwerben möchte und den Restpreis bezahlen. Welche Aussage(n) stimmt/stimmen?",
+    "choices": [
+      {
+        "text": "Der Leasingvertrag ist im ABGB gesetzlich geregelt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Variante 2) ist ein Leasingvertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Variante 1) ist ein Kaufvertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Variante 1) ist ein Leasingvertrag.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "065",
+    "question": "Q: Eine Richtlinie der EU…",
+    "choices": [
+      {
+        "text": "ist in den Mitgliedstaaten unmittelbar anwendbar.",
+        "isCorrect": false
+      },
+      {
+        "text": "gilt sobald sie von der Europäischen Kommission beschlossen wurde.",
+        "isCorrect": false
+      },
+      {
+        "text": "ist in der Regel in Erwägungsgründe und Paragraphen gegliedert.",
+        "isCorrect": false
+      },
+      {
+        "text": "ist in der Regel in Erwägungsgründe und Artikel gegliedert.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "066",
+    "question": "Q: Auf welchen § kann in Österreich der Haftungsausschluss im Zusammenhang mit der Setzung eines Hyperlinks zur Weiterleitung auf eine fremde Website gestützt werden?",
+    "choices": [
+      {
+        "text": "§ 18 ECG",
+        "isCorrect": false
+      },
+      {
+        "text": "§ 14 ECG",
+        "isCorrect": false
+      },
+      {
+        "text": "§ 17 ECG",
+        "isCorrect": true
+      },
+      {
+        "text": "Eine derartige Regelung besteht in Österreich nicht",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "067",
+    "question": "Was sind großen Vor- und Nachteile von eingetragenen Personengesellschaften gegenüber Kapitalgesellschaften?",
+    "choices": [
+      {
+        "text": "Ein Vorteil der eingetragenen Personengesellschaft ist, dass kein Mindestkapital vorgewiesen werden muss. Bei Kapitalgesellschaften sind es mindestens 10.000€.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ein Nachteil der eingetragenen Personengesellschaft ist jedoch, dass - je nach Art - mindestens ein Gesellschafter voll haftet. Bei einer Kapitalgesellschaft haftet keiner der Gesellschafter.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "068",
+    "question": "Welche von den unten angeführten Organen sind Organe der EU?",
+    "choices": [
+      {
+        "text": "Europäischer Rat (European Council)",
+        "isCorrect": true
+      },
+      {
+        "text": "Rat der Europäischen Union (Council of the EU)",
+        "isCorrect": true
+      },
+      {
+        "text": "Europarat (Council of Europe)",
+        "isCorrect": false
+      },
+      {
+        "text": "Europäischer Gerichtshof für Menschenrechte (European Court of Human Rights)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "069",
+    "question": "Was sind für staatliche Überwachung relevante Grundrechte?",
+    "choices": [
+      {
+        "text": "Recht auf Datenschutz",
+        "isCorrect": true
+      },
+      {
+        "text": "Erwerbsfreiheit",
+        "isCorrect": false
+      },
+      {
+        "text": "Recht auf ein faires Verfahren",
+        "isCorrect": false
+      },
+      {
+        "text": "Recht auf Achtung des Privat- und Familienlebens",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "070",
+    "question": "A hackt die Datenbank der Uni indem er das Sicherheitssystem knackt und trägt sich selbst eine bessere Note ein. Welche Straftat(en) begeht er?",
+    "choices": [
+      {
+        "text": "Missbräuchliches Abfangen von Daten (§119a StGB)",
+        "isCorrect": false
+      },
+      {
+        "text": "Datenfälschung (§225a StGB)",
+        "isCorrect": true
+      },
+      {
+        "text": "Betrug (§146 StGB)",
+        "isCorrect": false
+      },
+      {
+        "text": "Widerrechtlicher Zugriff auf ein Computersystem (§118a StGB)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "071",
+    "question": "In welchen Fällen kommt ein Vertrag zustande?",
+    "choices": [
+      {
+        "text": "Schwarzfahren in öffentlichen Verkehrsmitteln",
+        "isCorrect": false
+      },
+      {
+        "text": "Kauf eines Getränks bei einem Getränkeautomaten",
+        "isCorrect": true
+      },
+      {
+        "text": "Gründung eines Startups gemeinsam mit einem Freund",
+        "isCorrect": true
+      },
+      {
+        "text": "Download eines Films auf einer Torrent-Plattform",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "072",
+    "question": "Ist A in den folgenden Fällen Verbraucher?",
+    "choices": [
+      {
+        "text": "A besucht ein Museum und bezahlt dort Eintritt",
+        "isCorrect": true
+      },
+      {
+        "text": "A kauft Stifte und Papier für sein Unternehmen",
+        "isCorrect": false
+      },
+      {
+        "text": "A kauft Mittagessen für seine Mitarbeiter",
+        "isCorrect": false
+      },
+      {
+        "text": "A kauft eine Flasche Wein für einen Freund",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "073",
+    "question": "Welche freie Werknutzungsrechte bestehen am Computerprogrammen?",
+    "choices": [
+      {
+        "text": "Beobachten, Untersuchen und Testen",
+        "isCorrect": true
+      },
+      {
+        "text": "Vervielfältigen zum eigenen und privaten Gebrauch",
+        "isCorrect": false
+      },
+      {
+        "text": "Erstellen von Sicherungskopien",
+        "isCorrect": true
+      },
+      {
+        "text": "Dekompilieren",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "074",
+    "question": "Wer verwaltet die Top Level Domain.at?",
+    "choices": [
+      {
+        "text": "Das Bundeskanzleramt",
+        "isCorrect": false
+      },
+      {
+        "text": "Das österreichische Patentamt",
+        "isCorrect": false
+      },
+      {
+        "text": "Der Zentrale Informationsdienst der Universität Wien",
+        "isCorrect": false
+      },
+      {
+        "text": "Eine nichtstaatliche Vergabestelle",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "075",
+    "question": "Which of the following is a task of the data protection officer (DPO)? (Welche der folgenden Aufgaben hat der behördliche Datenschutzbeauftragte?)",
+    "choices": [
+      {
+        "text": "Inform and advise the data controller or data processor on GDPR compliance. (Informieren und beraten Sie den für die Datenverarbeitung Verantwortlichen oder den Datenverarbeiter über die Einhaltung der GDPR.)",
+        "isCorrect": true
+      },
+      {
+        "text": "Cooperate and communicate with Supervisory Authorities. (Zusammenarbeit und Kommunikation mit den Aufsichtsbehörden.)",
+        "isCorrect": true
+      },
+      {
+        "text": "Impose administrative fines on controllers and processors for infringements of the GDPR. (Verhängung von Bußgeldern gegen für die Verarbeitung Verantwortliche und Auftragsverarbeiter bei Verstößen gegen die Datenschutz-Grundverordnung.)",
+        "isCorrect": false
+      },
+      {
+        "text": "Process personal data on behalf of the data controller. (Personenbezogene Daten im Auftrag des für die Datenverarbeitung Verantwortlichen verarbeiten.)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "076",
+    "question": "Petra hat ein ausgefallenes Logo für ihr Unternehmen gestaltet. Wie kann dieses Logo geschützt werden?",
+    "choices": [
+      {
+        "text": "Eintragung im Firmenbuch.",
+        "isCorrect": false
+      },
+      {
+        "text": "Markenrecht.",
+        "isCorrect": true
+      },
+      {
+        "text": "Urheberrecht.",
+        "isCorrect": true
+      },
+      {
+        "text": "Patent.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "077",
+    "question": "Welche(r) Vertrag/Verträge ist/sind NICHT im ABGB geregelt?",
+    "choices": [
+      {
+        "text": "GmbH-Vertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Kaufvertrag.",
+        "isCorrect": false
+      },
+      {
+        "text": "Leasingvertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Mietvertrag.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "078",
+    "question": "EU law consists of: ( besteht aus)",
+    "choices": [
+      {
+        "text": "Only primary and secondary law. (Nur Primärrecht und Sekundärrecht)",
+        "isCorrect": false
+      },
+      {
+        "text": "Primary, secondary and tertiary law. (Primäres, sekundäres und tertiäres Recht)",
+        "isCorrect": true
+      },
+      {
+        "text": "Only secondary law. (Nur Sekundärrecht)",
+        "isCorrect": false
+      },
+      {
+        "text": "Only primary law. (Nur Primärrecht)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "079",
+    "question": "Ein Arbeitsverhältnis kann enden durch",
+    "choices": [
+      {
+        "text": "Austritt.",
+        "isCorrect": true
+      },
+      {
+        "text": "einvernehmliche Auflösung.",
+        "isCorrect": true
+      },
+      {
+        "text": "Zeitablauf.",
+        "isCorrect": true
+      },
+      {
+        "text": "Entlassung.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "080",
+    "question": "Wie kann ein IT-Vertrag zustandekommen?",
+    "choices": [
+      {
+        "text": "Durch übereinstimmende Willenserklärungen aller Parteien.",
+        "isCorrect": true
+      },
+      {
+        "text": "Durch Programmierung (sofern die Überlassung von Individualsoftware geschuldet ist).",
+        "isCorrect": false
+      },
+      {
+        "text": "Durch das Akzeptieren von AGBs.",
+        "isCorrect": true
+      },
+      {
+        "text": "Durch einseitige Erklärung des Eigentümers der Software.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "081",
+    "question": "In the event of a personal data breach, the data controller and processor must... (Im Falle einer Verletzung des Schutzes personenbezogener Daten müssen der für die Daten Verantwortliche und Verarbeiter...)",
+    "choices": [
+      {
+        "text": "Notify the Supervisory Authority, no later than 72 hours. (Die Aufsichtsbehörde innerhalb von 72 Stunden benachrichtigen.)",
+        "isCorrect": true
+      },
+      {
+        "text": "Notify the media and the general public, no later than 72 hours. (Die Medien und die Öffentlichkeit innerhalb von 72 Stunden benachrichtigen.)",
+        "isCorrect": false
+      },
+      {
+        "text": "Provide the Supervisory Authority with a description of the breach including the number of data subjects affected, likely consequences and the measures taken to address or mitigate the effects of the breach. (Der Aufsichtsbehörde eine Beschreibung der Sicherheitsverletzung, einschließlich der Anzahl der betroffenen Personen, der voraussichtlichen Folgen und der Maßnahmen, die zur Behebung oder Abschwächung der Auswirkungen der Sicherheitsverletzung getroffen wurden, übermitteln.)",
+        "isCorrect": true
+      },
+      {
+        "text": "Communicate the personal data breach to the data subjects when the breach is likely to result in a high risk to their rights and freedoms. (Mitteilung der Verletzung des Schutzes personenbezogener Daten an die betroffenen Personen, wenn die Verletzung wahrscheinlich ein hohes Risiko für ihre Rechte und Freiheiten mit sich bringt.)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "082",
+    "question": "Which of the following is a legal basis for the processing of personal data, in accordance with Article 6(1) of the GDPR?",
+    "choices": [
+      {
+        "text": "The financial interests of the data controller or a third party. (Finanzielle Interessen des für die Datenverarbeitung Verantwortlichen oder eines Dritten)",
+        "isCorrect": false
+      },
+      {
+        "text": "Legitimate interest of the data controller or a third party. (Berechtigtes Interesse des für die Datenverarbeitung Verantwortlichen oder eines Dritten.)",
+        "isCorrect": true
+      },
+      {
+        "text": "Protection of the vital interests of the data subject or another natural person. (Schutz der lebenswichtigen Interessen der betroffenen Person oder einer anderen natürlichen Person.)",
+        "isCorrect": true
+      },
+      {
+        "text": "Ethical necessity. (Ethische Gründe)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "083",
+    "question": "Was wird typischerweise bei der Überlassung von Individualsoftware geschuldet?",
+    "choices": [
+      {
+        "text": "Keine der Antworten ist korrekt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Abnahme.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mangelfreiheit der Software.",
+        "isCorrect": true
+      },
+      {
+        "text": "Erstellung einer konkreten Software.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "084",
+    "question": "Which of the following are institutions of the EU? (Welche der folgenden Institutionen sind Organe der EU?)",
+    "choices": [
+      {
+        "text": "Council of the EU. (Rat der EU)",
+        "isCorrect": true
+      },
+      {
+        "text": "Council of Europe. (Europarat)",
+        "isCorrect": false
+      },
+      {
+        "text": "European Council. (Europäischer Rat)",
+        "isCorrect": true
+      },
+      {
+        "text": "Council of Ministers. (Ministerrat)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "085",
+    "question": "Welche Gesellschaftsform(en) gibt es?",
+    "choices": [
+      {
+        "text": "GmbH",
+        "isCorrect": true
+      },
+      {
+        "text": "AG",
+        "isCorrect": true
+      },
+      {
+        "text": "KG",
+        "isCorrect": true
+      },
+      {
+        "text": "OG",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "086",
+    "question": "IT-Vertragsrecht",
+    "choices": [
+      {
+        "text": "ist im ABGB nicht umfassend geregelt.",
+        "isCorrect": true
+      },
+      {
+        "text": "ist Bundesrecht.",
+        "isCorrect": true
+      },
+      {
+        "text": "ist europarechtlich überformt.",
+        "isCorrect": true
+      },
+      {
+        "text": "wird vor Zivilgerichten verhandelt.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "087",
+    "question": "Welche Grundrechtsquellen gibt es in Österreich?",
+    "choices": [
+      {
+        "text": "Staatsverträge.",
+        "isCorrect": true
+      },
+      {
+        "text": "Verordnungen.",
+        "isCorrect": false
+      },
+      {
+        "text": "Grundrechtskataloge.",
+        "isCorrect": true
+      },
+      {
+        "text": "Grundrechtsgesetze.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "088",
+    "question": "Which of the following qualifies as personal data, in accordance with Article 4(1) of the GDPR?",
+    "choices": [
+      {
+        "text": "Social security number. (Sozialversicherungsnummer)",
+        "isCorrect": true
+      },
+      {
+        "text": "Anonymised data. (Anonymisierte Daten)",
+        "isCorrect": false
+      },
+      {
+        "text": "Company registration information. (Informationen zur Unternehmensregistrierung)",
+        "isCorrect": false
+      },
+      {
+        "text": "Weather data. (Wetterdaten)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "089",
+    "question": "Das Musterrecht schützt...",
+    "choices": [
+      {
+        "text": "gewisse Eigenschaften von Lebensmitteln (= Geschmacksmuster).",
+        "isCorrect": false
+      },
+      {
+        "text": "eigentümliche geistige Schöpfungen, wenn sie neu sind.",
+        "isCorrect": false
+      },
+      {
+        "text": "regelmäßige, abstrakte Gestaltungselemente in Logos.",
+        "isCorrect": false
+      },
+      {
+        "text": "die äußere Gestaltung von Waren.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "090",
+    "question": "A database may be protected (Eine Datenbank kann geschützt werden)",
+    "choices": [
+      {
+        "text": "As a sui generis right by protecting its content. (Als Recht sui generis durch den Schutz seines Inhalts.)",
+        "isCorrect": true
+      },
+      {
+        "text": "As a registered patent. (Als registriertes Patent.)",
+        "isCorrect": false
+      },
+      {
+        "text": "As subject matter of copyright by protecting its original structure. (Als Gegenstand des Urheberrechts durch den Schutz seiner ursprünglichen Struktur.)",
+        "isCorrect": true
+      },
+      {
+        "text": "As a sui generis right by protecting its structure. (Als ein Recht sui generis durch den Schutz seiner Struktur.)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "091",
+    "question": "Die Umsatzsteuer",
+    "choices": [
+      {
+        "text": "beträgt in Österreich abhängig vom Produkt oder von der Dienstleistung 10%, 13% oder 20%.",
+        "isCorrect": true
+      },
+      {
+        "text": "muss von jedem Unternehmer/jeder Unternehmerin in Österreich eingehoben werden. Es gibt keine Befreiungen.",
+        "isCorrect": false
+      },
+      {
+        "text": "beträgt immer 20%.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "092",
+    "question": "The E-Commerce Directive 2000/31/EC provides rules for intermediary liability carve-outs",
+    "choices": [
+      {
+        "text": "applicable exclusively to audio-visual media service providers.",
+        "isCorrect": false
+      },
+      {
+        "text": "applicable, among other activities, to illegal hate speech.",
+        "isCorrect": true
+      },
+      {
+        "text": "applicable to hosting, caching and mere conduit services.",
+        "isCorrect": true
+      },
+      {
+        "text": "applicable to all service providers without limitation.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "093",
+    "question": "In order for an invention to be patented: (Damit eine Erfindung patentiert werden kann)",
+    "choices": [
+      {
+        "text": "It should be novel. (sollte neuartig sein.)",
+        "isCorrect": true
+      },
+      {
+        "text": "It must already be in the public domain. (Muss sie bereits öffentlich zugänglich sein.)",
+        "isCorrect": false
+      },
+      {
+        "text": "It must be public, once the patent is granted. (Nach Erteilung des Patents muss es öffentlich sein.)",
+        "isCorrect": true
+      },
+      {
+        "text": "It must not have industrial application. (Darf keine industrielle Anwendung haben.)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "094",
+    "question": "Welche Vertragstypen kennt das ABGB?",
+    "choices": [
+      {
+        "text": "Leihvertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Werkvertrag.",
+        "isCorrect": true
+      },
+      {
+        "text": "Wartungsvertrag.",
+        "isCorrect": false
+      },
+      {
+        "text": "Leasingvertrag.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "095",
+    "question": "Die konkrete Strafhöhe",
+    "choices": [
+      {
+        "text": "wird vom Gesetz nur nach oben und unten hin begrenzt. Dazwischen besteht ein Spielraum.",
+        "isCorrect": true
+      },
+      {
+        "text": "wird anhand von Erschwerungs- und Milderungsgründen festgesetzt.",
+        "isCorrect": true
+      },
+      {
+        "text": "hängt bei Geldstrafen vom Einkommen des Täters ab.",
+        "isCorrect": true
+      },
+      {
+        "text": "wird mithilfe der \"Bundeseinheitlichen Berechnungsformel für die Strafzumessung\", die jährlich vom Justizministerium herausgegeben wird, berechnet.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "096",
+    "question": "Was versteht man unter einer \"freien Werknutzung\"?",
+    "choices": [
+      {
+        "text": "Gewisse Handlungen an bzw. mit einem urheberrechtlichen Werk, die ausschließlich dem Urheber vorbehalten sind.",
+        "isCorrect": false
+      },
+      {
+        "text": "Kategorien von Werken, die ausnahmsweise keinen urheberrechtlichen Schutz genießen.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mit dem Urheberrecht verwandte Schutzrechte.",
+        "isCorrect": false
+      },
+      {
+        "text": "Gewisse Handlungen, die Dritte an bzw. mit einem urheberrechtlich geschützten Werk ausnahmsweise vornehmen dürfen.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "097",
+    "question": "Eine Kommissar/eine Kommissarin der Europäischen Kommission",
+    "choices": [
+      {
+        "text": "muss die Staatsbürgerschaft eines EU-Mitgliedsstaats besitzen.",
+        "isCorrect": true
+      },
+      {
+        "text": "vertritt den EU-Mitgliedsstaat, dessen Staatsangehöriger er/sie ist.",
+        "isCorrect": false
+      },
+      {
+        "text": "muss ausgebildete/r Jurist/in sein.",
+        "isCorrect": false
+      },
+      {
+        "text": "ist zugleich Mitglied der Regierung eines Mitgliedsstaats.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "098",
+    "question": "Das Transparenzgebot",
+    "choices": [
+      {
+        "text": "gilt gegenüber Verbrauchern.",
+        "isCorrect": true
+      },
+      {
+        "text": "ist im KSchG geregelt.",
+        "isCorrect": true
+      },
+      {
+        "text": "gilt gegenüber Unternehmern.",
+        "isCorrect": false
+      },
+      {
+        "text": "ist Teil der Einbeziehungskontrolle.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "099",
+    "question": "Grundrechte",
+    "choices": [
+      {
+        "text": "gelten immer für Jedermann.",
+        "isCorrect": false
+      },
+      {
+        "text": "sind immer absolut.",
+        "isCorrect": false
+      },
+      {
+        "text": "schützen fundamentale Rechtspositionen.",
+        "isCorrect": true
+      },
+      {
+        "text": "gab es schon immer.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "100",
+    "question": "The E-Commerce Directive 2000/31/EC applies to (Die Richtlinie über den elektronischen Geschäftsverkehr gilt für)",
+    "choices": [
+      {
+        "text": "Services not provided by electronic means. (Dienstleistungen, die nicht auf elektronischem Wege erbracht werden.)",
+        "isCorrect": false
+      },
+      {
+        "text": "Services provided for free. (Unentgeltliche Dienste)",
+        "isCorrect": false
+      },
+      {
+        "text": "Services provided at a distance. (Dienstleistungen im Fernabsatz.)",
+        "isCorrect": true
+      },
+      {
+        "text": "Services provided at the individual request of a recipient of services. (Dienstleistungen, die auf individuellen Wunsch eines Dienstleistungsempfängers erbracht werden.)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "101",
+    "question": "Was ist Gegenstand des Urheberrechts?",
+    "choices": [
+      {
+        "text": "Ideen",
+        "isCorrect": false
+      },
+      {
+        "text": "Erfindungen",
+        "isCorrect": false
+      },
+      {
+        "text": "Marken",
+        "isCorrect": false
+      },
+      {
+        "text": "Computerprogramme",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "question": "Welche der folgenden Unternehmen betreiben eine Plattform im Sinne des DSA?",
+    "choices": [
+      {
+        "text": "Tiktok",
+        "isCorrect": true
+      },
+      {
+        "text": "Amazon",
+        "isCorrect": true
+      },
+      {
+        "text": "Airbnb",
+        "isCorrect": true
+      },
+      {
+        "text": "Uber",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "103",
+    "question": "Was zählt zu den nationalen Gerichten?",
+    "choices": [
+      {
+        "text": "OGH",
+        "isCorrect": true
+      },
+      {
+        "text": "VwGH",
+        "isCorrect": true
+      },
+      {
+        "text": "EuGH",
+        "isCorrect": false
+      },
+      {
+        "text": "VfGH",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "104",
+    "question": "Auf welcher Ebene der Fallprüfung ordnen Sie Notwehr ein?",
+    "choices": [
+      {
+        "text": "Rechtswidrigkeit",
+        "isCorrect": true
+      },
+      {
+        "text": "Subjektiver Tatbestand",
+        "isCorrect": false
+      },
+      {
+        "text": "Objektiver Tatbestand",
+        "isCorrect": false
+      },
+      {
+        "text": "Schuld",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "105",
+    "question": "Welche Daten fallen unter den Begriff der personenbezogenen Daten?",
+    "choices": [
+      {
+        "text": "Geburtsdatum",
+        "isCorrect": true
+      },
+      {
+        "text": "Anonymisierte Daten",
+        "isCorrect": false
+      },
+      {
+        "text": "Pseudonymisierte Daten",
+        "isCorrect": true
+      },
+      {
+        "text": "Name",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "106",
+    "question": "Welche Aussage(n) zum Kreditvertrag ist/sind richtig?",
+    "choices": [
+      {
+        "text": "Die Rückzahlung kann entweder monatlich oder am Ende erfolgen.",
+        "isCorrect": true
+      },
+      {
+        "text": "Die Laufzeit ist eine Mindestvoraussetzung.",
+        "isCorrect": false
+      },
+      {
+        "text": "Der Kreditvertrag ist nicht im ABGB geregelt.",
+        "isCorrect": false
+      },
+      {
+        "text": "Die Zinsen sind der \"Preis\" beim Kreditvertrag",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "107",
+    "question": "Auf Basis welcher Rechtsgrundlage können Sie personenbezogene Daten verarbeiten?",
+    "choices": [
+      {
+        "text": "Gewöhnlicher Notstand",
+        "isCorrect": false
+      },
+      {
+        "text": "Erfüllung eines Vertrages",
+        "isCorrect": true
+      },
+      {
+        "text": "Rechtliche Verpflichtung",
+        "isCorrect": true
+      },
+      {
+        "text": "Einwilligung",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "108",
+    "question": "Welche Schutzvoraussetzungen gibt es im Patentrecht?",
+    "choices": [
+      {
+        "text": "Kennzeichnungskraft",
+        "isCorrect": false
+      },
+      {
+        "text": "Neuheit",
+        "isCorrect": true
+      },
+      {
+        "text": "Erfinderischer Schritt",
+        "isCorrect": true
+      },
+      {
+        "text": "Originalität",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "109",
+    "question": "Welche Institutionen zählen zu den europäischen Gerichten?",
+    "choices": [
+      {
+        "text": "EGMR",
+        "isCorrect": true
+      },
+      {
+        "text": "EuGH",
+        "isCorrect": true
+      },
+      {
+        "text": "EuG",
+        "isCorrect": true
+      },
+      {
+        "text": "IstGH",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "110",
+    "question": "Welche Urheberpersönlichkeitsrechte gibt es?",
+    "choices": [
+      {
+        "text": "Schutz der Urheberschaft (Recht auf Anerkennung)",
+        "isCorrect": true
+      },
+      {
+        "text": "Recht der ersten Inhaltsangabe",
+        "isCorrect": true
+      },
+      {
+        "text": "Urheberbezeichnung",
+        "isCorrect": true
+      },
+      {
+        "text": "Lizenzierungsacht",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "111",
+    "question": "Welche Aussage(n) zu Artikel 32 DSGVO ist/sind zutreffend?",
+    "choices": [
+      {
+        "text": "Die Verpflichtung zur Erhaltung eines geeigneten Sicherheitsniveaus besteht fortlaufend.",
+        "isCorrect": true
+      },
+      {
+        "text": "Die Verpflichtung zur Erhaltung eines geeigneten Sicherheitsniveaus besteht nur zu einem bestimmen Zeitpunkt",
+        "isCorrect": false
+      },
+      {
+        "text": "Diese Bestimmung folgt einem risikobasierten Ansatz",
+        "isCorrect": true
+      },
+      {
+        "text": "Es sind keine Aufzeichnungen über Sicherheitsmaßnahmen erforderlich.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": "112",
+    "question": "Im Kontext von Datensicherheit wird die Angemessenheit von Sicherheitsmaßnahmen wie beurteilt?",
+    "choices": [
+      {
+        "text": "Implementierungskosten",
+        "isCorrect": true
+      },
+      {
+        "text": "Art, Reichweite, Zusammenhang und Zweck der Verarbeitung",
+        "isCorrect": true
+      },
+      {
+        "text": "Ausbildung des Verantwortlichen",
+        "isCorrect": false
+      },
+      {
+        "text": "Stand der Technik",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": "113",
+    "question": "Verbraucherrecht",
+    "choices": [
+      {
+        "text": "schützt auch Unternehmer.",
+        "isCorrect": false
+      },
+      {
+        "text": "wird bei Gericht durchgesetzt.",
+        "isCorrect": true
+      },
+      {
+        "text": "ist nur im Verbraucherschutzgesetz geregelt.",
+        "isCorrect": false
+      },
+      {
+        "text": "basiert großteils auf EU-Recht.",
+        "isCorrect": true
+      }
+    ]
+  }
+]
+
+  </script>
+
+  <script>
+    const SOURCE_QUESTIONS = JSON.parse(document.getElementById('question-data').textContent);
+    const STORAGE_KEY = 'it-recht-113-pdf-only-no-restart-v1';
+    const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+    const el = {
+      question: document.getElementById('question'),
+      choices: document.getElementById('choices'),
+      form: document.getElementById('quizForm'),
+      checkBtn: document.getElementById('checkBtn'),
+      nextBtn: document.getElementById('nextBtn'),
+      status: document.getElementById('status'),
+      progressBar: document.getElementById('progressBar'),
+      scorePill: document.getElementById('scorePill'),
+      missedPill: document.getElementById('missedPill'),
+      feedback: document.getElementById('feedback'),
+      hint: document.getElementById('hint')
+    };
+
+    let state = {
+      questions: [],
+      idx: 0,
+      score: 0,
+      missed: [],
+      checked: false,
+      selected: []
+    };
+
+    function shuffleArray(arr) {
+      const copy = arr.slice();
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function prepareQuestions(list) {
+      return shuffleArray(list).map((q) => ({
+        ...q,
+        choices: shuffleArray(q.choices || [])
+      }));
+    }
+
+    function saveState() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {}
+    }
+
+    function loadSavedState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!parsed || !Array.isArray(parsed.questions) || !parsed.questions.length) return null;
+        // Do not restore an old/incompatible session if the source size changed.
+        if (parsed.questions.length !== SOURCE_QUESTIONS.length) return null;
+        return parsed;
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function startNewSession(questionList = SOURCE_QUESTIONS) {
+      state = {
+        questions: prepareQuestions(questionList),
+        idx: 0,
+        score: 0,
+        missed: [],
+        checked: false,
+        selected: []
+      };
+      saveState();
+      renderQuestion();
+    }
+
+    function currentQuestion() { return state.questions[state.idx]; }
+
+    function correctIndices(q) {
+      return (q.choices || []).reduce((out, c, i) => { if (c.isCorrect) out.push(i); return out; }, []);
+    }
+
+    function equalAsSets(a, b) {
+      if (a.length !== b.length) return false;
+      const set = new Set(b);
+      return a.every(x => set.has(x));
+    }
+
+    function selectedIndices() {
+      return [...el.form.querySelectorAll('input[name="choice"]:checked')].map(n => Number(n.value));
+    }
+
+    function setDisabledAll(value) {
+      el.form.querySelectorAll('input[name="choice"]').forEach(n => n.disabled = value);
+    }
+
+    function updateTopStats() {
+      el.scorePill.textContent = String(state.score);
+      el.missedPill.textContent = String(state.missed.length);
+      const total = state.questions.length || SOURCE_QUESTIONS.length;
+      const done = Math.min(state.idx, total - 1);
+      const pct = total ? Math.round((done / total) * 100) : 0;
+      el.progressBar.style.width = `${pct}%`;
+    }
+
+    function syncSelectedClasses() {
+      [...el.form.querySelectorAll('.choice')].forEach((wrap) => {
+        const cb = wrap.querySelector('input[type="checkbox"]');
+        wrap.classList.toggle('selected', !!cb?.checked);
+      });
+    }
+
+    function clearChoiceState() {
+      [...el.form.querySelectorAll('.choice')].forEach((wrap) => {
+        wrap.classList.remove('selected', 'correct', 'incorrect', 'missed');
+      });
+    }
+
+    function renderQuestion() {
+      const q = currentQuestion();
+      if (!q) return showResults();
+
+      el.question.textContent = q.question;
+      el.hint.textContent = 'Select all correct answers.';
+      el.choices.innerHTML = '';
+      el.feedback.className = 'feedback';
+      el.feedback.textContent = '';
+
+      q.choices.forEach((choice, i) => {
+        const id = `choice-${state.idx}-${i}`;
+        const wrap = document.createElement('div');
+        wrap.className = 'choice';
+
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.name = 'choice';
+        input.id = id;
+        input.value = String(i);
+        input.checked = state.selected.includes(i);
+        input.disabled = state.checked;
+
+        const label = document.createElement('label');
+        label.setAttribute('for', id);
+
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+        badge.textContent = LETTERS[i] || String(i + 1);
+
+        const content = document.createElement('span');
+        content.className = 'text';
+        content.textContent = choice.text;
+
+        label.appendChild(badge);
+        label.appendChild(content);
+        wrap.appendChild(input);
+        wrap.appendChild(label);
+        el.choices.appendChild(wrap);
+      });
+
+      el.checkBtn.hidden = state.checked;
+      el.nextBtn.hidden = !state.checked;
+      el.checkBtn.disabled = state.selected.length === 0;
+      el.nextBtn.textContent = state.idx + 1 === state.questions.length ? 'Show results' : 'Next';
+
+      const pct = Math.floor((state.idx / state.questions.length) * 100);
+      el.status.textContent = `(${q.id}) Question ${state.idx + 1} of ${state.questions.length} — ${pct}% done`;
+      updateTopStats();
+      syncSelectedClasses();
+
+      if (state.checked) revealAnswerState();
+    }
+
+    function revealAnswerState() {
+      const q = currentQuestion();
+      const selected = state.selected;
+      const correct = correctIndices(q);
+      const choiceEls = [...el.form.querySelectorAll('.choice')];
+      clearChoiceState();
+
+      selected.forEach(i => {
+        if (correct.includes(i)) choiceEls[i]?.classList.add('correct');
+        else choiceEls[i]?.classList.add('incorrect');
+      });
+      correct.forEach(i => {
+        if (!selected.includes(i)) choiceEls[i]?.classList.add('missed');
+        choiceEls[i]?.classList.add('correct');
+      });
+
+      const exact = equalAsSets(selected, correct);
+      el.feedback.className = `feedback show ${exact ? 'ok' : 'bad'}`;
+      el.feedback.innerHTML = exact
+        ? 'Correct. Nice work.'
+        : `Not quite. Correct answers are: <strong>${correct.map(i => LETTERS[i] || i + 1).join(', ')}</strong>.`;
+    }
+
+    function onSelectionChanged() {
+      if (state.checked) return;
+      state.selected = selectedIndices();
+      el.checkBtn.disabled = state.selected.length === 0;
+      syncSelectedClasses();
+      saveState();
+    }
+
+    function checkAnswers() {
+      const q = currentQuestion();
+      if (!q || state.checked) return;
+      const selected = selectedIndices();
+      if (!selected.length) return;
+
+      state.selected = selected;
+      const exact = equalAsSets(selected, correctIndices(q));
+      state.checked = true;
+      if (exact) {
+        state.score += 1;
+        el.nextBtn.classList.add('success');
+      } else {
+        if (!state.missed.some(m => m.id === q.id)) {
+          state.missed.push({ id: q.id, question: q.question });
+        }
+        el.nextBtn.classList.remove('success');
+      }
+
+      setDisabledAll(true);
+      el.checkBtn.hidden = true;
+      el.nextBtn.hidden = false;
+      revealAnswerState();
+      updateTopStats();
+      saveState();
+      el.nextBtn.focus?.();
+    }
+
+    function nextQuestion() {
+      if (state.idx + 1 < state.questions.length) {
+        state.idx += 1;
+        state.checked = false;
+        state.selected = [];
+        saveState();
+        renderQuestion();
+      } else {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      const total = state.questions.length;
+      const percent = total ? Math.round((state.score / total) * 100) : 0;
+      el.progressBar.style.width = '100%';
+      el.status.textContent = 'Quiz finished — 100% done';
+      el.question.textContent = 'Results';
+      el.hint.textContent = 'Your 113-question PDF quiz session is complete.';
+      el.feedback.className = 'feedback';
+      el.feedback.textContent = '';
+      el.checkBtn.hidden = true;
+      el.nextBtn.hidden = true;
+
+      const missedHtml = state.missed.length
+        ? `<div class="missed-list">${state.missed.map(m => `<div class="missed-item"><b>${escapeHtml(m.id)}</b> — ${escapeHtml(m.question)}</div>`).join('')}</div>`
+        : '<div class="missed-item" style="text-align:center;">No missed questions 🎉</div>';
+
+      el.choices.innerHTML = `
+        <div class="results">
+          <div class="score-big">${percent}%</div>
+          <div class="result-grid">
+            <div class="metric"><strong>${state.score}</strong><span>correct</span></div>
+            <div class="metric"><strong>${total}</strong><span>questions</span></div>
+            <div class="metric"><strong>${state.missed.length}</strong><span>missed</span></div>
+          </div>
+          <div>${missedHtml}</div>
+          <p class="hint" style="margin-top:14px;">Refresh the page after finishing to start a new shuffled run.</p>
+          <div class="toolbar">
+            ${state.missed.length ? '<button type="button" class="mini" id="retryMissedBtn">Retry missed only</button>' : ''}
+            ${state.missed.length ? '<button type="button" class="mini" id="copyMissedBtn">Copy missed IDs</button>' : ''}
+          </div>
+        </div>
+      `;
+
+      document.getElementById('retryMissedBtn')?.addEventListener('click', retryMissedOnly);
+      document.getElementById('copyMissedBtn')?.addEventListener('click', copyMissedIds);
+      try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+    }
+
+    function retryMissedOnly() {
+      const missedIds = new Set(state.missed.map(m => m.id));
+      const missedQuestions = state.questions.filter(q => missedIds.has(q.id));
+      if (!missedQuestions.length) return;
+      state = {
+        questions: prepareQuestions(missedQuestions.map(q => ({ ...q, choices: q.choices.slice() }))),
+        idx: 0,
+        score: 0,
+        missed: [],
+        checked: false,
+        selected: []
+      };
+      saveState();
+      renderQuestion();
+    }
+
+    async function copyMissedIds() {
+      const text = state.missed.map(m => m.id).join(', ');
+      try {
+        await navigator.clipboard.writeText(text);
+        el.status.textContent = 'Missed IDs copied.';
+      } catch (_) {
+        el.status.textContent = `Missed IDs: ${text}`;
+      }
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    el.form.addEventListener('change', onSelectionChanged);
+    el.checkBtn.addEventListener('click', checkAnswers);
+    el.nextBtn.addEventListener('click', nextQuestion);
+
+    document.addEventListener('keydown', (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+
+      if (/^[1-9]$/.test(event.key) && !state.checked) {
+        const n = Number(event.key) - 1;
+        const input = el.form.querySelector(`input[name="choice"][value="${n}"]`);
+        if (input) {
+          input.checked = !input.checked;
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+          event.preventDefault();
+        }
+      }
+
+      if (event.key === 'Enter') {
+        if (!el.checkBtn.hidden && !el.checkBtn.disabled) { checkAnswers(); event.preventDefault(); }
+        else if (!el.nextBtn.hidden) { nextQuestion(); event.preventDefault(); }
+      }
+    });
+
+    (function init() {
+      const saved = loadSavedState();
+      if (saved && saved.idx < saved.questions.length) {
+        state = saved;
+        renderQuestion();
+      } else {
+        startNewSession();
+      }
+    })();
+  </script>
+</body>
+</html>
