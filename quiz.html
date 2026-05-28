@@ -382,11 +382,11 @@
         QUESTIONS = await loadAllQuestions(questionSet);
         shuffleQuestions();
         restart();
-      });
+      });      
 
       document.getElementById("onlineMCQ").addEventListener('click', async () => {
         hideDataSetOptions();
-        questionSet = 'onlineMCQ.json';
+        questionSet = 'it_recht_questions_answers_from_pdfs.json';
         QUESTIONS = await loadAllQuestions(questionSet);
         shuffleQuestions();
         restart();
